@@ -1,0 +1,385 @@
+# site_name: My site
+# site_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
+# theme:
+#   name: material
+# remote_theme: pages-themes/cayman@v0.2.0
+# plugins:
+# - jekyll-remote-theme # add this line to the plugins list if you already have one
+
+# title: [Retail Solution Accelerator - Workshop Guide]
+# description: [This guide serves as documentation for the deployment and configuration of retail solution accelerator.]
+# -----------------------------
+# Material Theme Configuration
+# ------------------------------
+# red, pink, purple, deep purple, indigo, 
+# blue, light blue, cyan, teal, green, light green, 
+# lime, yellow, amber, orange, deep orange, brown, 
+# grey, blue grey , black, white
+#    primary: pink # teal
+#    accent: indigo
+#
+# *** FONT ***
+# Guide: https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/?h=fonts
+# Google Fonts Supported: https://fonts.google.com/
+#
+# *** BLOG ***
+# https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
+# ---------------------------------
+
+# # Project information .........................................
+# site_name: "Build your own AI Copilot for FSI with PostgreSQL: Workshop Guide"
+# site_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
+# site_author: emumbaorg
+# site_description: >-
+#   Build custom AI-powered solutions on top of Azure Database for PostgreSQL and Azure AI.
+
+# # Repository ..................................................
+# repo_name: emumbaorg/microsoft-postgresql-solution-accelerator-build-your-own-ai-copilot
+# repo_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
+
+# # Copyright ...................................................
+# copyright: >
+#   Copyright &copy; 2025 - present Microsoft
+
+# # Configuration ...............................................
+# theme:
+#   name: material
+#   font:
+#     code: Roboto Mono  #Monospaced
+#     text: Roboto       #Regular
+#   logo: ./img/architecture.png
+#   language: en
+#   # custom_dir: overrides #Add custom header scripts
+
+#   # Theme Modes ...............................................
+#   palette:
+#     # Palette toggle for automatic mode
+#     - media: "(prefers-color-scheme)"
+#       toggle:
+#         icon: material/brightness-auto
+#         name: Switch to light mode
+#     # Palette toggle for light mode
+#     - media: "(prefers-color-scheme: light)"
+#       scheme: default 
+#       primary: blue
+#       accent: pink
+#       toggle:
+#         icon: material/brightness-2
+#         name: Switch to dark mode
+#     # Palette toggle for dark mode
+#     - media: "(prefers-color-scheme: dark)"
+#       scheme: slate
+#       primary: amber
+#       accent: cyan
+#       toggle:
+#         icon: material/brightness-4
+#         name: Switch to system preference 
+  
+#   # Theme Features ...............................................
+#   features:
+#     - navigation.instant
+#     - navigation.expand             # sidebar collapsible sections open
+#     - navigation.instant.progress   # load progress indicator
+#     - navigation.tracking           # tracks anchor tags in URL
+#     - navigation.tabs               # tabbed on desktop, single in mobile    
+#     - navigation.tabs.sticky        # tabs stick when scrolling downtheme:
+#     - navigation.path               # add breadcrumbs
+#     - navigation.indexes            # default index.md in folder is section page
+#     - navigation.top
+#     - toc.follow
+#     - navigation.footer
+#     - content.code.copy             # allow copy-paste from codeblocks
+#     - content.tabs.link             # Ensures site-wide switch to same tab name
+
+# # Extras  ...............................................
+# extra:
+#   generator: false
+
+# # Plugins  ...............................................
+# plugins:
+#   - search
+
+# # Extensions  ...............................................
+# markdown_extensions:
+#   - abbr
+#   - admonition
+#   - attr_list
+#   - toc:
+#       permalink: true
+#       toc_depth: 3
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:material.extensions.emoji.twemoji
+#       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#   - pymdownx.highlight:
+#       auto_title: true
+#       linenums: true
+#   - pymdownx.snippets
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#       slugify: !!python/object/apply:pymdownx.slugs.slugify
+#         kwds:
+#           case: lower
+
+# # Navigation  ...............................................
+# nav:
+
+# # Project information .........................................
+# site_name: "FSI AI Copilot with PostgreSQL - Professional Guide"
+# site_url: https://emumbaorg.github.io/docs-fsi-ai-copilot
+# site_author: emumbaorg
+# site_description: >-
+#   A comprehensive guide to building AI-powered solutions with PostgreSQL on Azure.
+
+# # Repository ..................................................
+# repo_name: emumbaorg/microsoft-postgresql-fsi-ai-copilot
+# repo_url: https://github.com/emumbaorg/microsoft-postgresql-fsi-ai-copilot
+
+# # Branding ...................................................
+# copyright: >
+#   &copy; 2025 Microsoft | Designed by emumbaorg
+
+# # Theme ...................................................
+# theme:
+#   name: material
+#   font:
+#     text: "Inter"        # Clean, modern font
+#     code: "Fira Code"    # Stylish monospace font
+#   logo: ./img/logo.png
+#   favicon: ./img/favicon.ico
+#   language: en
+
+#   # Color Palette for a Professional Look ....................................
+#   palette:
+#     - media: "(prefers-color-scheme: light)"
+#       scheme: default
+#       primary: blue-grey
+#       accent: amber
+#       toggle:
+#         icon: material/brightness-2
+#         name: Switch to dark mode
+#     - media: "(prefers-color-scheme: dark)"
+#       scheme: slate
+#       primary: navy
+#       accent: gold
+#       toggle:
+#         icon: material/brightness-4
+#         name: Switch to system preference
+
+#   # Theme Features ...............................................
+#   features:
+#     - navigation.instant
+#     - navigation.expand             # Sidebar expands sections
+#     - navigation.instant.progress   # Show progress bar
+#     - navigation.tracking           # Updates URL with section anchors
+#     - navigation.tabs               # Tabbed navigation for desktop
+#     - navigation.tabs.sticky        # Tabs remain sticky
+#     - navigation.path               # Breadcrumbs for better UX
+#     - navigation.indexes            # Treat index.md as section page
+#     - navigation.top                # Scroll-to-top button
+#     - toc.follow                    # Sidebar TOC follows scroll
+#     - navigation.footer             # Footer navigation
+#     - content.code.copy             # Copy code block button
+#     - content.tabs.link             # Keep same tab active across site
+
+# # Extras ...................................................
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/emumbaorg
+#     - icon: fontawesome/brands/linkedin
+#       link: https://www.linkedin.com/company/emumba
+#   generator: false
+
+# # Plugins ...................................................
+# plugins:
+#   - search
+#   - offline  # Enables offline browsing
+#   # - git-revision-date-localized:
+#   #     enable_creation_date: true
+
+# # Extensions ...................................................
+# markdown_extensions:
+#   - abbr
+#   - admonition
+#   - attr_list
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - pymdownx.tasklist:
+#       custom_checkbox: true
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:material.extensions.emoji.twemoji
+#       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+#   - pymdownx.highlight:
+#       auto_title: true
+#       linenums: true
+#   - pymdownx.snippets
+#   - pymdownx.tabbed:
+#       alternate_style: true
+#       slugify: !!python/object/apply:pymdownx.slugs.slugify
+#         kwds:
+#           case: lower
+
+# # Footer ...................................................
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-XXXXXXXXXX
+#   alternate:
+#     - name: "English"
+#       link: "/en/"
+#       lang: "en"
+#     - name: "Français"
+#       link: "/fr/"
+#       lang: "fr"
+
+# # Navigation ...................................................
+# nav:
+#   - Home: index.md
+#   - Introduction:
+#       - Overview: overview.md
+#       - Features: features.md
+#   - Getting Started:
+#       - Installation: installation.md
+#       - Quick Start: quick-start.md
+#   - AI Copilot:
+#       - Model Deployment: deployment.md
+#       - Customization: customization.md
+#   - Advanced:
+#       - API Reference: api.md
+#       - Performance Tuning: performance.md
+#   - FAQ: faq.md
+#   - Contact: contact.md
+
+# Project Information .........................................
+site_name: "Retail Solution Accelerator - Workshop Guide"
+site_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
+site_author: emumbaorg
+site_description: >
+  A comprehensive, professionally designed guide to building AI-powered solutions on Azure Database for PostgreSQL and Azure AI, following Microsoft quality standards.
+
+# Repository Information ......................................
+repo_name: emumbaorg/retail-solution-accelerator
+repo_url: https://github.com/emumbaorg/retail-solution-accelerator
+
+# Copyright ...................................................
+copyright: >
+  &copy; 2025 Microsoft. All rights reserved.
+
+# Theme Configuration .........................................
+theme:
+  name: material
+  # custom_dir: overrides  # (Optional) For further customizations via overrides
+  logo: ./img/logo.png
+  favicon: ./img/favicon.ico
+  language: en
+
+  # Typography: Using modern, clean fonts for readability
+  font:
+    text: "Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif"
+    code: "Consolas, 'Courier New', monospace"
+
+  # Enhanced Professional Color Palette (Microsoft-inspired)
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Light mode: clean and minimal with blue-grey and accent gold
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue-grey
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode: deep slate with accent light blue for contrast
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: "#0078D4"       # Microsoft Blue
+      accent: "#F3F2F1"        # Light accent for contrast
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  # Navigation and Layout Enhancements
+  features:
+    - navigation.instant
+    - navigation.expand           # Collapsible sections in sidebar
+    - navigation.instant.progress # Loading progress indicator
+    - navigation.tracking         # Updates URL with section anchors
+    - navigation.tabs             # Tabbed navigation on desktop
+    - navigation.tabs.sticky      # Sticky tabs while scrolling
+    - navigation.path             # Breadcrumbs for hierarchical context
+    - navigation.indexes          # Use index.md as section landing page
+    - navigation.top              # Back-to-top button for long pages
+    - toc.follow                  # Table of contents follows scroll position
+    - navigation.footer           # Consistent footer for additional links
+    - content.code.copy           # Copy code snippets easily
+    - content.tabs.link           # Synchronize tabs across pages
+
+# Extra Configuration .........................................
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/emumbaorg
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/emumba
+  generator: false
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Replace with your Google Analytics property ID
+
+# Plugins .......................................................
+plugins:
+  - search
+  - offline          # Enables offline browsing
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
+
+# Markdown Extensions .........................................
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      auto_title: true
+      linenums: true
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+# Navigation Structure .........................................
+nav:
+  # - Home: index.md
+  # - Introduction:
+  #     - Overview: workshop/docs/introduction/introduction.md
+  #     - Architecture: workshop/docs/introduction/introduction.md
+  # - Setup:
+  #     - Installation: workshop/docs/introduction/introduction.md
+  #     - Quick Start: workshop/docs/introduction/introduction.md
+  # - Guides:
+  #     - Deployment: workshop/docs/introduction/introduction.md
+  #     - Customization: workshop/docs/introduction/introduction.md
+  # - Reference:
+  #     - API Reference: workshop/docs/introduction/introduction.md
+  #     - Troubleshooting: workshop/docs/introduction/introduction.md
+  # - FAQ: workshop/docs/introduction/introduction.md
+  # - Contact: workshop/docs/introduction/introduction.md
