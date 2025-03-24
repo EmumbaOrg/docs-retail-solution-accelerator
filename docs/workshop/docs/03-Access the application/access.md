@@ -1,0 +1,1 @@
+The page provides information to access the application deployed in the previous step.

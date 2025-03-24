@@ -1,0 +1,1 @@
+To destroy or tear down the resources, use the following steps:
