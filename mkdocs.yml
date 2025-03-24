@@ -35,14 +35,14 @@ copyright: >
 theme:
   name: material
   custom_dir: overrides  # (Optional) For further customizations via overrides
-  logo: ./img/logo.png
-  favicon: ./img/favicon.ico
+  logo: ./img/postgresql.svg
+  favicon: ./img/postgresql.svg
   language: en
 
   # Typography: Using modern, clean fonts for readability
   font: # Monospaced regular
-    text: Roboto Mono
-    code: Regular
+    text: Roboto
+    code: Roboto Mono
 
   # Enhanced Professional Color Palette (Microsoft-inspired)
   palette:
