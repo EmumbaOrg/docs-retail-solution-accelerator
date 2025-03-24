@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/01-introduction/introduction/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/02-Deployment/deployment/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/03-Access%20the%20application/access/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/04-Agentic%20Flow/agent/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/Readme/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+    <url>
+         <loc>https://emumbaorg.github.io/docs-retail-solution-accelerator/Tear%20Down/teardown/</loc>
+         <lastmod>2025-03-24</lastmod>
+    </url>
+</urlset>
