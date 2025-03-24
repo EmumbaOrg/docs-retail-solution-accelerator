@@ -272,7 +272,7 @@ copyright: >
 # Theme Configuration .........................................
 theme:
   name: material
-  # custom_dir: overrides  # (Optional) For further customizations via overrides
+  custom_dir: overrides  # (Optional) For further customizations via overrides
   logo: ./img/logo.png
   favicon: ./img/favicon.ico
   language: en
