@@ -1,6 +1,7 @@
 # Multi Agent Retail Solution Accelerator
 This repository serves the documentation of solution accelerator as github pages
-![AZURE ARCHITECTURE](https://github.com/user-attachments/assets/208f82c5-e03d-448f-abb6-865bbeadbdbf)
+![AZURE ARCHITECTURE](https://github.com/user-attachments/assets/8b33bc06-8a6a-49ee-be57-66f3b7cb88ca)
+
 
 ## Workshop Guide
 The current repository is instrumented with a `docs/workshop/` folder that contains the step-by-step lab guide for developers, covering the entire workflow from resource provisioning to ideation, evaluation, deployment, and usage.
