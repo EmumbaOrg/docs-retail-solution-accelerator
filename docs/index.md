@@ -18,4 +18,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 # Home
 This repository serves the documentation of solution accelerator as github pages
-![AZURE ARCHITECTURE](https://github.com/user-attachments/assets/208f82c5-e03d-448f-abb6-865bbeadbdbf)
+![AZURE ARCHITECTURE](https://github.com/user-attachments/assets/5b01c4f0-37fa-428b-82f0-6f4ec4440935)
+
