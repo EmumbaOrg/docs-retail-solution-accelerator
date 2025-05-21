@@ -18,14 +18,14 @@
 
 # Project Information .........................................
 site_name: "Agentic Shop - Workshop Guide"
-site_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
-site_author: emumbaorg
+site_url: https://github.com/Azure-Samples/postgres-agentic-shop
+site_author: Azure-Samples
 site_description: >
-  This guide serves as documentation for the deployment and configuration of retail solution accelerator.
+  This guide serves as documentation for the deployment and configuration of Agentic Shop solution accelerator.
 
 # Repository Information ......................................
-repo_name: emumbaorg/retail-solution-accelerator
-repo_url: https://github.com/emumbaorg/docs-retail-solution-accelerator
+repo_name: Azure-Samples/postgres-agentic-shop
+repo_url: https://github.com/Azure-Samples/postgres-agentic-shop
 
 # Copyright ...................................................
 copyright: >
