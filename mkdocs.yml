@@ -17,7 +17,7 @@
 # ---------------------------------
 
 # Project Information .........................................
-site_name: "Retail Solution Accelerator - Workshop Guide"
+site_name: "Agentic Shop - Workshop Guide"
 site_url: https://emumbaorg.github.io/docs-retail-solution-accelerator
 site_author: emumbaorg
 site_description: >
@@ -54,8 +54,8 @@ theme:
     # Light mode: clean and minimal with blue-grey and accent gold
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue-grey
-      accent: amber
+      primary: blue
+      accent: pink
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
