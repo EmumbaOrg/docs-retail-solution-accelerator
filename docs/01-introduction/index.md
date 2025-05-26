@@ -4,7 +4,7 @@ This solution accelerator is designed as an example of an e-commerce store. It d
 
 The application has the following architecture:
 
-![AZURE ARCHITECTURE](https://github.com/user-attachments/assets/f3ca0e0d-0c93-4c0f-be5d-958eace3a138)
+![solution-accelerator-architecture](../img/solution-accelerator-architecture.png)
 
 ## Learning Objectives
 
