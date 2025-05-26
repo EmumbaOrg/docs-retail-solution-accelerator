@@ -1,0 +1,1 @@
+This section will contain the app architecture, shown with the help of architecture diagram
