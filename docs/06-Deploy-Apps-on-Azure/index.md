@@ -27,6 +27,20 @@ To deploy the updated app, follow the steps below:
     !!! danger "Execute the following Azure Developer CLI command!"
 
     ```bash title=""
+    azd up
+    ```
+
+4. When the `azd` workflow runs and asks you to enter the choice for the deployment of Azure Container Apps, enter `yes` to deploy updated apps on Azure Container Apps. 
+
+    ```bash title=""
+    Do you want to deploy Azure Container Apps? (y/n): yes
+    ```
+
+5. Your updated apps will be built and deployed to Azure Container Apps.
+
+6. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
+
+    ```bash title=""
     azd deploy
     ```
 
