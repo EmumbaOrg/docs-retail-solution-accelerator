@@ -18,13 +18,13 @@ To be able to complete this solution accelerator, you will need:
     - This is needed to provision the Azure infrastructure for your AI project.
     - If you don't have an Azure account, [sign up for a free one](https://aka.ms/free) now. (It takes just a few minutes.)
 4. **An appropriate Azure region for your workshop resources**
-    - To ensure you can successfully complete the workshop and deploy the required Azure resources, you must choose a region that supports those resources.
+    - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota:
     - Before selecting an Azure region:
       - Review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
         - Select a region that **supports the Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models**.
-        - Ensure you have a **at least 150K TPMs of `GlobalStandard` capacity available in the region** for the `gpt-4o` and **at least 120K TPMs of `Standard` capacity available in the region**`text-embedding-ada-002` models. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
+        - Ensure you have a **at least 150K TPMs of `GlobalStandard` capacity for the `gpt-4o` and 120K TPM of `Standard` capacity for available in the region** for `text-embedding-ada-002` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
       
-    You must choose a region that supports **both Azure OpenAI models**, has at least 150K TPM of `GlobalStandard` capacity for `gpt-4o` and 120K TPM of `Standard` capacity for `text-embedding-ada-002`.
+    You must choose a region that supports **both Azure OpenAI models**, has at least 150K TPM of `GlobalStandard` and `Standard` capacity for above models.
 
     !!! danger "Choosing a region that doesn't support both Azure OpenAI models will result in deployment failure when running `azd up`."
 
@@ -52,8 +52,8 @@ To get the most of of this solution accelerator, you should have:
 2. **Familiarity with the `bash` shell**.
     - If needed, you will use `bash` in the VS Code terminal to run post-provisioning scripts.
     - You will also use it to run Azure CLI and Azure Developer CLI commands during setup. 
-3. **Familiarity with Python and Node UI frameworks**.
-    - You will modify Node JavaScript and Python code to implement changes to the starter solution.
+3. **Familiarity with Python frameworks**.
+    - You will modify Python code to implement changes to the starter solution.
     - In some steps, you will create and run Python code from the command line and VS Code.
     - You will select a Python kernel and run pre-existing scripts in some steps.
 
@@ -63,6 +63,6 @@ After completing this workshop, you will have:
 
 1. A personal fork (copy) of the [postgres-agentic-shop](https://github.com/Azure-Samples/postgres-agentic-shop) repository in your GitHub profile. This repo contains all the materials you need to reproduce the workshop later.
 
-2. Hands-on understanding of the [Azure AI Foundry](https://ai.azure.com) portal and relevant developer tools (e.g., Azure Developer CLI, Prompty, FastAPI) to streamline end-to-end development workflows for your own AI apps.
+2. Hands-on understanding of the Azure portal and relevant developer tools (e.g., Azure Developer CLI, FastAPI) to streamline end-to-end development workflows for your own AI apps.
 
 3. An understanding of how Azure AI services can be integrated into applications to create powerful AI-enabled applications.
