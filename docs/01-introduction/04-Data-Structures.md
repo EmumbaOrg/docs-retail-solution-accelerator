@@ -128,7 +128,7 @@ This graph structure allows AI agents to perform queries like:
 
 ---
 
-## Text-Based Graph Diagram
+## Graph Diagram
 
 The following diagram illustrates the relationships between the primary nodes in the `product_review_graph`:
 
