@@ -39,8 +39,7 @@ The **Apache AGE** extension transforms your PostgreSQL database into a graph da
 - Representation of complex relationships like:
   _User → wrote → Review → talks_about → Feature → belongs_to → Product_
 - Querying with **Cypher** to answer:
-  - *“Find phones with negative reviews about battery life”*
-  - *“Which headphones are praised for noise cancellation?”*
+  - *“Headphones with positive reviews about noise cancellation”*
 
 ---
 
@@ -55,15 +54,14 @@ In this module, you'll prepare your PostgreSQL database to support these AI-driv
   Set up `azure_ai` with connection credentials for Azure OpenAI
 
 - [ ] **Embed Intelligence into Data**
-  - Add vector columns to relevant tables
   - Generate and store embeddings for product content and reviews
   - Use `azure_ai` to extract sentiment and key features from raw reviews
 
 - [ ] **Enable Scalable Search**
   - Improve vector query performance with **DiskANN**
 
-- [ ] **Enable Scalable Search**
-  - Build **Cypher-based product queries** using **Apache AGE**
+- [ ] **Enable Graph-Based Reasoning with Apache AGE**
+  - Model relationships between users, reviews, features, and products as a graph
 
 ## Note on Manual Steps
 
