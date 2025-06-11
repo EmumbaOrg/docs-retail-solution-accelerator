@@ -45,7 +45,7 @@ The **Apache AGE** extension transforms your PostgreSQL database into a graph da
 
 ## What You'll Do in This Section
 
-In this module, you'll prepare your PostgreSQL database to support these AI-driven capabilities:
+In this module, we will walk through how our PostgreSQL database is setup via Bicep and Alembic migrations to support these AI-driven capabilities:
 
 - [ ] **Install Extensions**
   Install `azure_ai`, `pg_diskann`, `vector`, and `apache_age`
@@ -63,15 +63,12 @@ In this module, you'll prepare your PostgreSQL database to support these AI-driv
 - [ ] **Enable Graph-Based Reasoning with Apache AGE**
   - Model relationships between users, reviews, features, and products as a graph
 
-## Note on Manual Steps
+## Note on Steps
 
-> **Manual Configuration as an Optional Deep Dive**
-> While this section walks through how to manually install and configure PostgreSQL extensions (e.g., `azure_ai`, `pg_diskann`, `apache_age`) and generate embeddings or run feature extraction:
->
-> - These steps are included to show what is happening behind the scenes.
-> - In practice, the full setup is **automated using Infrastructure-as-Code (IaC)** via **Bicep scripts**, which provision the database and configure the required extensions.
-> - **Data ingestion**, **vector generation**, and **in-database AI processing** (e.g., feature and sentiment extraction) are executed during application bootstrapping using **Alembic**, a lightweight database migration tool for Python. Alembic ensures database schema consistency across environments.
-> - **Vector embeddings** for product content and reviews are generated using the **LlamaIndex** framework and stored in the database during these migrations.
+- This section is included to show what is happening behind the scenes.
+- The full setup is **automated using Infrastructure-as-Code (IaC)** via **Bicep scripts**, which provision the database and configure the required extensions.
+- **Data ingestion**, **vector generation**, and **in-database AI processing** (e.g., feature and sentiment extraction) are executed during application bootstrapping using **Alembic**, a lightweight database migration tool for Python. Alembic ensures database schema consistency across environments.
+- **Vector embeddings** for product content and reviews are generated using the **LlamaIndex** framework and stored in the database during these migrations.
 
 This walk-through will help you:
 
