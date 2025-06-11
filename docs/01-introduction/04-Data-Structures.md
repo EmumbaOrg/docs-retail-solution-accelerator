@@ -19,10 +19,8 @@ AgenticShop processes **user profiles, product catalogs, product variants, custo
 | `variant_attributes`             | Stores key-value attributes for each product variant (e.g., `attribute_name`: "Color", `attribute_value`: "Blue"). |
 | `product_reviews`                | Stores customer reviews, ratings, associated product, user, and AI-extracted sentiment and feature ID. |
 | `personalized_product_sections`  | Stores AI-generated personalized content (JSONB) for specific user-product combinations, including status and tracing IDs for AI workflows. |
-| `embeddings_products`            | Vector store holding embeddings for product data (e.g., name, description, category) to enable semantic search for products. (Typically named `data_pg_<your_product_collection_name>`) |
-| `embeddings_reviews`             | Vector store holding embeddings for product review text to enable semantic search and analysis of reviews. (Typically named `data_pg_<your_review_collection_name>`) |
-| `copilot_chat_sessions`     | Stores information about individual user chat sessions with an AI assistant (mem0). |
-| `copilot_chat_session_history` | Stores the history of messages (user queries, AI responses, tool calls) exchanged during each chat session (mem0). |
+| `embeddings_products`            | Vector store holding embeddings for product data (e.g., name, description, category) to enable semantic search for products. |
+| `embeddings_reviews`             | Vector store holding embeddings for product review text to enable semantic search and analysis of reviews. |
 
 ### How These Tables Work Together
 
@@ -31,8 +29,10 @@ AgenticShop processes **user profiles, product catalogs, product variants, custo
 3.  **Customer reviews** (`product_reviews`) are processed by AI to extract sentiment and identify key features discussed.
 4.  **Embeddings** (`embeddings_products`, `embeddings_reviews`) are generated from product and review text, enabling semantic search and retrieval.
 5.  AI agents generate **personalized content** (`personalized_product_sections`) based on user profiles, product data, reviews, and inventory status.
-6.  **Chat interactions** (`copilot_chat_sessions`, `copilot_chat_session_history`) are logged, allowing for conversational AI and context persistence.
 7.  **Apache AGE graph data** (derived from these tables) models relationships between products, reviews, and features for advanced analytics and explainable AI.
+
+
+![Database ERD Diagram](../img/solution-accelerator-database-erd.png)
 
 ---
 
@@ -54,7 +54,6 @@ AgenticShop integrates with Azure AI services, vector databases, and graph datab
 | `hobbies`, `lifestyle_preferences`, `search_history`, `age`, `gender`, `location` | `users`                                          | User profile attributes used by AI agents to understand user context and personalize recommendations/content.     |
 | `status`                        | `personalized_product_sections`                  | Tracks the state of AI content generation workflows (pending, running, done, failed).                             |
 | `phoenix_trace_id`              | `personalized_product_sections`                  | Links to observability platforms (like Arize Phoenix) for tracing and debugging AI agent execution.             |
-| `message`, `role`, `tool_calls` (within JSONB or structured fields) | `copilot_chat_session_history`                 | Content of chat messages, speaker role (user/AI), and tool invocations used for conversational AI memory and context. |
 
 ### Apache AGE Graph Relationships (`product_review_graph`)
 
@@ -75,7 +74,6 @@ AgenticShop integrates with Azure AI services, vector databases, and graph datab
 - **Personalized content (`personalization` in `personalized_product_sections`)** stores the direct output of AI agents, delivering tailored experiences to users.
 - **JSONB fields (`specifications`, `personalization`)** provide flexibility for AI agents to work with evolving data structures and store rich, nested information.
 - **Graph relationships in `product_review_graph`** support **GraphRAG (Retrieval-Augmented Generation)** and complex queries, allowing AI to understand interconnectedness (e.g., "show me products with highly-rated 'battery life' reviews").
-- **Chat history (`copilot_chat_session_history`)** provides memory for conversational AI, enabling more natural and context-aware interactions.
 - **Observability fields (`phoenix_trace_id`)** are crucial for monitoring and debugging complex multi-agent AI systems.
 
 ---
