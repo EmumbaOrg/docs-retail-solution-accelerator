@@ -1,4 +1,4 @@
-## 1.1 The App Scenario
+# 1.1 The App Scenario
 
 ### Personalizing E-Commerce with GenAI and Multi-Agent Systems
 
