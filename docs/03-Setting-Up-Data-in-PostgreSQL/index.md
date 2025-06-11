@@ -2,13 +2,11 @@
 
 The **AgenticShop** prototype showcases how **Generative AI (GenAI)** can be deeply integrated into your database infrastructure to power intelligent e-commerce experiences. Built on **Azure Database for PostgreSQL – Flexible Server**, this solution leverages a combination of **vector search**, **graph modeling**, and **in-database AI** to deliver advanced personalization and product discovery.
 
-## Why Generative AI for E-Commerce?
-
 GenAI uses **natural language processing (NLP)** techniques like **prompting** and **retrieval-augmented generation (RAG)** to understand user intent, extract actionable insights, and generate personalized responses. This enables use cases like:
 
 - Extracting structured features and sentiments from unstructured product reviews
 - Modeling user–product–review relationships as a graph
-- Powering multi-modal product discovery: *“Headphones with positive reviews about battery life”*
+- Powering multi-modal product discovery: *“Headphones with positive reviews about noise cancellation”*
 - Dynamically updating personalization profiles based on user conversations
 
 ## PostgreSQL Extensions Used in This POC
@@ -63,6 +61,8 @@ In this module, you'll prepare your PostgreSQL database to support these AI-driv
 
 - [ ] **Enable Scalable Search**
   - Improve vector query performance with **DiskANN**
+
+- [ ] **Enable Scalable Search**
   - Build **Cypher-based product queries** using **Apache AGE**
 
 ## Note on Manual Steps
