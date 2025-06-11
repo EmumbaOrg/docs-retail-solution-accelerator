@@ -13,6 +13,17 @@ To enable extensions in Azure Database for PostgreSQL Flexible Server, they must
 
 You can also review how this is done manually in [the official documentation](https://learn.microsoft.com/azure/postgresql/extensions/how-to-allow-extensions).
 
+=== "Azure CLI"
+
+```bash
+az postgres flexible-server parameter set \
+  --resource-group [YOUR_RESOURCE_GROUP] \
+  --server-name [YOUR_POSTGRESQL_SERVER] \
+  --subscription [YOUR_SUBSCRIPTION_ID] \
+  --name azure.extensions \
+  --value azure_ai,pg_diskann,vector,age
+```
+
 ---
 
 ## Install Extensions
