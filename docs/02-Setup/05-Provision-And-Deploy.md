@@ -81,13 +81,13 @@ You are now ready to provision your Azure resources and deploy the Woodgrove Ban
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
     - If you chose not to deploy Azure Container Apps, it will roughly take 10 minutes.
 
-    !!! failure "Not enough subscription CPU quota"
+    !!! failure "Not enough Azure OpenAI models quota"
 
         If you did not check your Azure OpenAI models quota prior to starting running the `azd up` command, you may receive a quota error message similar to the following:
 
-        _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity. _
+        _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
         
-	_(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 Standard, which is bigger than the current available capacity._
+	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 Standard, which is bigger than the current available capacity._
 
     !!! failure "Deployment failed: Postgresql server is not in an accessible state"
 
