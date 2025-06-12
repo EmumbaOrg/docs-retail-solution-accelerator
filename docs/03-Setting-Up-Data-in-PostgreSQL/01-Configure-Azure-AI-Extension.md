@@ -1,1 +1,0 @@
-# 3.1 Configure Azure AI Extension
