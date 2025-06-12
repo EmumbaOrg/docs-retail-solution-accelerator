@@ -21,7 +21,7 @@ You can find the complete source code here:
 
 The application has the following architecture:
 
-![High-level architecture diagram for the solution](https://github.com/user-attachments/assets/94d365c6-009f-4568-aa7a-ae94b1605c77)
+![High-level architecture diagram for the solution](../img/solution-accelerator-architecture.png)
 
 ---
 

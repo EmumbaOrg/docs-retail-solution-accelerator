@@ -38,7 +38,9 @@ To deploy the updated app, follow the steps below:
 
 5. Your updated apps will be built and deployed to Azure Container Apps.
 
-6. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
+6. On successful completion, you will see a `SUCCESS: ...` message on the console.
+
+7. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
 
     ```bash title=""
     azd deploy
