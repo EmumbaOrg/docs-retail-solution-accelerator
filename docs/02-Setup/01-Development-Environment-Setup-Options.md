@@ -1,13 +1,13 @@
-# 2.1 Development Environment Setup Options
+# 2.1 Development Environment Setup
 
-There are two main options for setting up your development environment, using a Dev Container or a Local Development Environment. It is recommended to use a Dev Container. Dev Containers are useful tools as they help minimize setup and configuration issues that may occur (sometimes known as the "it works on my machine" problem). There are a lot of prerequisite installation requirements for this solution accelerator, if you use the Dev Container option, many of these prerequisites are installed automatically inside the container without variability or risk of configuration drift.
+There are two main options for setting up your development environment, using a Dev Container or a Local Development Environment. **It is recommended to use a Dev Container**. Dev Containers are useful tools as they help minimize setup and configuration issues that may occur (sometimes known as the "it works on my machine" problem). There are a lot of prerequisite installation requirements for this solution accelerator, if you use the Dev Container option, many of these prerequisites are installed automatically inside the container without variability or risk of configuration drift.
 
 Alternatively, if you prefer to work locally without a dev container, you can install and configure each prerequisites yourself on your operating system.  The following sections walk you through
 how to do either option.
 
 For more background on dev containers, read the [documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
-## Option 1 (Recommended) - Setup Using Dev Container
+## Setup Dev Containers (Recommended)
 
 Using a `Dev Container` will minimize the amount of software you need to install on your local operating system.  The following is the minimum needed to build and run the `dev container`:
 
@@ -80,7 +80,7 @@ Throughout this workshop, you will use pgAdmin to run queries against your Postg
 
 2. Run the installer using the default options.
 
-## Option 2 - Setup Local Development Environment
+## Setup Local Development Environment
 
 ### Install Software
 
