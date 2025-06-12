@@ -2,9 +2,14 @@
 
 In this step, you'll create a new file `review_agent.py` in `src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews. Get ready to build the brains of your new agent!
 
+> **File location:** `src/agents/review_agent.py`
+> 
+> **Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain.
+
 ---
 
 ```python
+# --- Imports ---
 from llama_index.core import VectorStoreIndex
 from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.core.base.embeddings.base import BaseEmbedding
@@ -25,12 +30,24 @@ def get_reviews_agent(
     vector_store: BasePydanticVectorStore,
     filters: MetadataFilters,
 ):
+    """
+    Create and return a Reviews Agent for summarizing product reviews.
+    Args:
+        llm: The language model to use.
+        embed_model: The embedding model for vector search.
+        vector_store: The vector store containing review embeddings.
+        filters: Metadata filters for narrowing search results.
+    Returns:
+        Configured FunctionAgent for product review summarization.
+    """
 
+    # 1. Create an index from the vector store
     index = VectorStoreIndex.from_vector_store(
         vector_store=vector_store,
         embed_model=embed_model,
     )
 
+    # 2. Create a query engine for searching and summarizing reviews
     query_engine = index.as_query_engine(
         similarity_top_k=settings.TOP_K,
         verbose=settings.VERBOSE,
@@ -39,6 +56,7 @@ def get_reviews_agent(
         filters=filters,
     )
 
+    # 3. Wrap the query engine as a tool for the agent
     query_engine_tools = [
         QueryEngineTool(
             query_engine=query_engine,
@@ -51,6 +69,7 @@ def get_reviews_agent(
         ),
     ]
 
+    # 4. Create and return the FunctionAgent
     return FunctionAgent(
         name=AgentNames.REVIEWS_AGENT.value,
         llm=llm,

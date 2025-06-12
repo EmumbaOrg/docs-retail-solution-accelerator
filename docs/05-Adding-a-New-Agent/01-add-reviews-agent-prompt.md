@@ -2,9 +2,14 @@
 
 In this step, we will define a new prompt for the Reviews Agent in `src/agents/prompts.py`. This prompt will instruct the agent on how to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
 
+> **File location:** `src/agents/prompts.py`
+> 
+> **Purpose:** This prompt guides the Reviews Agent to generate concise, relevant, and structured summaries of product reviews, ensuring the output is always a JSON object with a summary and reasoning.
+
 ---
 
 ```python
+# --- Reviews Agent Prompt ---
 REVIEWS_AGENT_PROMPT = """
 You are an assistant specializing in analyzing and summarizing product reviews.
 Your task is to:
@@ -41,5 +46,6 @@ The JSON must follow this structure:
 
 ---
 
-**What this does:**
-This prompt guides the Reviews Agent to generate concise, relevant, and structured summaries of product reviews, ensuring the output is always a JSON object with a summary and reasoning. 🚀
+**Tip:**
+- Make sure to copy this prompt exactly as shown to avoid formatting issues in your agent's output.
+- This prompt is designed to enforce strict output formatting and relevance to user preferences.
