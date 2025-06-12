@@ -74,8 +74,13 @@ You are now ready to provision your Azure resources and deploy the Woodgrove Ban
         - **Select two Azure locations to use**: 
             - Select the Azure region into which resources should be deployed using the up and down arrow keys.
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
-        - **Enter a value for the `resourceGroupName`**: Enter `rg-postgresql-accelerator`, or a similar name.
-        - **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment.
+        - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
+
+2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment.
+
+    ```bash title=""
+    Do you want to deploy Azure Container Apps? (y/n): no
+    ```
 
 2. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.

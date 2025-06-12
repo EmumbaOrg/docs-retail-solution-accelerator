@@ -6,16 +6,18 @@ The Setup section of this guide will tell you how to choose this deployment opti
 
 Here's a breakout of the _estimated cost_ of Azure resources deployed for this solution:
 
-- Azure Database for PostgreSQL:
-- Azure Container Registry: 
-- Azure Container Apps: 
-- Azure OpenAI Service: Dependent upon usage of `chatgpt-4o` and `text-embedding-ada-002` models.
-- Azure Keyvault:
+    | Service Name | Cost per day ($) |
+    | :-- | :-- |
+    | Azure Flexible server for PostgreSQL | ~4.31 |
+    | Azure Container Registry | ~0.167 |
+    | Azure Keyvault | ~0.18 |
+    | Azure Container Apps | ~4.57 |
+    | Azure OpenAI Service | Pay-as-you-go |
 
 To summarize the estimated monthly cost:
 
-- Monthly cost for Azure deployment: 
-- Monthly cost for local deployment: 
+- Per day cost for Azure deployment: ~$9.227 excluding OpenAI models costs
+- Per day cost for local deployment: ~$4.31 excluding OpenAI models costs
 
 !!! warning "The above costs are only estimates."
 

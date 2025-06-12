@@ -90,7 +90,7 @@ The required development environment uses a Visual Studio (VS) Code editor with 
 - [X] Azure command-line tools
 - [X] Git
 - [X] Python 3.12
-- [X] Node.js
+- [X] Node.js and npm
 - [X] Docker desktop
 - [X] Visual Studio Code and required extensions
 - [X] pgAdmin

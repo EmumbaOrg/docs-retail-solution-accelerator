@@ -1,6 +1,9 @@
 # Deploy Apps on Azure
 
-The workshop began with a _development_ version of the _Agentic Shop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure.
+The workshop began with a _development_ version of the _Agentic Shop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
+
+    !!! info "Optional deployment on Azure!"
+        This step is optional and is not mandatory for the functioning of this solution accelerator. Using this step can help you experience the app functionality when its deployed in actual production environment.
 
 Because you used `azd` for provisioning and deployment, this is as simple as calling `azd up` (to push all changes in both infrastructure and application). After successful deployment on Azure Container Apps, running `azd deploy` would simply rebuild and deploy the application changes only you made in this project.
 
