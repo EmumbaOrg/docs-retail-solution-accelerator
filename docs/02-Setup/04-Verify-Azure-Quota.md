@@ -12,7 +12,7 @@ In this task, you must request Azure OpenAI models quota in the region that you 
 
 1. To request Azure OpenAI models quota, you must [submit a form](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota)
 
-![quota-request](../img/request-quota)
+![quota-request](../img/request-quota.png)
 
 2. You shall see a form. Input the necessary information about quota you are requesting. The quota required for Agentic Shop is following:
 
