@@ -1,4 +1,4 @@
-# Redeploy App to Azure
+# Deploy Apps on Azure
 
 The workshop began with a _development_ version of the _Agentic Shop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure.
 
@@ -14,7 +14,7 @@ Because you used `azd` for provisioning and deployment, this is as simple as cal
 
     In other words, use `azd up` when setting everything up from the beginning and `azd deploy` when updating an existing application deployment.
 
-## Deploy the Updated App
+## Deploy the Updated Apps
 
 To deploy the updated app, follow the steps below:
 
