@@ -1,4 +1,4 @@
-# Step 5: Expose the Agent in the Module Init
+# 5.6: Expose the Agent in the Module Init
 
 In this step, we will update `src/agents/__init__.py` to import and expose the `get_reviews_agent` function. This makes the function available for import elsewhere in your codebase, allowing other modules to use the Reviews Agent.
 

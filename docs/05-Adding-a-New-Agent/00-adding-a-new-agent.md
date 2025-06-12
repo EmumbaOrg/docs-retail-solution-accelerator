@@ -1,4 +1,4 @@
-# 5. Adding a New Agent: Guide Overview
+# 5.1 Adding a New Agent: Guide Overview
 
 Welcome to the "Adding a New Agent" module! In this hands-on guide, you'll embark on an exciting journey to extend your multi-agent system by building and integrating a brand new Reviews Agent. This module is designed to give you practical experience with real-world tools and workflows, empowering you to customize and scale intelligent systems.
 

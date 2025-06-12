@@ -1,4 +1,4 @@
-# Step 1: Add the Reviews Agent Prompt
+# 5.2: Add the Reviews Agent Prompt
 
 In this step, we will define a new prompt for the Reviews Agent in `src/agents/prompts.py`. This prompt will instruct the agent on how to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
 

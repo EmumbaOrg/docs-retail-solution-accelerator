@@ -1,4 +1,4 @@
-# Step 4: Create the Reviews Agent File
+# 5.5: Define the Review Agent in Separate File.
 
 In this step, we will create a new file `review_agent.py` in `src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 

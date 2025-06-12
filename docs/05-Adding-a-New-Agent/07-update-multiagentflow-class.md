@@ -1,4 +1,4 @@
-# Step 7: Update the MultiAgentFlow Class
+# 5.8: Update the MultiAgentFlow Class
 
 In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
