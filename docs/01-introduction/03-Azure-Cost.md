@@ -4,8 +4,10 @@ The Microsoft Azure resources you deploy will be provisioned within your Azure S
 
 The Setup section of this guide will tell you how to choose this deployment option.
 
-Here's a breakout of the _estimated cost_ of Azure resources deployed for this solution:
     !!! note "Review the estimated costs of deployed resources."
+
+        Here's a breakout of the _estimated cost_ of Azure resources deployed for this solution:
+        
         | Service Name | Cost per day ($) |
         | :-- | :-- |
         | Azure Flexible server for PostgreSQL | ~4.31 |
