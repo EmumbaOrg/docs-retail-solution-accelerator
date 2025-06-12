@@ -1,6 +1,6 @@
-# 5.8: Update the MultiAgentFlow Class
+# 5.8 🔄🧩 Update the MultiAgentFlow Class
 
-In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
+In this step, you'll update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents. Let's connect all the moving parts!
 
 ---
 
@@ -86,19 +86,14 @@ ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsComp
 ---
 
 **What this does:**
-These changes integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
+These changes integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents. 🤝🚦
 
 ---
 
 **Further Explanation:**
 
-In this step, we are integrating the Reviews Agent into the LlamaIndex workflow system. According to the [LlamaIndex Workflows documentation](https://docs.llamaindex.ai/en/stable/module_guides/workflow/#workflows), a workflow is an event-driven abstraction that chains together several steps, each responsible for handling specific event types and emitting new events. 
+- 🧩 Each function decorated with `@step` is a workflow step, handling specific events and emitting new ones.
+- 🔄 The Reviews Agent is now a modular, event-driven part of your system, ready to collaborate with other agents!
+- 👀 You get observability and validation for every step, making debugging and extension a breeze.
 
-Here's how the code in this step leverages LlamaIndex workflows:
-
-- The `MultiAgentFlow` class is structured as a workflow, where each function decorated with `@step` represents a step in the workflow. Each step listens for certain event types (like `ReviewsEvent`) and produces new events (like `ReviewsCompletedEvent`).
-- By adding the Reviews Agent, we introduce a new step (`review`) that is triggered when a `ReviewsEvent` is emitted. This step processes the event, runs the Reviews Agent, and emits a `ReviewsCompletedEvent` with the result.
-- The workflow system ensures that each step only runs when the appropriate event is ready, and the input/output types are validated automatically.
-- This modular, event-driven approach allows you to flexibly chain together multiple agents and logic, making it easy to extend or modify the workflow as your application grows.
-
-In summary, this step connects the Reviews Agent to the overall multi-agent workflow, enabling event-driven, modular, and observable orchestration of agent logic using LlamaIndex's workflow system.
+You're building a truly flexible, intelligent system—great job!

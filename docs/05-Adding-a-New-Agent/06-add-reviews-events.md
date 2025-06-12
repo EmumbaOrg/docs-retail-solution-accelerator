@@ -1,6 +1,6 @@
-# 5.7: Add Reviews Events
+# 5.7 🛎️📣 Add Reviews Events
 
-In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+In this step, you'll define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent. Get ready to make your agent event-driven!
 
 ---
 
@@ -15,4 +15,4 @@ class ReviewsCompletedEvent(Event):
 ---
 
 **What this does:**
-These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent. 🕹️📊
