@@ -1,6 +1,6 @@
-# 7.0: Add tool for Search-with-Sentiment
+# 7.0: Create tool for Search-with-Sentiment
 
-In this step, we will add search-with-sentiment tool in the user_query_agent in `backend/src/agents/user_query_agent.py`. This utilizes the azure_ai and cypher query through 'get_feature' and 'fetch_product_with_feature_and_sentiment_count ' functions respectively.
+In this step, we will create search-with-sentiment tool in the user_query_agent in `backend/src/agents/user_query_agent.py`. This utilizes the azure_ai and cypher query through 'get_feature' and 'fetch_product_with_feature_and_sentiment_count ' functions respectively.
 
 > **File location:** `backend/src/agents/user_query_agent.py`
 > 
