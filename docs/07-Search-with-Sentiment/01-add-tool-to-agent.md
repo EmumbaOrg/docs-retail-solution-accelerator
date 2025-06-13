@@ -25,7 +25,7 @@ add `self.query_reviews_with_sentiment`
 def _get_tools(self) -> list:
         tools_func = [
             self.query_about_product,
-            self.query_reviews_with_sentiment
+            self.query_reviews_with_sentiment,
             self.search_products,
         ]
         return [
