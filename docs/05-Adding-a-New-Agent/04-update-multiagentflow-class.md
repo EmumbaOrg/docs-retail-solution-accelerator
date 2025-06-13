@@ -1,9 +1,46 @@
-# 5.8: Update the MultiAgentFlow Class
+# 5.5: Update the MultiAgentFlow Class
+
+## Understanding MultiAgent Architecture Using LlamaIndex Workflows
+
+LlamaIndex workflows are designed around an event-driven architecture. The workflow begins when a start event is triggered. Each step in the workflow is defined by a function decorated with the `@step` decorator. These step functions are activated by specific event types, which means the workflow decides which step to execute next based on the event it receives.
+
+Each step processes its input event and returns a new event. This returned event determines the next step in the workflow. Steps can emit multiple events, and a single step can be set up to listen for several different event types. This flexibility allows multiple steps to run in parallel, enabling efficient and scalable workflows.
+
+In the context of multi-agent systems, each step typically interacts with a different agent. By leveraging this event-driven approach, you can run several agents at the same time, making your workflow both modular and highly parallelized. This structure makes it easy to add, remove, or modify agents as your application evolves.
+
+## Define Reviews Events
+
+In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+
+> **File location:** `backend/src/agents/multi_agent_workflow.py` (or wherever your workflow/event classes are defined)
+> 
+> **Purpose:** These classes represent the start and completion of a review agent task, enabling event-driven orchestration in your workflow.
+
+---
+
+```python
+# --- Event Classes for Reviews Agent ---
+class ReviewsEvent(Event):
+    self_reflection: Optional[str] = None
+    prev_result: Optional[str] = None
+
+class ReviewsCompletedEvent(Event):
+    result: str
+```
+
+---
+
+**What this does:**
+These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+
+---
+
+## Intergrade Reviews Agent in MultiAgentFlow Class
 
 In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
-> **File location:** `src/agents/multi_agent_workflow.py`
->
+> **File location:** `backend/src/agents/multi_agent_workflow.py`
+> 
 > **Purpose:** This step wires your Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent.
 
 ---

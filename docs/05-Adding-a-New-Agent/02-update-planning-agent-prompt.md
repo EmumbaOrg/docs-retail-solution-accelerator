@@ -1,9 +1,9 @@
-# 5.3 Add the Reviews Agent Description in the Planning Agent Prompt
+# 5.3 Update Planning Agent Prompt
 
 In this step, we will update the `PLANNING_AGENT_PROMPT` to include a description of the Reviews Agent and update the example agents list in the JSON response. This ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
 
-> **File location:** `src/agents/prompts.py` (or wherever your planning agent prompt is defined)
->
+> **File location:** `backend/src/agents/prompts.py` (or wherever your planning agent prompt is defined)
+> 
 > **Purpose:** This step makes sure the planner knows about your new agent and can suggest it for relevant user queries.
 
 ---

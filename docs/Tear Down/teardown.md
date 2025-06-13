@@ -7,7 +7,7 @@
 The **[Postgres Agentic Shop](https://github.com/Azure-Samples/postgres-agentic-shop)** sample is an actively updated project that will reflect the latest features and best practices for code-first development of multi-agent workflows on the Azure AI platform. **[Visit the repo](https://github.com/Azure-Samples/postgres-agentic-shop)** or click the button below, to give us a ⭐️.
 
 <!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/Azure-Samples/postgres-agentic-shop" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star Azure-Samples/postgres-agentic-shop on GitHub"> Give the PostgreSQL Solution Accelerator a Star!</a>
+<a class="github-button" href="https://github.com/Azure-Samples/postgres-agentic-shop" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star Azure-Samples/postgres-agentic-shop on GitHub"> Give the AgenticShop Solution Accelerator a Star!</a>
 
 ## Provide Feedback
 
@@ -19,7 +19,7 @@ Once you have completed this workshop, delete the Azure resources you created. Y
 
 1. In VS Code, open a new integrated terminal prompt.
 
-2. At the terminal prompt, execute the following command to delete the resources created by the deployment script:
+2. At the terminal prompt in the root directory of the project, execute the following command to delete the resources created by the `azd` workflow:
 
     !!! danger "Execute the following Azure Developer CLI command to delete resources!"
 

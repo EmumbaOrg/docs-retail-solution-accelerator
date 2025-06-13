@@ -42,7 +42,7 @@ To get the most of of this solution accelerator, you should have:
     - You will use the Azure portal to retrieve endpoints, keys, and other values associated with the resources you deploy for this workshop.
 3. **Familiarity with PostgreSQL**
     - The workshop assumes you are familiar with basic SQL syntax.
-    - You will be executin SQL statements to alter tables, create extensions, and run queries against tables.
+    - You will be executing SQL statements to alter tables, create extensions, and run queries against tables.
 
 ### Preferred knowledge and experience
 
