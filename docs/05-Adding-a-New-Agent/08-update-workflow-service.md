@@ -1,6 +1,6 @@
-# 5.9 ⚙️🔌 Update Workflow Service
+# 5.9: Update Workflow Service
 
-In this step, you'll re-import `get_reviews_agent` in `src/services/agent_workflow.py` and pass it to the `MultiAgentFlow` when initializing. This ensures the Reviews Agent is properly initialized and included in the workflow service. Let's plug your agent into the system!
+In this step, we will re-import `get_reviews_agent` in `src/services/agent_workflow.py` and pass it to the `MultiAgentFlow` when initializing. This ensures the Reviews Agent is properly initialized and included in the workflow service.
 
 > **File location:** `src/services/agent_workflow.py`
 >
@@ -32,7 +32,4 @@ reviews_agent=get_reviews_agent(
 ---
 
 **What this does:**
-This ensures the Reviews Agent is properly initialized and included in the workflow service. 🔋🚀
-
-**Tip:**
-- Double-check that all dependencies (LLM, embedding model, vector store, filters) are correctly passed to your agent for smooth operation!
+This ensures the Reviews Agent is properly initialized and included in the workflow service.
