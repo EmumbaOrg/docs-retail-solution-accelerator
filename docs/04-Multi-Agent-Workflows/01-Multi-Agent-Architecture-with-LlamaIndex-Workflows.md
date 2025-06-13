@@ -21,16 +21,13 @@ Workflows offer the following advantages:
 
 At a high level, a LlamaIndex `Workflow` consists of:
 
-1. **Steps** – These are the individual units of execution in the workflow. Each step performs a specific task and can wrap:
-
-   - An **Agent** for complex reasoning and multi-turn capabilities
-   - A **Function** for logic such as formatting or transforming data
-   - A **Tool** for invoking structured tools
-   - A **Router** to direct flow based on logic or message content
-
-2. **Events** – Events are structured messages that trigger workflow steps. Each step listens for one or more `EventType`s as input and emits one or more `EventType`s as output. Events carry the context that allows the workflow to evolve dynamically.
-
-3. **Workflow Execution** – Execution starts with `workflow.run(input_event)`, which dispatches the initial event. From there, steps respond to incoming events, perform their tasks, and emit new events that trigger downstream steps. This event-driven chaining enables flexible, reactive workflows.
+- **Steps** – These are the individual units of execution in the workflow. Each step performs a specific task and can wrap:
+    - An **Agent** for complex reasoning and multi-turn capabilities
+    - A **Function** for logic such as formatting or transforming data
+    - A **Tool** for invoking structured tools
+    - A **Router** to direct flow based on logic or message content
+- **Events** – Events are structured messages that trigger workflow steps. Each step listens for one or more `EventType`s as input and emits one or more `EventType`s as output. Events carry the context that allows the workflow to evolve dynamically.
+- **Workflow Execution** – Execution starts with `workflow.run(input_event)`, which dispatches the initial event. From there, steps respond to incoming events, perform their tasks, and emit new events that trigger downstream steps. This event-driven chaining enables flexible, reactive workflows.
 
 Each step is defined with clear input and output events, enabling modular, scalable orchestration of multiple agents and tools.
 
@@ -40,9 +37,9 @@ Each step is defined with clear input and output events, enabling modular, scala
 
 In this workshop, you’ll implement or inspect:
 
-- A multi-agent `Workflow` that connects planning, review analysis, personalization, and presentation logic.
-- A **Review Agent step** that processes sentiment and features from product reviews.
+- A multi-agent `Workflow` that connects planning, personalization, inventory and presentation logic is already provided.
+- A **Review Agent** that answers users query based on product reviews.
 - An **event-based system** where steps react to emitted data rather than executing in a rigid sequence.
-- Integration of memory and retrieval (RAG) using **LlamaIndex tools and context**.
+- Integration of memory and retrieval (RAG)
 
 By structuring your agents using LlamaIndex workflows, you'll gain not only modularity and maintainability—but also the ability to scale your application to handle more complex tasks with intelligent orchestration.

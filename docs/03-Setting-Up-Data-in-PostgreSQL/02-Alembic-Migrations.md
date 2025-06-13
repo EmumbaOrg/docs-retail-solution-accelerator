@@ -1,6 +1,6 @@
 # 3.2 Alembic Migrations
 
-In this section, you'll learn about how **Alembic** is used to manage the database schema and AI workflows in the AgenticShop backend.
+In this section, you'll learn about how **Alembic** is used to manage the database schema in the AgenticShop backend.
 
 ## What is Alembic?
 
