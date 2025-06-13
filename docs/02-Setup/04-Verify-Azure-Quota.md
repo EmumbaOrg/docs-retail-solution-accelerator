@@ -21,11 +21,11 @@ In this task, you must request Azure OpenAI models quota in the region that you 
 
 ![quota-form](../img/quota-form.png)
 
-2. Once submitted, you shall receive a confimation mail on the email that you have added in the form to vet the quota request. Confirm the quota request.
+3. Once submitted, you shall receive a confimation mail on the email that you have added in the form to vet the quota request. Confirm the quota request.
 
 ![vet-mail](../img/vet-mail.png)
 
-3. Once the quota is approved, you shall receive another email stating that your quota has been approved. This may take some time depending on the requests Azure support team receives. 
+4. Once the quota is approved, you shall receive another email stating that your quota has been approved. This may take some time depending on the requests Azure support team receives. 
 
     !!! failure "Not enough Azure OpenAI models quota"
 

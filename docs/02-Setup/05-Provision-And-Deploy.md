@@ -36,7 +36,7 @@ your dev container command line, not your local operating system command line.
 
 Before running the `azd up` command, you must authenticate your VS Code environment to Azure.
 
-1. To create Azure resources, you need to be authenticated from VS Code. Open a new integrated terminal in VS Code. Then, complete the following steps:
+To create Azure resources, you need to be authenticated from VS Code. Open a new integrated terminal in VS Code. Then, complete the following steps:
 
 ### Authenticate with `az` for post-provisioning tasks
 
@@ -110,11 +110,11 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         It's possible a `server is not in an accessible state` error may occur when the Azure Bicep deployment attempts to add the PostgreSQL Admin User after the PostgreSQL Server has been provisioned. This can occur if the PostgreSQL server is still being provisioned in the Azure backend, but the Deployment returned that it's successful already. If you encounter this error, simply re-run the `azd up` command.
 
-        ```
+        ```bash title=""
         ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to subscription:
 
         Deployment Error Details:
-        AadAuthOperationCannotBePerformedWhenServerIsNotAccessible: The server 'psql-datacvdjta5pfnc5e' is not in an accessible state to perform Azure AD Principal operation. Please make sure the server is accessible before executing Azure AD Principal operations.
+        AadAuthOperationCannotBePerformedWhenServerIsNotAccessible: The server 'dev-cvdjta5pfnc5e' is not in an accessible state to perform Azure AD Principal operation. Please make sure the server is accessible before executing Azure AD Principal operations.
         ```
 
 3. On successful completion you will see a `SUCCESS: ...` message on the console.

@@ -48,7 +48,7 @@ Git enables you to manage your code by tracking changes, maintaining a version h
 
 Docker Desktop is an application that allows you to build, share, and run containerized applications on your local machine. It provides a user-friendly interface to manage Docker containers, images, and networks. By streamlining the containerization process, Docker Desktop helps you develop, test, and deploy applications consistently across different environments.
 
-Download and install Docker Desktop for your OS:
+1. Download and install Docker Desktop for your OS:
 
     - [Linux](https://docs.docker.com/desktop/setup/install/linux/)
     - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
