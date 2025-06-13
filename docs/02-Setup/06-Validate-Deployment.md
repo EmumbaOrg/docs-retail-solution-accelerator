@@ -78,6 +78,6 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 5. Ensure that the models that you have deployed have the required quota and deployment type.
 
-![quota](../img/model-quota.png)
+    ![quota](../img/model-quota.png)
 
 !!! tip "Leave the Azure Portal open. You will revisit it later."

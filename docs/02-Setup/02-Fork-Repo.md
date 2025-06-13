@@ -14,13 +14,13 @@ Forking in GitHub refers to creating a personal copy of a public repository, whi
 
 2. Select the **Fork** button to create a copy of the repo in your GitHub profile.
 
-![repo-fork](../img/github-fork.png)
+    ![repo-fork](../img/github-fork.png)
 
 3. Login with your GitHub profile, if prompted.
 
 4. On the **Create a new fork** page, select **Create fork** to make a copy of the repo under your GitHub profile.
 
-![create-fork](../img/create-fork.png)
+    ![create-fork](../img/create-fork.png)
 
 5. The forked repo will open within your GitHub profile.
 
@@ -28,7 +28,7 @@ Forking in GitHub refers to creating a personal copy of a public repository, whi
 
 1. On the GitHub page for your fork, select the **Code** button and then select the **Copy URL to clipboard** button next to the repo's HTTPS clone link:
 
-![copy-url](../img/copy-url.png)
+    ![copy-url](../img/copy-url.png)
 
 2. Open a new command prompt and change directories to the folder in which you want to clone the repo (e.g., D:\repos).
 
