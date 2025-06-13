@@ -1,6 +1,9 @@
 # 2.5 Provision and Deploy
 
-You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details.
+You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
+
+- [X] Authenticated with Azure
+- [X] Provisioned Azure resources and deployed the AgenticShop solution
 
 ## Start Docker Desktop
 
@@ -10,10 +13,10 @@ Docker Desktop is used to create and deploy the containers used for running the 
 
 2. Look for the Docker icon in your system tray or menu bar to confirm it is running.
 
-## Build and Open Dev Container (Only if you chosen the Dev Container Setup Option Previously)
+## Build and Open Dev Container (Only if you chose the Recommended Dev Container Setup Option Previously)
 
 In this step you will open and build your dev container in VS Code.  After you complete this, you can complete the remaining steps in this page by running all commands inside
-your dev container command line not your local operating system command line.
+your dev container command line, not your local operating system command line.
 
 1. Open VS Code
 2. Open Folder of your locally cloned repo
@@ -22,7 +25,7 @@ your dev container command line not your local operating system command line.
 
 !!! info "Dev Container Build Process"
 
-    This will kick off a docker build process where your dev container will be built by docker desktop.  Let this process run, it may take a few minutes the first time.
+    This will kick off a docker build process where your dev container will be built by docker desktop.  Let this process run, it may take a few minutes.
     You will see VS Code flash and load into a new project environment.  Once the process completes, you can open a new terminal in VS Code.  You will notice the shell will
     look a little different as now you are in an Ubuntu Linux Container.
 
@@ -55,11 +58,20 @@ Before running the `azd up` command, you must authenticate your VS Code environm
     azd auth login
     ```
 
+    !!! info "Alternative if above command fails"
+
+        If the above command fails, use the following flag which will provide a code in the terminal. Copy this code for later use.
+        On pressing enter, a window will open where paste the code you previously copied and you shall be able to login.
+
+        ```bash title=""
+        azd auth login --use-device-code
+        ```
+
 ## Provision Azure Resource Without Apps Deployment
 
-You are now ready to provision your Azure resources and deploy the Woodgrove Bank solution.
+You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the workshop to deploy apps on Azure infrastructure.
 
-1. Use `azd up` to provision your Azure infrastructure and deploy the web application to Azure.
+1. Use `azd up` to provision your Azure infrastructure and skip deployment of apps on Azure infrastructure.
 
     ```bash title=""
     azd up
@@ -71,12 +83,12 @@ You are now ready to provision your Azure resources and deploy the Woodgrove Ban
         - The environment for the `azd up` command ensures configuration files, environment variables, and resources are provisioned and deployed correctly.
         - Should you need to delete the `azd` environment, locate and delete the `.azure` folder at the root of the project in the VS Code Explorer.
         - **Select an Azure Subscription to use**: Select the Azure subscription you are using for this workshop using the up and down arrow keys.
-        - **Select two Azure locations to use**: 
+        - **Select two Azure locations to use**: Ensure both selected regions are same. 
             - Select the Azure region into which resources should be deployed using the up and down arrow keys.
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
         - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
 
-2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment.
+2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
     ```bash title=""
     Do you want to deploy Azure Container Apps? (y/n): no

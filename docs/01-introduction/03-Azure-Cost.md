@@ -1,12 +1,12 @@
 # 1.3 Azure Cost Estimate
 
-The Microsoft Azure resources you deploy will be provisioned within your Azure Subscription. You are responsible for the cost of those services. The cost of the solution will vary depending on the Azure region selected and which deployment options you choose.
+The Microsoft Azure resources you deploy will be provisioned within your Azure Subscription. You are responsible for the cost of those services. The cost of the solution will vary depending on the Azure region selected and deployment options you choose.
 
-The Setup section of this guide will tell you how to choose this deployment option.
+The Setup section of this guide will tell you how to choose the deployment options.
 
 !!! note "Review the estimated costs of deployed resources."
 
-    Here's a breakout of the _estimated cost_ of Azure resources deployed for this solution:
+    Here's a breakdown of the _estimated costs_ of Azure resources deployed for this solution:
 
     | Service Name                          | Cost per day ($) |
     | ------------------------------------- | ---------------- |
@@ -23,4 +23,4 @@ To summarize the estimated monthly cost:
 
 !!! warning "The above costs are only estimates."
 
-    The costs provided here are estimates based on running the solution accelerator using the provided configuration and are intended to provide general guidance about the costs associated with running the solution accelerator. Depending on deployment options, region selection, and data sizes, individual costs will vary.
+    The costs provided here are estimates based on running the solution accelerator using the provided configuration and are intended to provide general guidance about the costs associated with running the solution accelerator. Depending on deployment options, region selection, and requests generated, individual costs will vary.

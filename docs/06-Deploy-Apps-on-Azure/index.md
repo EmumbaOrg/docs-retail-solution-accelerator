@@ -3,7 +3,8 @@
 The workshop began with a _development_ version of the _Agentic Shop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
 
     !!! info "Optional deployment on Azure!"
-        This step is optional and is not mandatory for the functioning of this solution accelerator. Using this step can help you experience the app functionality when its deployed in actual production environment.
+
+        This step is optional and is not mandatory for the functioning of this solution accelerator. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
 
 Because you used `azd` for provisioning and deployment, this is as simple as calling `azd up` (to push all changes in both infrastructure and application). After successful deployment on Azure Container Apps, running `azd deploy` would simply rebuild and deploy the application changes only you made in this project.
 
@@ -33,7 +34,7 @@ To deploy the updated app, follow the steps below:
     azd up
     ```
 
-4. When the `azd` workflow runs and asks you to enter the choice for the deployment of Azure Container Apps, enter `yes` to deploy updated apps on Azure Container Apps. 
+4. When the `azd` workflow runs and selec the same region and resource group that you created before. The `azd` workflow will ask you to enter the choice for the deployment of Azure Container Apps, enter `yes` to deploy updated apps on Azure Container Apps. 
 
     ```bash title=""
     Do you want to deploy Azure Container Apps? (y/n): yes
@@ -60,7 +61,7 @@ To deploy the updated app, follow the steps below:
 3. In the _Agentic Shop_ landing page, select any **User** and you can see the home page where all the products are listed!
 
 
-4. You can select any products and the UI will show you the details of the products powered by AI models.
+4. You can select any products and the UI will show you the details and personalized recommendations of the products powered by AI models.
 
 
 ---

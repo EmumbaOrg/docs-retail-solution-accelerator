@@ -3,8 +3,6 @@
 This solution requires an appropriate region where Azure OpenAI models are supported and those regions should contain required quota for `GPT-4o` and `text-embedding-ada-002` models. In this section, you should have:
 
 - [X] Verified your Azure OpenAI Models quota
-- [X] Authenticated with Azure
-- [X] Provisioned Azure resources and deployed the starter solution
 
 ## Request Azure OpenAI Models Quota¶
 
