@@ -20,4 +20,12 @@ By the end of this guide, you'll have:
 6. **Update the MultiAgentFlow Class:** Integrate your agent into the event-driven workflow, enabling seamless collaboration with other agents.
 7. **Update Workflow Service:** Wire up your agent in the workflow service for full system integration.
 
+---
+
+Before we begin, let's examine the current workflow without the **Reviews Agent**. Reviewing the debug flow diagram below, you'll notice that the Reviews Agent is not yet part of the multi-agent architecture. This will help you understand the baseline system before we integrate the new agent.
+
+![Workflow Without Reviews Agent](../img/workflow-without-review-agent.png)
+
+---
+
 Get ready to dive in, experiment, and see your new agent come to life as part of a robust, intelligent multi-agent system. Let's get started!

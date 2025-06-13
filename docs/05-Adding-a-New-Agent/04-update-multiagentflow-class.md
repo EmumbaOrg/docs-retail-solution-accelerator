@@ -1,5 +1,13 @@
 # 5.5: Update the MultiAgentFlow Class
 
+## Understanding MultiAgent Architecture Using LlamaIndex Workflows
+
+LlamaIndex workflows are designed around an event-driven architecture. The workflow begins when a start event is triggered. Each step in the workflow is defined by a function decorated with the `@step` decorator. These step functions are activated by specific event types, which means the workflow decides which step to execute next based on the event it receives.
+
+Each step processes its input event and returns a new event. This returned event determines the next step in the workflow. Steps can emit multiple events, and a single step can be set up to listen for several different event types. This flexibility allows multiple steps to run in parallel, enabling efficient and scalable workflows.
+
+In the context of multi-agent systems, each step typically interacts with a different agent. By leveraging this event-driven approach, you can run several agents at the same time, making your workflow both modular and highly parallelized. This structure makes it easy to add, remove, or modify agents as your application evolves.
+
 ## Define Reviews Events
 
 In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
