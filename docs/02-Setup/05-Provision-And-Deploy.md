@@ -117,4 +117,4 @@ You are now ready to provision your Azure resources without deployment of Agenti
         AadAuthOperationCannotBePerformedWhenServerIsNotAccessible: The server 'dev-cvdjta5pfnc5e' is not in an accessible state to perform Azure AD Principal operation. Please make sure the server is accessible before executing Azure AD Principal operations.
         ```
 
-3. On successful completion you will see a `SUCCESS: ...` message on the console.
+3. On successful completion you will see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message on the console.

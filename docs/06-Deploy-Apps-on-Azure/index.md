@@ -22,9 +22,9 @@ Because you used `azd` for provisioning and deployment, this is as simple as cal
 
 To deploy the updated app, follow the steps below:
 
-1. Open a new integrated terminal in Visual Studio Code.
+1. Depending on the deployment option you selected previously, open the integrated terminal in Visual Studio Code for dev container option or `sh/pwsh` terminal for local dev environment option.
 
-2. Ensure you are at the root of your repository.
+2. Navigate to the root directory of your repository.
 
 3. Execute this command to deploy your application with changes.
 
@@ -34,7 +34,7 @@ To deploy the updated app, follow the steps below:
     azd up
     ```
 
-4. When the `azd` workflow runs and selec the same region and resource group that you created before. The `azd` workflow will ask you to enter the choice for the deployment of Azure Container Apps, enter `yes` to deploy updated apps on Azure Container Apps. 
+4. When the `azd` workflow runs and select the same region and resource group that you created before. The `azd` workflow will ask you to enter the choice for the deployment of Azure Container Apps, enter `yes` to deploy updated apps on Azure Container Apps. 
 
     ```bash title=""
     Do you want to deploy Azure Container Apps? (y/n): yes
@@ -46,7 +46,7 @@ To deploy the updated app, follow the steps below:
 
 6. At this point, the infrastructure has been provisioned and now your updated apps will be built and deployed to Azure Container Apps. This is the build and deploy phase or azd workflow.
 
-7. On successful completion, you will see a `SUCCESS: Your application was deployed to Azure in 10 minutes 35 seconds.` message on the console.
+7. On successful completion, you will see a `SUCCESS: Your application was deployed to Azure in xx minutes xx seconds.` message on the console.
 
 8. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
 

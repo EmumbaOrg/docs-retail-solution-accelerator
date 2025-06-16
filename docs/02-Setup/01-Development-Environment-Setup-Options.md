@@ -80,7 +80,7 @@ Throughout this workshop, you will use pgAdmin to run queries against your Postg
 
 2. Run the installer using the default options.
 
-## Setup Local Development Environment
+## Option 2; Setup Local Development Environment
 
 ### Install Software
 

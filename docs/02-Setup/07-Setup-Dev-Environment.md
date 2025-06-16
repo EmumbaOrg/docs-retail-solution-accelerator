@@ -1,4 +1,4 @@
-# 2.7 Option 2: Setup Local Dev Environment
+# 2.7 Setup Local Dev Environment
 
 In this step, you will configure your Python development environment in Visual Studio Code. At the end of this step, you should have:
 
@@ -6,7 +6,11 @@ In this step, you will configure your Python development environment in Visual S
 - [X] Create and Populated `.env` Files for the Apps.
 - [X] Ran the Apps Locally.
 
-## Install required libraries
+## Dev Containers (Recommended)
+
+## Local Dev Environment
+
+### Install Required Libraries
 
 The `pyproject.toml` file in the `backend` folder contains the set of Python libraries needed to run the Python components of the solution accelerator.
 
@@ -28,7 +32,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
     npm install
     ```
 
-## Create `.env` file for apps
+### Create `.env` File for Apps
 
 1. For each of the following directories, create a `.env` file and populate it with the required environment variables:
 
@@ -38,7 +42,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
     Refer to the project documentation or any provided `.env.example` files for the required variables in each app directory.
 
-## Run apps in local environment
+### Run Apps in Local Environment
 
 1. Setup **Arize AI** docker container:
 
