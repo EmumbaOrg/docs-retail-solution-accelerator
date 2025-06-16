@@ -6,11 +6,12 @@ Alternatively, if you prefer to work locally without a dev container, you can in
 
 For more background on dev containers, read the [documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
-## Setup Dev Containers (Recommended)
+## Option 1: Setup Dev Containers (Recommended)
 
 Using a `Dev Container` will minimize the amount of software you need to install on your local operating system.  The following is the minimum needed to build and run the `dev container`:
 
 ![Dev Containers.](https://code.visualstudio.com/assets/docs/devcontainers/containers/architecture-containers.png)
+[Image reference](https://code.visualstudio.com/assets/docs/devcontainers/containers/architecture-containers.png)
 
 ### Install Software
 

@@ -12,9 +12,9 @@ In this task, you must request Azure OpenAI models quota in the region that you 
 
     ![quota-request](../img/request-quota.png)
 
-2. You shall see a form. Input the necessary information about quota you are requesting. The quota required for Agentic Shop is following:
+2. You shall see a form. Input the necessary information about quota you are requesting. The quota required for AgenticShop is following:
 
-    !!! info "Quota required for postgres agentic shop" 
+    !!! info "Quota required for postgres AgenticShop" 
 
         - 150K TPM of `GlobalStandard` capacity for `gpt-4o` model.
         - 120K TPM of `GlobalStandard` capacity for `text-embedding-ada-002` model.

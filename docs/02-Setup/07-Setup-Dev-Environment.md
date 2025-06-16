@@ -1,4 +1,4 @@
-# 2.7 Setup Local Dev Environment
+# 2.7 Option 2: Setup Local Dev Environment
 
 In this step, you will configure your Python development environment in Visual Studio Code. At the end of this step, you should have:
 

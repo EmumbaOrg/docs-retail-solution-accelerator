@@ -1,6 +1,6 @@
 # Deploy Apps on Azure
 
-The workshop began with a _development_ version of the _Agentic Shop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
+The workshop began with a _development_ version of the _AgenticShop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
 
     !!! info "Optional deployment on Azure!"
 
@@ -55,13 +55,13 @@ To deploy the updated app, follow the steps below:
 1. In the Azure portal, return to the resource group containing your resources and select the **Container app** resource.
 
 
-2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application Url** to open the deployed Agentic Shop app in a new browser tab.
+2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application Url** to open the deployed AgenticShop app in a new browser tab.
 
 
-3. In the _Agentic Shop_ landing page, select any **User** and you can see the home page where all the products are listed!
+3. In the _AgenticShop_ landing page, select any **User** and you can see the home page where all the products are listed!
 
 
-4. You can select any products and the UI will show you the details and personalized recommendations of the products powered by AI models.
+4. You can select any product and the UI will show you the details and personalized recommendations of the products powered by AI models.
 
 
 ---
