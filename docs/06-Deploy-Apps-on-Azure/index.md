@@ -2,9 +2,9 @@
 
 The workshop began with a _development_ version of the _AgenticShop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
 
-    !!! info "Optional deployment on Azure!"
+!!! tip "Optional deployment on Azure"
 
-        This step is optional and is not mandatory for the functioning of this solution accelerator. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
+    This step is optional and is not mandatory for the functioning of this solution acceleratsor. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
 
 Because you used `azd` for provisioning and deployment, this is as simple as calling `azd up` (to push all changes in both infrastructure and application). After successful deployment on Azure Container Apps, running `azd deploy` would simply rebuild and deploy the application changes only you made in this project.
 
@@ -40,11 +40,15 @@ To deploy the updated app, follow the steps below:
     Do you want to deploy Azure Container Apps? (y/n): yes
     ```
 
-5. Your updated apps will be built and deployed to Azure Container Apps.
+5. The terminal shows a link track the resources. You can click on the link to view resource creation on Azure portal. When the Azure services are deployed successfully, you shall see the following message: 
 
-6. On successful completion, you will see a `SUCCESS: ...` message on the console.
+    ![track-resources](../img/deploy-success.png)
 
-7. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
+6. At this point, the infrastructure has been provisioned and now your updated apps will be built and deployed to Azure Container Apps. This is the build and deploy phase or azd workflow.
+
+7. On successful completion, you will see a `SUCCESS: Your application was deployed to Azure in 10 minutes 35 seconds.` message on the console.
+
+8. Once the apps are deployed on Azure, you can use the following command to just build and redeploy the apps instead of provisioning complete infrastructure.
 
     ```bash title=""
     azd deploy
@@ -57,10 +61,12 @@ To deploy the updated app, follow the steps below:
 
 2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application Url** to open the deployed AgenticShop app in a new browser tab.
 
+    ![appurl](../img/app-url.png)
 
 3. In the _AgenticShop_ landing page, select any **User** and you can see the home page where all the products are listed!
 
-
+    ![users](../img/users.png)
+    
 4. You can select any product and the UI will show you the details and personalized recommendations of the products powered by AI models.
 
 

@@ -182,7 +182,7 @@ Python is the programming language used to build the backend app for the solutio
 
 Node.js is an open-source runtime environment that lets you run JavaScript code outside of a browser. It's ideal for building scalable network applications and works seamlessly with REACT single-page applications by providing a backend environment to handle server-side logic and API requests. This allows for efficient development and smooth interactions between the frontend and backend apps.
 
-1. Download Node.js from <https://nodejs.org/en/download/>, ensuring you select the most recent LTS version and your correct OS.
+1. Download Node.js 18.x or later from <https://nodejs.org/en/download/>.
 
 2. Run the installer using the default options.
 

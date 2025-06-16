@@ -16,7 +16,7 @@ To be able to complete this solution accelerator, you will need:
     - If you don't have a GitHub account, [sign up for a free one](https://github.com/signup) now. (It takes just a few minutes.)
 3. **An Azure Subscription.**
     - This is needed to provision the Azure infrastructure for your AI project.
-    - If you don't have an Azure account, [sign up for a free one](https://aka.ms/free) now. (It takes just a few minutes.)
+    - If you don't have an Azure account, [sign up for a free one](https://azure.microsoft.com/en-gb/pricing/purchase-options/azure-account) now. (It takes just a few minutes.)
 4. **An appropriate Azure region for your workshop resources**
     - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota.
     - Before selecting an Azure region, review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
