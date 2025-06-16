@@ -16,8 +16,8 @@ In this task, you must request Azure OpenAI models quota in the region that you 
 
     !!! info "Quota required for postgres agentic shop" 
 
-        - 150K TPMs of `GlobalStandard` capacity for `gpt-4o` model.
-        - 120K TPMs of `Standard` capacity for `text-embedding-ada-002` model.
+        - 150K TPM of `GlobalStandard` capacity for `gpt-4o` model.
+        - 120K TPM of `GlobalStandard` capacity for `text-embedding-ada-002` model.
 
     ![quota-form](../img/quota-form.png)
 

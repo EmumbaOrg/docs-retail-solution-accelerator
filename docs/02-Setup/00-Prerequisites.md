@@ -18,13 +18,10 @@ To be able to complete this solution accelerator, you will need:
     - This is needed to provision the Azure infrastructure for your AI project.
     - If you don't have an Azure account, [sign up for a free one](https://aka.ms/free) now. (It takes just a few minutes.)
 4. **An appropriate Azure region for your workshop resources**
-    - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota:
-    - Before selecting an Azure region:
-      - Review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
+    - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota.
+    - Before selecting an Azure region, review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
         - Select a region that **supports the Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models**.
-        - Ensure you have a **at least 150K TPMs of `GlobalStandard` capacity for the `gpt-4o` and 120K TPM of `Standard` capacity for available in the region** for `text-embedding-ada-002` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
-      
-    You must choose a region that supports **both Azure OpenAI models**, has at least 150K TPM of `GlobalStandard` and `Standard` capacity for above models.
+        - Ensure you have a **at least 150K TPM of `GlobalStandard` capacity for the `gpt-4o` and 120K TPM of `GlobalStandard` capacity for available in the region** for `text-embedding-ada-002` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
 
     !!! danger "Choosing a region that doesn't support both Azure OpenAI models will result in deployment failure when running `azd up`."
 

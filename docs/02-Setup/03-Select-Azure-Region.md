@@ -1,6 +1,6 @@
 # 2.3 Select An Azure Region
 
-To ensure you can successfully deploy the Azure resources using the `azd up` command, you must choose a region that supports the required Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models, has at least 150K TPM of `GlobalStandard` capacity available for `gpt-4o` and 120K TPM of `text-embedding-ada-002` model. On completing this step, you should have:
+To ensure you can successfully deploy the Azure resources using the `azd up` command, you must choose a region that supports the required Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models, has at least 150K TPM of `GlobalStandard` capacity available for `gpt-4o` and 120K TPM of `GlobalStandard` capacity for `text-embedding-ada-002` model. On completing this step, you should have:
 
 - [X] Selected an Azure region for workshop resources.
 
@@ -14,7 +14,7 @@ Follow the instructions below to review regional availability of the required se
 
 1. Review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
 
-2. Ensure you have a **at least 150K TPMs of `GlobalStandard` capacity available in the region** for the `gpt-4o` and **at least 120K TPMs of `Standard` capacity available in the region** for the `text-embedding-ada-002` models. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
+2. Ensure you have a **at least 150K TPM of `GlobalStandard` capacity available in the region** for the `gpt-4o` and **at least 120K TPM of `GlobalStandard` capacity available in the region** for the `text-embedding-ada-002` models. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
 
 ## Select an Azure region that supports workshop resources
 
