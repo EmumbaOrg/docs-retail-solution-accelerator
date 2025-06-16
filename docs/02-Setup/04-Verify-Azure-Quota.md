@@ -4,28 +4,19 @@ This solution requires an appropriate region where Azure OpenAI models are suppo
 
 - [X] Verified your Azure OpenAI Models quota
 
-## Request Azure OpenAI Models Quota¶
+## Request Azure OpenAI Models Quota
 
 In this task, you must request Azure OpenAI models quota in the region that you have selected.
 
-1. To request Azure OpenAI models quota, you must [submit a form](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota)
+1. To view the [default available quota]((https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits?utm_source=chatgpt.com&tabs=REST#gpt-4o-global-standard)) for Azure OpenAI models in your selected region.
+
+2. To [view and manage current quota](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest) for Azure OpenAI models available in your selected region.
+
+3. To request additional Azure OpenAI models quota, you must [submit a form](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota)
 
     ![quota-request](../img/request-quota.png)
 
-2. You shall see a form. Input the necessary information about quota you are requesting. The quota required for AgenticShop is following:
-
-    !!! info "Quota required for postgres AgenticShop" 
-
-        - 150K TPM of `GlobalStandard` capacity for `gpt-4o` model.
-        - 120K TPM of `GlobalStandard` capacity for `text-embedding-ada-002` model.
-
-    ![quota-form](../img/quota-form.png)
-
-3. Once submitted, you shall receive a confimation mail on the email that you have added in the form to vet the quota request. Confirm the quota request.
-
-    ![vet-mail](../img/vet-mail.png)
-
-4. Once the quota is approved, you shall receive another email stating that your quota has been approved. This may take some time depending on the requests Azure support team receives. 
+4. Once the quota is approved, you shall receive an email stating that your quota has been approved. This may take some time depending on the requests Azure support team receives. 
 
     !!! failure "Not enough Azure OpenAI models quota"
 
