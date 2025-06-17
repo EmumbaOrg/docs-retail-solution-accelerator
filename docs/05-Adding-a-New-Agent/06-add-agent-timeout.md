@@ -1,6 +1,6 @@
 # 5.7: Add Agent Timeout
 
-In this step, we will add the 'REVIEW_AGENT_TIMEOUT'  in `backend/src/config/config.py`. This is the maximum ammount of time the review agent will take to process a request, after which it will timeout, allowing the agentic flow to move forward gracefully.
+In this step, we will add the 'REVIEW_AGENT_TIMEOUT'  in `backend/src/config/config.py`. This is the maximum amount of time the review agent will take to process a request, after which it will timeout, allowing the agentic flow to move forward gracefully.
 
 > **File location:** `backend/src/config/config.py`
 >
