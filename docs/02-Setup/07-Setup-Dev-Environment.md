@@ -34,13 +34,36 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
 ### Create `.env` File for Apps
 
-1. For each of the following directories, create a `.env` file and populate it with the required environment variables:
+1. For each of the following directories, navigate in each directory to create a `.env` file and populate it with the required environment variables:
 
-    - `frontend/.env`
-    - `backend/.env`
-    - `arize-ai/.env`
+    ```bash title=""
+    `frontend/.env`
+    `backend/.env`
+    `arize-phoenix/.env`
+    ```
 
-    Refer to the project documentation or any provided `.env.example` files for the required variables in each app directory.
+    Let's populate those files with environment variables. Refer to the project documentation or any provided `.env.example` files for the required variables in each app directory.
+
+2. Inside the `.env` file of `frontend` directory , paste the following variable:
+
+    ```bash title=""
+    VITE_BE_APP_ENDPOINT=http://127.0.0.1:8000
+    ```
+
+3. Inside the `.env`. file of `arize-phoenix` directory, paste the following variable:
+
+    ```bash title=""
+    PHOENIX_SQL_DATABASE_URL=postgresql://${administratorLoginUser}:${administratorLoginPassword}@${postgresServer.outputs.POSTGRES_DOMAIN_NAME}:5432/arize_db
+    ```
+    
+    - The values of variables `administratorLoginUser` and `administratorLoginPassword` are set in the `main.parameters.json` file in the `infra` directory. Copy those values and replace them in the `.env` file you created above. 
+
+    - To get the endpoint of the database, go to the Azure Flexible Server for PostgreSQL inside the Resource Group you created with `azd` and copy the database endpoint as shown below. You can also get the administrator login username for PostgreSQL as well. 
+        ![db-url](../img/db-url.png)
+
+    !!! warning "Change the default credentails"
+
+        The credentials used here are default and only serve for learning purposes. Change these PostgreSQl credentials as best security practice before deploying the AgenticShop solution.
 
 ### Run Apps in Local Environment
 

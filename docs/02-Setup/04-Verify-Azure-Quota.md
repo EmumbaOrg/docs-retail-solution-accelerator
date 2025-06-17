@@ -14,9 +14,7 @@ In this task, you must request Azure OpenAI models quota in the region that you 
 
 3. To request additional Azure OpenAI models quota, you must [submit a form](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota)
 
-    ![quota-request](../img/request-quota.png)
-
-4. Once the quota is approved, you shall receive an email stating that your quota has been approved. This may take some time depending on the requests Azure support team receives. 
+4. Once the quota is approved, you shall receive a confirmation email stating that your quota has been approved. This process may take some time depending on the requests Azure support team receives. 
 
     !!! failure "Not enough Azure OpenAI models quota"
 

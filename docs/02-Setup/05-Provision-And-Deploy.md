@@ -67,6 +67,23 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
         azd auth login --use-device-code
         ```
 
+## Change PostgreSQL Authentication Credentials
+
+You should change the default postgres authentication credentials. This serves as a best security practice to avoid unauthorised access and credentials leakage of PostgreSQL database.
+
+1. In the root directory of your project, change directory into `infra` directory and edit the `main.parameters.json` file.
+
+2. Edit the following parameters with your own username and password. You can refer to this file anytime you want to connect to the database to perform any action.
+
+    ```bash title=""
+    ADMINISTRATOR_LOGIN_USER=rtbackend
+    ADMINISTRATOR_LOGIN_PASSWORD=Agent2shop
+    ```
+    
+    !!! danger "Only for workshop purposes"
+
+        The credentials shown above are only for workshop or learning purposes. You must change these paramters as best security practice if you intend to deploy this solution in production.
+
 ## Provision Azure Resource Without Apps Deployment
 
 You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the workshop to deploy apps on Azure infrastructure.
