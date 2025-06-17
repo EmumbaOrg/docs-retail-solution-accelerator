@@ -98,7 +98,7 @@ In this step, we will update `backend/src/agents/__init__.py` to import and expo
 
 ```python
 # --- Expose the Reviews Agent ---
-from .reviews_agent import get_reviews_agent
+from .review_agent import get_reviews_agent
 
 # Then add this in the list:
 "get_reviews_agent",
