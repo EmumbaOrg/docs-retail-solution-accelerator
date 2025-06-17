@@ -54,9 +54,9 @@ In this section, you will validate your setup before moving on to the next phase
 
 The `azd up` command included steps to deploy the **Azure Flexible Server for PostgreSQL**. This server will store all the data and information related to the solution as well as use multiple postges extensions used by the backend app to provide the multi-agent workflow functionalities.
 
-!!! info "Azure Container Apps (ACA) deployment"
+!!! info "Azure Flexible Server deployment"
 
-    Azure Database for PostgreSQL flexible server is a fully managed database service designed to provide more granular control and flexibility over database management functions and configuration settings. The service generally provides more flexibility and server configuration customizations based on user requirements.
+    Azure Database for PostgreSQL Flexible Server is a fully managed database service designed to provide more granular control and flexibility over database management functions and configuration settings. The service generally provides more flexibility and server configuration customizations based on user requirements.
 
 ## View Azure OpenAI model deployments in Azure AI Foundry
 

@@ -130,10 +130,10 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         When you execute the `azd up` command, following resources will be provisioned in your subscription. You can view these resources in the resource group you have provisioned.
 
-            | Service Name                          | 
-            | ------------------------------------- | 
-            | Azure Flexible server for PostgreSQL  |
-            | Azure OpenAI Service                  |
+        | Service Name                          | 
+        | ------------------------------------- | 
+        | Azure Flexible server for PostgreSQL  |
+        | Azure OpenAI Service                  |
 
     !!! failure "Not enough Azure OpenAI models quota"
 
@@ -155,3 +155,33 @@ You are now ready to provision your Azure resources without deployment of Agenti
         ```
 
 3. On successful completion you will see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message on the console.
+
+## Troubleshooting Errors
+ 
+### Continue with Current Deployment
+
+1. If your deployment failed with an error, you can re-run the `azd up` command to restart the deployment of the same `azd` env that you have created before.
+
+2. If your deployment has failed due region or quota availability and you want to continue with current deployment, the simplest way is to delete the `config.json` and `.env` in `.azure` folder and execute the `azd up` command again. This will reset the whole 
+
+### Destroy and Recreate New Deployment
+
+1. If your deployment failed and you want to create a new deployment, you must first purge the previous deployment using `azd down --purge` command before creating a new deployment with a new `azd` env. To create new `azd` env, you must execute `azd env new` command.
+
+2. You might run into following error when executing `azd down --purge` command when you have not approved quota before or have not approved yet:
+
+    !!! danger "No Deployment Found!"
+
+        ERROR: deleting infrastructure: error deleting Azure resources: finding completed deployments: 'dev': no deployments found.
+    
+    To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion.
+
+    ```bash title=""
+    az group delete --name <resource-group-name>
+    Are you sure you want to perform this operation? (y/n): y
+    ```
+
+3. If you intend to create a new deployment after destroying the resources, you can execute any one of the following:
+
+    - You can delete the folder of that env in the `.azure` folder in root directory that you created before and run the `azd up` command again to create a new deployment.
+    - You
