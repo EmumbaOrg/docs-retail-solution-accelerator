@@ -160,13 +160,29 @@ You are now ready to provision your Azure resources without deployment of Agenti
  
 ### Continue with Current Deployment
 
-1. If your deployment failed with an error, you can re-run the `azd up` command to restart the deployment of the same `azd` env that you have created before.
+1. If your deployment failed with an error such as validation error, you can re-run the `azd up` command to restart the deployment of the same `azd` env that you have created before.
 
-2. If your deployment has failed due region or quota availability and you want to continue with current deployment, the simplest way is to delete the `config.json` and `.env` in `.azure` folder and execute the `azd up` command again. This will reset the whole 
+    !!! danger "Validation Error"
 
-### Destroy and Recreate New Deployment
+        InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
 
-1. If your deployment failed and you want to create a new deployment, you must first purge the previous deployment using `azd down --purge` command before creating a new deployment with a new `azd` env. To create new `azd` env, you must execute `azd env new` command.
+2. If your deployment has failed due to region or quota availability and you want to continue with current deployment in another region, you must purge the existing deployment using `azd down --purge` command before proceeding with another deployment. To set the new region for Azure OpenAI models in current `azd` deployment, you can use the following command:
+
+    ```bash title=""
+    azd env set AZURE_OPENAI_LOCATION <region>
+    ```
+
+    !!! warning "Soft Delete Resources consume quota"
+
+        If the resource destruction does not complete, interrupted or `--purge` flag is not used, the resources may still exist in the your subscription as soft deleted resources which can be seen from Azure portal such as deleted OpenAI models in `Manage deleted resources`, then these resources will consume OpenAI quota hindering you from creating new deployment. It is very important to permanently delete these resources either from Azure portal or through azure CLI before proceeding with another deployment. 
+
+        ```bash title=""
+        az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
+        ```
+
+### Destroy Old Deployment and Create New
+
+1. If your deployment failed and you want to create a new deployment, you must first purge the previous deployment using `azd down --purge` command before creating a new deployment with a new `azd` env. To create new `azd` env, you must execute `azd env new` command and input the name for the new `azd` env.
 
 2. You might run into following error when executing `azd down --purge` command when you have not approved quota before or have not approved yet:
 
@@ -174,14 +190,23 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         ERROR: deleting infrastructure: error deleting Azure resources: finding completed deployments: 'dev': no deployments found.
     
-    To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion.
+    To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion. Redeploy the env using `azd up` command.
 
     ```bash title=""
     az group delete --name <resource-group-name>
     Are you sure you want to perform this operation? (y/n): y
+
+    azd up
     ```
 
-3. If you intend to create a new deployment after destroying the resources, you can execute any one of the following:
+3. If you intend to create a new deployment after destroying the resources, you can perform any one of the following operations:
 
     - You can delete the folder of that env in the `.azure` folder in root directory that you created before and run the `azd up` command again to create a new deployment.
-    - You
+
+    - You can execute the following command to create a new deployment and run the `azd up` command for new deployment.
+
+    ```bash title=""
+    azd env new
+
+    azd up
+    ```
