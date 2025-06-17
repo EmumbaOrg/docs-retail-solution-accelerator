@@ -6,20 +6,22 @@ This solution requires an appropriate region where Azure OpenAI models are suppo
 
 ## Request Azure OpenAI Models Quota
 
-In this task, you must request Azure OpenAI models quota in the region that you have selected.
+In this task, you will request quota for Azure OpenAI models in the region you have selected.
 
-1. To view the [default available quota]((https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits?utm_source=chatgpt.com&tabs=REST#gpt-4o-global-standard)) for Azure OpenAI models in your selected region.
+1. Review the [default available quota](https://learn.microsoft.com/en-us/azure/ai-services/openai/quotas-limits?utm_source=chatgpt.com&tabs=REST#gpt-4o-global-standard) for Azure OpenAI models in your chosen region.
 
-2. To [view and manage current quota](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest) for Azure OpenAI models available in your selected region.
+2. [View and manage your current quota](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest) through the Azure portal.
 
-3. To request additional Azure OpenAI models quota, you must [submit a form](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota)
+3. If additional capacity is needed, [submit a quota increase request](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/quota?tabs=rest#request-more-quota).
 
-4. Once the quota is approved, you shall receive a confirmation email stating that your quota has been approved. This process may take some time depending on the requests Azure support team receives. 
+4. Once your request is approved, you will receive a confirmation email.
+   Please note that approval times may vary depending on Azure Support’s current workload.
 
-    !!! failure "Not enough Azure OpenAI models quota"
+!!! failure "Not enough Azure OpenAI models quota"
 
-        If you did not approve your Azure OpenAI models quota prior to sdeployment, you may receive a quota error message similar to the following:
+    If your quota was not approved before deployment, you may encounter an error similar to the following:
 
-        _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
-        
-	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which is bigger than the current available capacity._
+    _(InsufficientQuota) This operation requires 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which exceeds the current available capacity._
+
+    _(InsufficientQuota) This operation requires 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which exceeds the current available capacity._
+
