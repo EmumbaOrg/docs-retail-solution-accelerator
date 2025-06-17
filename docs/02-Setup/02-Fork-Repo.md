@@ -30,7 +30,7 @@ Forking in GitHub refers to creating a personal copy of a public repository, whi
 
     ![copy-url](../img/copy-url.png)
 
-2. Open a new command prompt and change directories to the folder in which you want to clone the repo (e.g., D:\repos).
+2. Open a new command prompt/shell terminal and change directories to the folder in which you want to clone the repo (e.g., D:\repos).
 
 3. Once in the desired directory, run the following `git clone` command to download a copy of your fork onto your local machine. Ensure you replace the `<url_of_your_forked_repo>` url with the clone link you copied in the previous step.
 

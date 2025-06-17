@@ -38,6 +38,11 @@ Before running the `azd up` command, you must authenticate your VS Code environm
 
 To create Azure resources, you need to be authenticated from VS Code. Open a new integrated terminal in VS Code. Then, complete the following steps:
 
+!!! info "Visual Studio Code Integrated terminal"
+
+    The integrated terminal in Visual Studio Code is a built-in console panel that runs your system’s shell such as Bash, PowerShell etc. within the editor. It lets you execute commands without switching windows, and enhances workflow with extensions, persistent sessions, and context-aware shell integration
+    To open an integrated terminal, you can use this keyboard shortcut "Ctrl + `" or click View in the Menu Bar → Click Terminal
+
 ### Authenticate with `az` for post-provisioning tasks
 
 1. Log into the Azure CLI `az` using the command below.
@@ -67,6 +72,12 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
         azd auth login --use-device-code
         ```
 
+    !!! info "Difference between az CLI and azd CLI"
+
+        az CLI is a granular control-plane tool for managing Azure resources such as VMs, networking, storage, etc. and is used when you need fine‑grained control over infrastructure configuration.
+
+        azd CLI is a higher-level, developer-focused workflow tool that scaffolds, provisions, deploys, and monitors entire applications to automates the full app lifecycle, together with IaC, CI/CD, and monitoring so you don't handcraft each resource individually.
+
 ## Change PostgreSQL Authentication Credentials
 
 You should change the default postgres authentication credentials. This serves as a best security practice to avoid unauthorised access and credentials leakage of PostgreSQL database.
@@ -82,7 +93,7 @@ You should change the default postgres authentication credentials. This serves a
     
     !!! danger "Only for workshop purposes"
 
-        The credentials shown above are only for workshop or learning purposes. You must change these paramters as best security practice if you intend to deploy this solution in production.
+        The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -114,6 +125,15 @@ You are now ready to provision your Azure resources without deployment of Agenti
 2. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
     - If you chose not to deploy Azure Container Apps, it will roughly take 10 minutes.
+
+    !!! info "Provisioned Resources"
+
+        When you execute the `azd up` command, following resources will be provisioned in your subscription. You can view these resources in the resource group you have provisioned.
+
+            | Service Name                          | 
+            | ------------------------------------- | 
+            | Azure Flexible server for PostgreSQL  |
+            | Azure OpenAI Service                  |
 
     !!! failure "Not enough Azure OpenAI models quota"
 

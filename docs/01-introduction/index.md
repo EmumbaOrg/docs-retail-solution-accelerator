@@ -43,8 +43,8 @@ To ensure transparency and debuggability, the solution includes end-to-end obser
 - Embed Generative AI capabilities directly into PostgreSQL workflows using the [Azure AI extension](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-integrate-azure-ai)
 - Perform fast, scalable vector similarity searches using [pg_diskann](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgdiskann), integrated with [LlamaIndex](https://llamaindex.ai/)
 - Design and orchestrate multi-agent systems using LlamaIndex, with persistent memory via [Mem0](https://mem0.ai/) and observability via [Phoenix Arize](https://phoenix.arize.com/)
-- Host the solution using [Azure Container Apps](https://aka.ms/azcontainerapps) to simulate a real-world production deployment
-- Use the [Azure Developer CLI](https://aka.ms/azd) and templates to provision and deploy applications consistently across teams
+- Host the solution using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview) to simulate a real-world production deployment
+- Use the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/) and templates to provision and deploy applications consistently across teams
 - Use [Apache AGE](https://age.apache.org/) along with the Azure AI extension to:
   - Model graph representations of products, reviews, features, and sentiments
   - Run complex Cypher queries to find products based on how users talk about specific features
