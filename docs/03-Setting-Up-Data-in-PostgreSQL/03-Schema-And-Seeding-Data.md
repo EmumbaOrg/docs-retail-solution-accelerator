@@ -49,4 +49,4 @@ output = memory.add(
 
 This gives each user a base profile which downstream agents will reference to generate personalized results.
 
-> We'll explore memory in more detail in the [Generating Memories](05-Building-Memories.md)) section.
+> We'll explore memory in more detail in the [Generating Memories](05-Generating-Memories.md) section.

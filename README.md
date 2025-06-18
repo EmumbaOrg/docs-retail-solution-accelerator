@@ -12,7 +12,6 @@ You can view the workshop directly from this source by running the [MKDocs](http
 2. Run the `mkdocs serve` command from the `workshop` folder
 
     ```bash
-    cd docs/workshop
     mkdocs serve -a localhost:7000
     ```
 
