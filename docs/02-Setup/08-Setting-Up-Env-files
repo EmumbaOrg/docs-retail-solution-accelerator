@@ -1,6 +1,6 @@
 # 2.8 Setting Up Environment (.env) Files
 
-Environment variable files (`.env`) are essential for securely managing configuration values such as API keys, service URLs, and secrets for each application component. This section guides you through setting up `.env` files for the **frontend**, **backend**, and **arize-ai** services.
+Environment variable files (`.env`) are essential for securely managing configuration values such as API keys, service URLs, and secrets for each application component. This section guides you through setting up `.env` files for the **frontend**, **backend**, and **arize-phoenix** services.
 
 ---
 
@@ -36,19 +36,19 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 
 ---
 
-## 4. Arize-AI: Setting up `.env` file
+## 4. Arize-Phoenix: Setting up `.env` file
 
-1. In the `arize-ai` directory, create a file named `.env` if it does not already exist.
+1. In the `arize-phoenix` directory, create a file named `.env` if it does not already exist.
 2. Copy the Arize-related variables from the root `.env` file. Typical variables include:
     - `PHOENIX_SQL_DATABASE_URL`
     - Any other variables required by Arize (refer to Arize documentation or sample `.env.example` if available).
-3. Paste these variables into `arize-ai/.env`.
+3. Paste these variables into `arize-phoenix/.env`.
 
 ---
 
 ## 5. Summary
 
-- After every deployment, always update your service-specific `.env` files with the latest values from the root `.env` file.
+- In case of new deployment, always update your service-specific `.env` files with the latest values from the root `.env` file.
 - This process ensures each app has the correct configuration and can connect to the necessary Azure resources securely.
 
-> **Tip:** Never commit `.env` files with secrets to version control. Use `.gitignore` to keep them private.
+> ⚠️ **Tip:** Never commit `.env` files with secrets to version control. Use `.gitignore` to keep them private.
