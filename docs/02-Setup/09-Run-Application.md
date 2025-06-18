@@ -1,13 +1,29 @@
 # 2.9 Run Application
 
+## Run Database Migrations
+
+Before starting the backend or frontend applications, you **must run the database migrations** to set up the required tables and schema. This is essential after configuring your environment variables, especially for a new deployment, as the database will be empty and the app will not function correctly without the necessary tables.
+
+To apply the migrations, run the following command from the `backend` directory:
+
+```bash
+cd backend
+alembic upgrade head
+```
+
+This command applies all pending migrations and ensures your database schema is up to date.
+> **More Information:** For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this workshop.
+
+> **Note:** This step is required regardless of whether you use the command line or the VS Code debugger to run the applications.
+
 ## Run Apps in Local Environment
 
 There are **two options** for running the backend and frontend applications in your local environment:
 
 1. **Using Command Line:**
-   - Start each app manually in separate terminal windows using the provided commands.
+    - Start each app manually in separate terminal windows using the provided commands.
 2. **Using VS Code Debugger (Recommended):**
-   - Use the built-in debugger to launch the backend, frontend, or both apps simultaneously with pre-configured launch settings.
+    - Use the built-in debugger to launch the backend, frontend, or both apps simultaneously with pre-configured launch settings.
 
 Choose the option that best fits your workflow and follow the corresponding instructions below.
 
@@ -28,11 +44,12 @@ Open a terminal in VS Code and run:
 
 ```bash
 cd ../arize-phoenix
-# Build the Arize container (only needed once)
+
 docker build -t arize-phoenix .
-# Start the Arize container (must be running for the apps to work)
+
 docker run --name arize-phoenix-container -p 6006:6006 arize-phoenix
 ```
+
 ---
 
 ### Option 1: Run Apps Using Command Line
@@ -62,9 +79,9 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
 
 1. Open the Run & Debug panel in VS Code (`Ctrl+Shift+D`).
 2. Select one of the following configurations from the dropdown:
-   - **Launch Backend: FastAPI** – starts the backend (also starts Arize container automatically via preLaunchTask).
-   - **Launch Frontend (UI)** – starts the frontend app.
-   - **Launch Frontend and Backend** – starts both apps simultaneously.
+    - **Launch Backend: FastAPI** – starts the backend (also starts Arize container automatically via preLaunchTask).
+    - **Launch Frontend (UI)** – starts the frontend app.
+    - **Launch Frontend and Backend** – starts both apps simultaneously.
 3. Click the green play button to start debugging.
 
 ![debugger-dropdown](../img/debugger-drop-down.png)
@@ -77,6 +94,7 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
 
 When using VS Code Devcontainers:
 - The Arize container starts automatically—no manual steps needed.
+
 - Use the VS Code debugger as described above to run backend, frontend, or both (no need to run commands manually).
 
 1. Open the Run & Debug panel (`Ctrl+Shift+D`).

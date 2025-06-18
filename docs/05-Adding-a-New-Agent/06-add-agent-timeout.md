@@ -8,11 +8,13 @@ In this step, we will add the 'REVIEW_AGENT_TIMEOUT'  in `backend/src/config/con
 
 
 Add the following in the Settings class
+
 ---
 
 ```python
     REVIEW_AGENT_TIMEOUT: int = 60
 ```
+
 ---
 
 **What this does:**
