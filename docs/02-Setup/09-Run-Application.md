@@ -65,8 +65,9 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
    - **Launch Backend: FastAPI** – starts the backend (also starts Arize container automatically via preLaunchTask).
    - **Launch Frontend (UI)** – starts the frontend app.
    - **Launch Frontend and Backend** – starts both apps simultaneously.
-   ![debugger-dropdown](../img/debugger-drop-down.png)
 3. Click the green play button to start debugging.
+
+![debugger-dropdown](../img/debugger-drop-down.png)
 
 > **Tip:** The compound configuration **Launch Frontend and Backend** will run both apps together, each in its own debugger instance.
 
