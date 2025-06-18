@@ -79,7 +79,7 @@ the needed extensions will automatically be installed within the `dev container`
 
 ### Install pgAdmin
 
-Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database. pgAdmin is the leading Open Source management tool for Postgres.
+Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database.
 
 1. Download pgAdmin from <https://www.pgadmin.org/download/>.
 

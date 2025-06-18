@@ -86,7 +86,7 @@ The system uses `mem0` to personalize interactions based on **user memory**. Her
 
 - During **workflow setup**, user preferences are retrieved from memory and included in the profile.
 - If a user adds new input (e.g., "I care about portability"), it’s stored back to memory.
-- Memory influences agent outputs like personalization, ranking, and summarization.
+- Memory influences agent outputs like personalization.
 
 ### Memory Update Example
 
