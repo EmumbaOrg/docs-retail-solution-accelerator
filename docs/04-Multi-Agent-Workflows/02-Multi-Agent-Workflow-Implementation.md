@@ -48,7 +48,7 @@ If the agent fails to respond within the timeout, a fallback message is returned
 
 ---
 
-## 🧩 Anatomy of an Agent
+## Anatomy of an Agent
 
 Agents in AgenticShop are implemented using LlamaIndex’s `FunctionAgent`. Each agent wraps a system prompt and has a clear role.
 
