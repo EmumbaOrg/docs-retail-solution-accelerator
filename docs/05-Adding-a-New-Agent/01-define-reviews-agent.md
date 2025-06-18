@@ -1,8 +1,8 @@
 # 5.2: Define the Review Agent.
 
-In this step, we will create a new file `review_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
+In this step, we will create a new file `reviews_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 
-> **File location:** `backend/src/agents/review_agent.py`
+> **File location:** `backend/src/agents/reviews_agent.py`
 > 
 > **Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain.
 

@@ -1,42 +1,20 @@
-# 2.5 Provision and Deploy
+# 2.6 Provision and Deploy
 
 You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
 - [X] Authenticated with Azure
 - [X] Provisioned Azure resources and deployed the AgenticShop solution
 
-## Start Docker Desktop
-
-Docker Desktop is used to create and deploy the containers used for running the _Frontend and Backend_ applications. It must be running before you begin the deployment process using `azd up`.
-
-1. Launch Docker Desktop from the applications menu on your computer.
-
-2. Look for the Docker icon in your system tray or menu bar to confirm it is running.
-
-## Build and Open Dev Container (Only if you chose the Recommended Dev Container Setup Option Previously)
-
-In this step you will open and build your dev container in VS Code.  After you complete this, you can complete the remaining steps in this page by running all commands inside
-your dev container command line, not your local operating system command line.
-
-1. Open VS Code
-2. Open Folder of your locally cloned repo
-3. Press `Ctrl+Shift+P` to open the command palette
-4. Type: `Dev Container` and choose "Rebuild and Reopen in Container"
-
-!!! info "Dev Container Build Process"
-
-    This will kick off a docker build process where your dev container will be built by docker desktop.  Let this process run, it may take a few minutes.
-    You will see VS Code flash and load into a new project environment.  Once the process completes, you can open a new terminal in VS Code.  You will notice the shell will
-    look a little different as now you are in an Ubuntu Linux Container.
-
-    From here on out in the documentation, run your commands in the dev container shell.  Except for tools like pgAdmin, you will
-    still run these in your main operating system not the dev container.
-
 ## Authenticate With Azure
 
 Before running the `azd up` command, you must authenticate your VS Code environment to Azure.
 
 To create Azure resources, you need to be authenticated from VS Code. Open a new integrated terminal in VS Code. Then, complete the following steps:
+
+!!! info "Visual Studio Code Integrated terminal"
+
+    The integrated terminal in Visual Studio Code is a built-in console panel that runs your system’s shell such as Bash, PowerShell etc. within the editor. It lets you execute commands without switching windows, and enhances workflow with extensions, persistent sessions, and context-aware shell integration
+    To open an integrated terminal, you can use this keyboard shortcut "Ctrl + `" or click View in the Menu Bar → Click Terminal
 
 ### Authenticate with `az` for post-provisioning tasks
 
@@ -67,6 +45,12 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
         azd auth login --use-device-code
         ```
 
+    !!! info "Difference between az CLI and azd CLI"
+
+        az CLI is a granular control-plane tool for managing Azure resources such as VMs, networking, storage, etc. and is used when you need fine‑grained control over infrastructure configuration.
+
+        azd CLI is a higher-level, developer-focused workflow tool that scaffolds, provisions, deploys, and monitors entire applications to automates the full app lifecycle, together with IaC, CI/CD, and monitoring so you don't handcraft each resource individually.
+
 ## Change PostgreSQL Authentication Credentials
 
 You should change the default postgres authentication credentials. This serves as a best security practice to avoid unauthorised access and credentials leakage of PostgreSQL database.
@@ -82,7 +66,7 @@ You should change the default postgres authentication credentials. This serves a
     
     !!! danger "Only for workshop purposes"
 
-        The credentials shown above are only for workshop or learning purposes. You must change these paramters as best security practice if you intend to deploy this solution in production.
+        The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -115,6 +99,15 @@ You are now ready to provision your Azure resources without deployment of Agenti
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
     - If you chose not to deploy Azure Container Apps, it will roughly take 10 minutes.
 
+    !!! info "Provisioned Resources"
+
+        When you execute the `azd up` command, following resources will be provisioned in your subscription. You can view these resources in the resource group you have provisioned.
+
+        | Service Name                          | 
+        | ------------------------------------- | 
+        | Azure Flexible server for PostgreSQL  |
+        | Azure OpenAI Service                  |
+
     !!! failure "Not enough Azure OpenAI models quota"
 
         If you did not check your Azure OpenAI models quota prior to starting running the `azd up` command, you may receive a quota error message similar to the following:
@@ -135,3 +128,58 @@ You are now ready to provision your Azure resources without deployment of Agenti
         ```
 
 3. On successful completion you will see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message on the console.
+
+## Troubleshooting Errors
+ 
+### Continue with Current Deployment
+
+1. If your deployment failed with an error such as validation error, you can re-run the `azd up` command to restart the deployment of the same `azd` env that you have created before.
+
+    !!! danger "Validation Error"
+
+        InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
+
+2. If your deployment has failed due to region or quota availability and you want to continue with current deployment in another region, you must purge the existing deployment using `azd down --purge` command before proceeding with another deployment. To set the new region for Azure OpenAI models in current `azd` deployment, you can use the following command:
+
+    ```bash title=""
+    azd env set AZURE_OPENAI_LOCATION <region>
+    ```
+
+    !!! warning "Soft Delete Resources consume quota"
+
+        If the resource destruction does not complete, interrupted or `--purge` flag is not used, the resources may still exist in the your subscription as soft deleted resources which can be seen from Azure portal such as deleted OpenAI models in `Manage deleted resources`, then these resources will consume OpenAI quota hindering you from creating new deployment. It is very important to permanently delete these resources either from Azure portal or through azure CLI before proceeding with another deployment. 
+
+        ```bash title=""
+        az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
+        ```
+
+### Destroy Old Deployment and Create New
+
+1. If your deployment failed and you want to create a new deployment, you must first purge the previous deployment using `azd down --purge` command before creating a new deployment with a new `azd` env. To create new `azd` env, you must execute `azd env new` command and input the name for the new `azd` env.
+
+2. You might run into following error when executing `azd down --purge` command when you have not approved quota before or have not approved yet:
+
+    !!! danger "No Deployment Found!"
+
+        ERROR: deleting infrastructure: error deleting Azure resources: finding completed deployments: 'dev': no deployments found.
+    
+    To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion. Redeploy the env using `azd up` command.
+
+    ```bash title=""
+    az group delete --name <resource-group-name>
+    Are you sure you want to perform this operation? (y/n): y
+
+    azd up
+    ```
+
+3. If you intend to create a new deployment after destroying the resources, you can perform any one of the following operations:
+
+    - You can delete the folder of that env in the `.azure` folder in root directory that you created before and run the `azd up` command again to create a new deployment.
+
+    - You can execute the following command to create a new deployment and run the `azd up` command for new deployment.
+
+    ```bash title=""
+    azd env new
+
+    azd up
+    ```

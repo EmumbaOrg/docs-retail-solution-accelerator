@@ -1,4 +1,4 @@
-# 5.7 Running the Multi-Agent Workflow
+# 5.8 Running the Multi-Agent Workflow
 
 Welcome to the final and most exciting part of this module! In this section, you'll put everything you've built to the test by running the complete multi-agent workflow—including your newly integrated Reviews Agent. The goal is to see your agent in action, verify that it is triggered as expected, and observe how it contributes to the overall system response.
 
