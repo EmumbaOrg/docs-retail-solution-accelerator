@@ -116,16 +116,9 @@ You are now ready to provision your Azure resources without deployment of Agenti
         
 	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which is bigger than the current available capacity._
 
-    !!! failure "Deployment failed: Postgresql server is not in an accessible state"
+    !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
 
-        It's possible a `server is not in an accessible state` error may occur when the Azure Bicep deployment attempts to add the PostgreSQL Admin User after the PostgreSQL Server has been provisioned. This can occur if the PostgreSQL server is still being provisioned in the Azure backend, but the Deployment returned that it's successful already. If you encounter this error, simply re-run the `azd up` command.
-
-        ```bash title=""
-        ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to subscription:
-
-        Deployment Error Details:
-        AadAuthOperationCannotBePerformedWhenServerIsNotAccessible: The server 'dev-cvdjta5pfnc5e' is not in an accessible state to perform Azure AD Principal operation. Please make sure the server is accessible before executing Azure AD Principal operations.
-        ```
+        It's possible that when Azure Bicep deployment attempts to create resources, error may occur when the soft deleted resources are in process to be purged from Azure backend. If you encounter this error, simply re-run the `azd up` command.
 
 3. On successful completion you will see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message on the console.
 
