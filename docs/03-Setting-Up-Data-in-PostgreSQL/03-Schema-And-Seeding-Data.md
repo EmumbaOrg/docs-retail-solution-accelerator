@@ -1,4 +1,4 @@
-# 3.2 Creating Schema and Seeding Data
+# 3.3 Creating Schema and Seeding Data
 
 In this section, we set the foundation for our agentic application by:
 
