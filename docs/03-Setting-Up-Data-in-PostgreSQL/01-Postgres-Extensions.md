@@ -2,7 +2,7 @@
 
 Azure Database for PostgreSQL Flexible Server allows you to extend the functionality of your database using extensions. Extensions bundle multiple related SQL objects into a single package that can be loaded or removed from your database with a single command. After being loaded into the database, extensions function like built-in features.
 
-> ✅ These steps have already been executed automatically via our [Bicep infrastructure deployment](../path-to-bicep-scripts) as part of the provisioning process.
+> ✅ These steps have **already been executed** automatically via our [Bicep infrastructure deployment](../path-to-bicep-scripts) as part of the provisioning process.
 > The content below is included for reference and understanding of what was configured behind the scenes.
 
 ---
@@ -86,5 +86,4 @@ This will list all extensions currently installed in your PostgreSQL instance.
 
 ---
 
-> 💡 If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](../path-to-bicep-scripts) and [Alembic migration code](../path-to-alembic).
-
+> 💡 If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](../path-to-bicep-scripts).
