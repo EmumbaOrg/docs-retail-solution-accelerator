@@ -45,7 +45,7 @@ We’ll explore runtime memory updates in later sections during interactive agen
 
 ---
 
-## Try It Yourself: Create Memories Manually
+## 🧪 Try It Yourself: Create Memories Manually
 
 You can try storing user memories in an interactive shell within the devcontainer. Here's how:
 
@@ -102,12 +102,23 @@ This will return rows containing the memory text, associated user ID, and metada
 
 > Each `payload` is a JSON object containing a single memory item and the associated user (metadata).
 
+## 🧩 Behind the Scenes
+
+While you can add memories manually or programmatically, under the hood `mem0` uses an large language model (LLM) to extract structured insights—called **facts**—from user input. 
+
+These facts are:
+
+- Parsed and summarized from free-form user messages (e.g., “I prefer wireless headphones with long battery life.”)
+- Stored with metadata (e.g., user ID, timestamp, hashed ID)
+- Indexed and retrieved later by context-aware agents during personalization
+
+The memory engine acts as a **semantic layer**, distilling key preferences or intents from conversations and making them accessible to agents without needing to reprocess raw history.
+
+> 🧠 The LLM prompt used for extraction is defined [here in the mem0 GitHub repo](https://github.com/mem0ai/mem0/blob/main/mem0/configs/prompts.py). You can customize this to fit your domain-specific needs.
+
 ## Summary
 
 - `mem0` helps agents remember and adapt to individual users.
 - Initial memories are created from CSVs during setup.
 - You can manually add entries and inspect them from the REPL.
 - Live user preferences will be added during interaction with the system.
-
-We'll revisit memory in later sections when we walk through real-time user queries and how memory enhances personalization.
-

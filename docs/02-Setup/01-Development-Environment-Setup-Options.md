@@ -1,10 +1,15 @@
 # 2.1 Development Environment Setup
 
-There are two main options for setting up your development environment, using a Dev Container or a Local Development Environment. **It is recommended to use a Dev Container**. Dev Containers are useful tools as they help minimize setup and configuration issues that may occur (sometimes known as the "it works on my machine" problem). There are a lot of prerequisite installation requirements for this solution accelerator, if you use the Dev Container option, many of these prerequisites are installed automatically inside the container without variability or risk of configuration drift.
+To get started, you have two options for setting up your development environment:
 
-Alternatively, if you prefer to work locally without a dev container, you can install and configure each prerequisites yourself on your operating system. The following sections walk you through how to do either option.
+- Option 1 **(Recommended)**: Use a Dev Container
+- Option 2: Set up a Local Development Environment manually
 
-For more background on dev containers, read the [documentation](https://code.visualstudio.com/docs/devcontainers/containers).
+We strongly recommend using the **Dev Container** approach. Dev Containers provide a consistent, pre-configured environment that eliminates many of the common setup issues—often referred to as the _“it works on my machine”_ problem. This solution accelerator has multiple prerequisites, and the Dev Container automatically installs most of them, reducing manual configuration and the risk of version mismatches.
+
+If you prefer to work outside a container, you can follow the local setup instructions to install each prerequisite on your own operating system. The next sections walk you through both workflows in detail.
+
+> 🔎 Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers).
 
 ## Option 1: Setup Dev Containers (Recommended)
 
@@ -180,11 +185,11 @@ Python is the programming language used to build the backend app for the solutio
 
 ### Install Node.js
 
-Node.js is an open-source runtime environment that lets you run JavaScript code outside of a browser. It's ideal for building scalable network applications and works seamlessly with REACT single-page applications by providing a backend environment to handle server-side logic and API requests. This allows for efficient development and smooth interactions between the frontend and backend apps.
+Node.js is required to run and manage frontend dependencies and build tools for the React-based UI in this project. It enables commands like `npm install`, `npm run dev`, and others used during development.
 
-1. Download Node.js 18.x or later from <https://nodejs.org/en/download/>.
+1. Download **Node.js v22.x** from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
 
-2. Run the installer using the default options.
+2. Run the installer and proceed with the default settings.
 
 ### Install Docker Desktop
 
@@ -216,7 +221,7 @@ Visual Studio Code is a versatile, open-source code editor that combines powerfu
 
 ### Install pgAdmin
 
-Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database. pgAdmin is the leading Open Source management tool for Postgres.
+Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database.
 
 1. Download pgAdmin from <https://www.pgadmin.org/download/>.
 

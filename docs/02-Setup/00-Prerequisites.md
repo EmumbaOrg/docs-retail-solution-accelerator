@@ -39,7 +39,6 @@ To get the most of of this solution accelerator, you should have:
     - You will use the Azure portal to retrieve endpoints, keys, and other values associated with the resources you deploy for this workshop.
 3. **Familiarity with PostgreSQL**
     - The workshop assumes you are familiar with basic SQL syntax.
-    - You will be executing SQL statements to alter tables, create extensions, and run queries against tables.
 
 ### Preferred knowledge and experience
 
@@ -52,7 +51,6 @@ To get the most of of this solution accelerator, you should have:
 3. **Familiarity with Python frameworks**.
     - You will modify Python code to implement changes to the starter solution.
     - In some steps, you will create and run Python code from the command line and VS Code.
-    - You will select a Python kernel and run pre-existing scripts in some steps.
 
 ## What You Will Take Away
 
