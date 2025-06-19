@@ -1,4 +1,4 @@
-# 3.2 Generating Features and Sentiments
+# 3.5 Generating Features and Sentiments
 
 In this section, you'll explore how the AgenticShop application uses **in-database AI** to extract valuable insights from raw product reviews.
 
