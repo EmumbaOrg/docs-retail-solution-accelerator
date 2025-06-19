@@ -21,7 +21,7 @@ Here’s an example SQL query that demonstrates how we use the `azure_ai.extract
 SELECT azure_ai.extract(
   'Review: The battery life is incredible. Feature: battery life',
   ARRAY['sentiment - sentiment about the feature as in positive, negative, or neutral'],
-  model => 'gpt-35-turbo'
+  model => 'gpt-4o'
 ) ->> 'sentiment' AS sentiment;
 ```
 
@@ -43,7 +43,7 @@ This example shows how to extract **which feature** is being talked about in the
 SELECT azure_ai.extract(
   'I love how lightweight and portable this device is.',
   ARRAY['productFeature: string - A feature of a product. Features should be from: weight, battery life, screen quality, portability or NULL'],
-  model => 'gpt-35-turbo'
+  model => 'gpt-4o'
 ) ->> 'productFeature' AS extracted_feature;
 ```
 
