@@ -52,6 +52,7 @@ You can try storing user memories in an interactive shell within the devcontaine
 ### Step 1: Open the Python REPL inside your devcontainer
 
 ```bash
+cd backend
 python
 ```
 
@@ -62,7 +63,7 @@ from src.config.memory import get_mem0_memory
 
 memory = get_mem0_memory()
 
-# Simulate adding preferences for user_id=101
+# Simulate adding preferences for user_id=1
 memory.add(messages="Prefers long battery life", user_id="1")
 memory.add(messages="Interested in noise-cancelling headphones", user_id="1")
 ```
@@ -70,7 +71,7 @@ memory.add(messages="Interested in noise-cancelling headphones", user_id="1")
 ### Step 3: Retrieve what’s stored (optional)
 
 ```python
-results = memory.search(query="battery life", user_id="101")
+results = memory.search(query="battery life", user_id="1")
 print(results)
 ```
 
