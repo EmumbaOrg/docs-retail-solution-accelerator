@@ -91,14 +91,18 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
 2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
-   ```bash title=""
+    ```bash title=""
     Do you want to deploy Azure Container Apps? (y/n): no
     ```
-   - Selecting `no` will deploy only the azure_ai and the database server in the resource-group --- the frontend, backend and arize container apps will not be deployed.
-   - Selecting `yes` here will deploy all container apps in the resource-group.
+
+   - Selecting `no` will deploy only the Azure OpenAI models and the database server in the resource group while frontend, backend and arize Azure Container Apps will not be deployed. 
+
+   - Selecting `yes` here will deploy the solution with default settings on Azure including the Azure Container Apps. This is not recommended at this stage. We shall deploy our apps on Azure later in this workshop.
 
 2. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
+
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
+
     - If you chose not to deploy Azure Container Apps, it will roughly take 10 minutes.
 
     !!! info "Provisioned Resources"
