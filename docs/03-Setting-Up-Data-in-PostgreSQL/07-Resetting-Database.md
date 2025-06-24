@@ -1,7 +1,7 @@
 # 3.7: Reset Database
 
 The Reset button present on the frontend products page allows users to restore the database to its original post-setup state—i.e., immediately after the application is initialized and migrations are run.
-It triggers the reset service present at 'backend/src/services/reset.py'. This feature is helpful when you want to demonstrate a specific application flow again. It clears the database entries created during the initial run, allowing the flow to start fresh as if it’s being triggered for the first time.
+It triggers a backend reset endpoint that clears database entries, allowing the application flow to start fresh.
 
 ![create-fork](../img/reset.png)
 
