@@ -47,7 +47,7 @@ cd ../arize-phoenix
 
 docker build -t arize-phoenix .
 
-docker run --name arize-phoenix-container -p 6006:6006 arize-phoenix
+docker run --name arize-phoenix-container -p 6006:6006 -v phoenix_data:/root/.phoenix/ arize-phoenix
 ```
 
 ---
