@@ -10,7 +10,7 @@ You must create a copy (known as a fork) of the [postgres-agentic-shop](https://
 
 Forking in GitHub refers to creating a personal copy of a public repository, which allows you to freely experiment with changes without affecting the original project.
 
-1. To fork the repo, open a new browser window or tab and navigate to <https://github.com/Azure-Samples/postgres-agentic-shop>.
+1. To fork the repo, open a new browser window or tab and navigate to <https://github.com/Azure-Samples/postgres-agentic-shop>
 
 2. Select the **Fork** button to create a copy of the repo in your GitHub profile.
 

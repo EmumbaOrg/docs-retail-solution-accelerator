@@ -1,4 +1,4 @@
-# 2.5 Provision and Deploy
+# 2.6 Provision and Deploy
 
 You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
@@ -126,7 +126,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         It's possible that when Azure Bicep deployment attempts to create resources, error may occur when the soft deleted resources are in process to be purged from Azure backend. If you encounter this error, simply re-run the `azd up` command.
 
-3. On successful completion you will see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message on the console.
+3. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
 
 ## Troubleshooting Errors
  

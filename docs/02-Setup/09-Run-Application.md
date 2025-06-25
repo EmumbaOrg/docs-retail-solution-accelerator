@@ -47,7 +47,7 @@ cd ../arize-phoenix
 
 docker build -t arize-phoenix .
 
-docker run --name arize-phoenix-container -p 6006:6006 arize-phoenix
+docker run --name arize-phoenix-container -p 6006:6006 -v phoenix_data:/root/.phoenix/ arize-phoenix
 ```
 
 ---
@@ -55,6 +55,8 @@ docker run --name arize-phoenix-container -p 6006:6006 arize-phoenix
 ### Option 1: Run Apps Using Command Line
 
 - **Backend:**
+  Open a new integrated terminal in VS Code by selecting **Terminal > New Terminal** from the menu or using the shortcut ``Ctrl+` ``. This ensures your backend runs in its own terminal window.
+
   ```bash
   cd backend
   uvicorn src.main:app --host 0.0.0.0 --port 8000 --log-config logging_config.yaml --reload
@@ -62,6 +64,8 @@ docker run --name arize-phoenix-container -p 6006:6006 arize-phoenix
   > This command starts the FastAPI backend server using Uvicorn with live reload enabled.
 
 - **Frontend:**
+  Open a new integrated terminal in VS Code by selecting **Terminal > New Terminal** from the menu or using the shortcut ``Ctrl+` ``. This ensures your frontend runs in its own terminal window.
+
   ```bash
   cd frontend
   npm run dev

@@ -19,11 +19,31 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 2. Copy the backend-related variables from the root `.env` file. Typical variables include:
     - `DB_HOST`
     - `DB_PASSWORD`
+    - `DB_NAME`
+    - `DB_USER`
     - `AZURE_OPENAI_API_KEY`
     - `AZURE_OPENAI_ENDPOINT`
-    - `AZURE_API_VERSION`
+    - `AZURE_API_VERSION_LLM`
+    - `AZURE_API_VERSION_EMBEDDING_MODEL`
     - Any other variables required by the backend (refer to sample `.env.example`).
 3. Paste these variables values into `backend/.env`.
+4. In the new `backend/.env` file, Arize Phoenix environment variables are already set for the devcontainer setup. If you are running locally, you need to update these variables as follows:
+
+    - **For local development:**
+      1. **Comment out** the Arize Phoenix DevContainer environment variables:
+         ```env
+         # DevContainer Environment
+         # PHOENIX_COLLECTOR_ENDPOINT=http://arize-phoenix:6006/v1/traces
+         # PHOENIX_CLIENT_ENDPOINT=http://arize-phoenix:6006
+         ```
+      2. **Uncomment or add** the local environment settings:
+         ```env
+         # Local Environment
+         PHOENIX_COLLECTOR_ENDPOINT="http://localhost:6006/v1/traces"
+         PHOENIX_CLIENT_ENDPOINT="http://localhost:6006"
+         ```
+
+    This ensures your backend connects to the correct Arize Phoenix endpoint depending on whether you are running in a devcontainer or on your local machine.
 
 ---
 
@@ -38,11 +58,14 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 
 ## 4. Arize-Phoenix: Setting up `.env` file
 
+> **Note:** By default, we recommend **not** setting the environment variable below for Arize Phoenix. In this case, traces will be stored locally inside the container using a Docker volume, and will persist as long as the Docker volume exists. However, if the volume is removed, traces will be lost. If you want to persist traces to an external database, follow the steps below to configure the connection.
+
 1. In the `arize-phoenix` directory, create a file named `.env` if it does not already exist.
 2. Copy the Arize-related variables from the root `.env` file. Typical variables include:
-    - `PHOENIX_SQL_DATABASE_URL`
-    - Any other variables required by Arize (refer to Arize documentation or sample `.env.example` if available).
+    - `PHOENIX_SQL_DATABASE_URL` (set this only if you want to persist traces externally)
 3. Paste these variables into `arize-phoenix/.env`.
+
+> If you do not set `PHOENIX_SQL_DATABASE_URL`, Arize Phoenix will use its default local storage for traces.
 
 ---
 

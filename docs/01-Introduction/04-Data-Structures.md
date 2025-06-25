@@ -1,6 +1,6 @@
 # 1.4 Backend Data Structures
 
-This section provides an overview of the core database schema and data artifacts used in the AgenticShop backend. It highlights **key tables and fields** that enable AI-powered personalization, semantic search, review analysis, and conversational AI. It also explains how these components are leveraged by backend services and Azure AI integrations.
+This section provides an overview of the core database schema and data artifacts used in the AgenticShop backend. It highlights **key tables and fields** that enable AI-powered personalization, semantic search, review analysis. It also explains how these components are leveraged by backend services and Azure AI integrations.
 
 ## Understanding the Table Schema
 
