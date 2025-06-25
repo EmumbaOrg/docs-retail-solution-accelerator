@@ -7,18 +7,23 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 > **Purpose:** This step makes sure the planner knows about your new agent and can suggest it for relevant user queries.
 
 ---
-
 ```python
 # --- Planning Agent Prompt Update ---
 """
 - Reviews Agent: Answer queries related to product reviews. Can be used to generate personalized
   content related to product reviews. Invoke if user is interested in reviews.
-  Update the json agents list example present in planning agent        
-Respond with a JSON list of agents to call: ["product_personalization", "reviews", "inventory"] 
 """
 ```
-
 ---
+
+Update the json agents list present in planning agent prompt
+---
+```
+Respond with a JSON list of agents to call: ["product_personalization", "reviews", "inventory"]
+```
+---
+
+
 
 **What this does:**
 This change ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
