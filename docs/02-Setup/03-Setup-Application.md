@@ -62,6 +62,17 @@ sudo systemctl enable docker
 
 After starting Docker, re-run `docker info` to confirm that the Docker Engine
 
+### Create `.env` File for Apps
+
+1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now.
+   We will populate the required environment variables later in Section <Section #>
+
+    ```bash title=""
+    `frontend/.env`
+    `backend/.env`
+    `arize-phoenix/.env`
+    ```
+
 ## Build and Open Dev Container
 
 In this step you will open and build your dev container in VS Code.  After you complete this, you can complete the remaining steps in this page by running all commands inside
@@ -79,18 +90,6 @@ your dev container command line, not your local operating system command line.
 
     From here on out in the documentation, run your commands in the dev container shell.  Except for tools like pgAdmin, you will still run these in your main operating system not the dev container.
 
-
-### Create `.env` File for Apps
-
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now.
-   We will populate the required environment variables later in Section <Section #>
-
-    ```bash title=""
-    `frontend/.env`
-    `backend/.env`
-    `arize-phoenix/.env`
-    ```
-
 ## Local Dev Environment (Option 2)
 
 ### Install Required Libraries
@@ -107,8 +106,11 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
     ```bash title=""
     cd backend
+    poetry config virtualenvs.in-project true --local
     poetry install
     ```
+
+    > The command `poetry config virtualenvs.in-project true --local` ensures that Poetry creates the virtual environment inside your project directory (as `.venv`), making it easier to manage and locate your environment for this project.
 
 2. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
 
