@@ -71,7 +71,7 @@ memory.add(messages="Interested in noise-cancelling headphones", user_id="1")
 ### Step 3: Retrieve what’s stored (optional)
 
 ```python
-results = memory.search(query="battery life", user_id="1")
+results = memory.search(query="User's specific preferences, likes, dislikes, past interactions, and shopping behavior patterns?", user_id="1")
 print(results)
 ```
 
