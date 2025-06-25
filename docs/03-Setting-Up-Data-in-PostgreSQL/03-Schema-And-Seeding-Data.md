@@ -8,7 +8,7 @@ In this section, we set the foundation for our agentic application by:
 
 ---
 
-## 🧱 Database Tables Created
+## Database Tables Created
 
 Tables include:
 
@@ -23,7 +23,7 @@ These tables are structured with appropriate foreign keys, indexes, and enum typ
 
 ---
 
-## 📥 Seeding Data from CSV
+## Seeding Data from CSV
 
 CSV files stored in the `backend/data/` directory are used to populate:
 
@@ -36,7 +36,7 @@ The seeding process automatically replaces empty values with `NULL` and ensures 
 
 ---
 
-## 🧠 Initializing Memory with User Preferences
+## Initializing Memory with User Preferences
 
 User preferences are loaded from CSV into the `mem0` memory engine:
 
@@ -49,4 +49,4 @@ output = memory.add(
 
 This gives each user a base profile which downstream agents will reference to generate personalized results.
 
-> We'll explore memory in more detail in the [Generating Memories](05-Generating-Memories.md) section.
+> We'll explore memory in more detail in the next section.

@@ -19,7 +19,7 @@ Here’s an example SQL query that demonstrates how we use the `azure_ai.extract
 
 ```sql
 SELECT azure_ai.extract(
-  'Review: The battery life is incredible. Feature: battery life',
+  'Review: The battery life is incredible.',
   ARRAY['sentiment - sentiment about the feature as in positive, negative, or neutral'],
   model => 'gpt-4o'
 ) ->> 'sentiment' AS sentiment;
@@ -69,6 +69,3 @@ Although you’re testing this manually here, the production system runs these A
 
 This approach keeps everything **in-database**, minimizing round-trips and making the AI processing fully declarative and observable.
 
----
-
-> 🔍 Tip: You can view intermediate results using SQL before they’re written back to the `product_reviews` table, making debugging and experimentation simple.

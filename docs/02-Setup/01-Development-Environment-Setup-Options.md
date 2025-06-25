@@ -23,6 +23,7 @@ Using a `Dev Container` will minimize the amount of software you need to install
 The required development environment uses a Visual Studio (VS) Code editor with a Python runtime. To complete this lab on your own computer, you must install the following required software. On completing this step, you should have installed:
 
 - [X] Windows Powershell 7.5+ (Only if using Windows)
+- [X] WSL 2 and Ubuntu (Only if using Windows)
 - [X] Git
 - [X] Docker desktop
 - [X] Visual Studio Code
@@ -42,6 +43,31 @@ The required development environment uses a Visual Studio (VS) Code editor with 
     
 4. The command prompt should show the version of PowerShell as `7.5.0` or greater.
 
+### Install WSL 2 and Ubuntu (Only if using Windows)
+
+Windows Subsystem for Linux (WSL) is a powerful tool that allows the ability to run Linux based Docker images on the Windows operating system.  Plus, WSL 2 provides advantages to using
+Docker Desktop on Windows, such as better memory management for large containers.  WSL 2 is needed because the dev container for this solution accelerator is built on an Ubuntu Linux base image.
+
+1. First we need to install Ubuntu from the Microsoft App Store:
+
+    - Open "Microsoft Store" from your Start Menu
+    - Search for "Ubuntu"
+    - For the search result titled simply "Ubuntu", select and click "Get" to install
+    - Reboot if it asks.
+
+2. Open PowerShell as Admin and run:
+
+    ```powershell title=""
+    wsl --install
+    ```
+
+3. It will install WSL 2.
+4. Reboot if it asks.
+5. Test the installation:
+
+    - Opening Terminal in PowerShell shell, and type `wsl'
+    - This should load an Ubuntu Linux Shell command line and if you type `ps` you will be a list of processes, this means everything works correctly
+
 ### Install Git
 
 Git enables you to manage your code by tracking changes, maintaining a version history, and facilitating collaboration with others. This helps in organizing and maintaining the integrity of your project's development.
@@ -59,6 +85,23 @@ Docker Desktop is an application that allows you to build, share, and run contai
     - [Linux](https://docs.docker.com/desktop/setup/install/linux/)
     - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
     - [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+
+2. Configure Docker Desktop to use WSL 2 based engine (For Windows Only)
+
+    - Open Docker Desktop
+    - Click Settings
+    - Click General
+    - Select `Use the WSL 2 based engine`
+    - Click `Apply & restart`
+
+3. Configure Docker Desktop to use WSL 2 integration (For Windows Only)
+
+    - Open Docker Desktop
+    - Click Resources
+    - Click WSL integration
+    - Select `Enable integration with me default WSL distro`
+    - Select `Ubuntu`
+    - Click `Apply & restart`
 
 ### Install Visual Studio Code
 
