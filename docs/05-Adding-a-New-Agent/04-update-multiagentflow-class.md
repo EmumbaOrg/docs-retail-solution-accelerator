@@ -100,7 +100,6 @@ async def review(
             Generate a summary of relevant reviews of the product based on the
             user's preferences: {user_info['user_preferences']}
             and the optional user query: {user_message}.
-            {generate_error_prompt}
         """,
         )
 
