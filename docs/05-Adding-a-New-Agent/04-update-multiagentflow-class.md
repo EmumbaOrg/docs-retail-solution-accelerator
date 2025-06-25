@@ -59,7 +59,7 @@ self.reviews_agent = reviews_agent
 
 - **Add `ReviewsEvent` to the planning step return type:**
 
-any type of event that a step function can emit must be mentioned in its return type. We add the ReviewsEvent here so that it can be triggered by the planning agent
+Any type of event that a step function can emit must be mentioned in its return type. We add the ReviewsEvent here so that it can be triggered by the planning agent.
 ```python
 # --- Update planning step return type ---
 ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
@@ -67,7 +67,7 @@ ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
 
 - **Trigger the Reviews Agent when needed:**
 
-by adding this code logic in the planning step function, it is able to trigger the review agent step function by emitting the ReviewsEvent
+By adding this code logic in the planning step function, it is able to trigger the review agent step function by emitting the ReviewsEvent.
 ```python
 # --- Trigger Reviews Agent ---
 if "reviews" in agents_to_call:
@@ -77,7 +77,7 @@ if "reviews" in agents_to_call:
 
 - **Add a step function for the Reviews Agent:**
 
-this is the review agent step function which is executed when the ReviewsEvent is emitted. Within this, we call the review agent that we previously defined in the agents/reviews_agent.py file
+This is the review agent step function, which is executed when the ReviewsEvent is emitted. Within this, we call the review agent that we previously defined in the agents/reviews_agent.py file.
 ```python
 # --- Reviews Agent Step Function ---
 @step
@@ -121,7 +121,7 @@ async def review(
 - **Update the presentation step to accept `ReviewsCompletedEvent`:**
 
 
-the presentation agent accepts the outputs of agents and then refines it before eventually passing it to the frontend. We add the ReviewsCompletedEvent here so that it accepts the output of review agent step function 
+The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function. 
 ```python
 # --- Update presentation step signature ---
 ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsCompletedEvent,
