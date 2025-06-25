@@ -34,7 +34,7 @@ These event classes allow the workflow to track and manage the execution and com
 
 ---
 
-## Intergrade Reviews Agent in MultiAgentFlow Class
+## Integrate Reviews Agent in MultiAgentFlow Class
 
 In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
@@ -52,14 +52,12 @@ reviews_agent: BaseAgent,
 ```
 
 - **Assign it in the constructor body:**
-
 ```python
 # --- Assign in constructor ---
 self.reviews_agent = reviews_agent
 ```
 
 - **Add `ReviewsEvent` to the planning step return type:**
-
 ```python
 # --- Update planning step return type ---
 ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
