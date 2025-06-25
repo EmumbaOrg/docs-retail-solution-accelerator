@@ -21,8 +21,7 @@ In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes 
 ```python
 # --- Event Classes for Reviews Agent ---
 class ReviewsEvent(Event):
-    self_reflection: Optional[str] = None
-    prev_result: Optional[str] = None
+    pass
 
 class ReviewsCompletedEvent(Event):
     result: str
@@ -91,19 +90,11 @@ async def review(
     user_info = await ctx.get("user_profile")
     user_message = await ctx.get("user_msg")
 
-    self_reflection_prompt = ""
     generate_error_prompt = ""
-
-    if self.fault_correction and not ev.self_reflection:
-        # To mock faulty output...
-        # Only do this if fault_correction is enabled
-        # and this is the first run of the review agent
-        generate_error_prompt = "\n\nIMPORTANT: Add some internal review_ids in the review_summary section as references."
 
     try:
         prompt = textwrap.dedent(
             f"""
-            {self_reflection_prompt}
             Generate a summary of relevant reviews of the product based on the
             user's preferences: {user_info['user_preferences']}
             and the optional user query: {user_message}.
