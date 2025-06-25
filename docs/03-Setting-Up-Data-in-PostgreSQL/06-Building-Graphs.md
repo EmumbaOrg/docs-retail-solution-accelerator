@@ -109,3 +109,49 @@ Here’s a simplified schematic of how entities connect:
 - **Nodes**: Represent real-world concepts: Products, Features, and Reviews.
 - **Edges**: Capture relationships and sentiment between them.
 - Each edge can carry its own **properties**, enabling more nuanced filtering and querying.
+
+
+## From Natural Language to Graph Query
+
+Let’s walk through how the graph is used to answer a user query like:
+
+> _“Wireless headphones with positive reviews about noise cancellation”_
+
+This type of question involves multiple steps:
+1. Understanding the **product category** (“wireless headphones”).
+2. Identifying the **feature** mentioned (“noise cancellation”).
+3. Filtering for **positive sentiment** from reviews.
+
+To map the user's phrasing of the feature to a canonical feature in our system, we use an **LLM-powered feature extraction** technique via `azure_ai`. This helps match varied expressions like “noise cancellation” to a defined feature (e.g., `"Noise Reduction"`).
+
+Here’s the query using **azure_ai** that performs that step:
+
+```python
+    WITH feature_schema AS (
+        SELECT
+            'productFeature: string - A feature of a product. Features: ' ||
+            STRING_AGG(fx.feature_name, ', ' ORDER BY fx.feature_name) || ' or NULL' AS feature_schema,
+            ARRAY_AGG(fx.id) AS feature_ids,
+            ARRAY_AGG(fx.feature_name) AS feature_names
+        FROM features fx
+    )
+    SELECT
+        (azure_ai.extract('{feature_name}', ARRAY[(SELECT feature_schema FROM feature_schema)],
+        '{settings.LLM_MODEL}')::JSONB->>'productFeature') AS mapped_feature
+```
+
+Once the feature is resolved, a Cypher query is constructed to count how many positive reviews reference that feature for each product in the given category:
+
+```cypher
+MATCH (p:Product), (f:Feature), (r:Review)
+WHERE p.id IN [list_of_product_ids] AND f.name = 'Noise Reduction'
+MATCH (p)-[:HAS_FEATURE]->(f)
+MATCH (f)<-[:positive_sentiment {product_id: p.id}]-(r)
+RETURN p.id AS product_id, COUNT(r) AS positive_review_count
+ORDER BY positive_review_count DESC
+```
+
+This enables the system to rank products like wireless headphones based on the number of positive mentions for the desired feature, surfacing the most well-reviewed products for that specific aspect.
+
+> This powerful combination of LLM-driven feature resolution and graph traversal using Cypher unlocks complex insights from unstructured user queries—without requiring hardcoded logic or manual keyword mapping.
+
