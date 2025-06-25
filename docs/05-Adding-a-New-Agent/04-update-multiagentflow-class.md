@@ -92,8 +92,6 @@ async def review(
     user_info = await ctx.get("user_profile")
     user_message = await ctx.get("user_msg")
 
-    generate_error_prompt = ""
-
     try:
         prompt = textwrap.dedent(
             f"""
