@@ -86,6 +86,23 @@ Docker Desktop is an application that allows you to build, share, and run contai
     - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
     - [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 
+2. Configure Docker Desktop to use WSL 2 based engine (For Windows Only)
+
+    - Open Docker Desktop
+    - Click Settings
+    - Click General
+    - Select `Use the WSL 2 based engine`
+    - Click `Apply & restart`
+
+3. Configure Docker Desktop to use WSL 2 integration (For Windows Only)
+
+    - Open Docker Desktop
+    - Click Resources
+    - Click WSL integration
+    - Select `Enable integration with me default WSL distro`
+    - Select `Ubuntu`
+    - Click `Apply & restart`
+
 ### Install Visual Studio Code
 
 Visual Studio Code is a versatile, open-source code editor that combines powerful features with an intuitive interface to help you efficiently write, debug, and customize projects. Note that
