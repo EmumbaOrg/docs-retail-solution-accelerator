@@ -58,7 +58,7 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 
 ## 4. Arize-Phoenix: Setting up `.env` file
 
-> **Note:** By default, we recommend **not** setting the environment variable below for Arize Phoenix. In this case, traces will be stored locally inside the container, which means they will be lost if the container is restarted. If you want to persist traces to an external Arize database, follow the steps below to configure the connection.
+> **Note:** By default, we recommend **not** setting the environment variable below for Arize Phoenix. In this case, traces will be stored locally inside the container using a Docker volume, and will persist as long as the Docker volume exists. However, if the volume is removed, traces will be lost. If you want to persist traces to an external Arize database, follow the steps below to configure the connection.
 
 1. In the `arize-phoenix` directory, create a file named `.env` if it does not already exist.
 2. Copy the Arize-related variables from the root `.env` file. Typical variables include:
