@@ -21,7 +21,10 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
     - `DB_PASSWORD`
     - `AZURE_OPENAI_API_KEY`
     - `AZURE_OPENAI_ENDPOINT`
-    - `AZURE_API_VERSION`
+    - `AZURE_API_VERSION_LLM`
+    - `AZURE_API_VERSION_EMBEDDING_MODEL`
+    - `LLM_MODEL`
+    - `EMBEDDING_MODEL`
     - Any other variables required by the backend (refer to sample `.env.example`).
 3. Paste these variables values into `backend/.env`.
 
