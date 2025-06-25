@@ -1,4 +1,4 @@
-# 2.7 Setup Application
+# 2.3 Setup Application
 
 ## Introduction
 
