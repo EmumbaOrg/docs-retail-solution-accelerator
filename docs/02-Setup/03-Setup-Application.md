@@ -112,12 +112,22 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
     > The command `poetry config virtualenvs.in-project true --local` ensures that Poetry creates the virtual environment inside your project directory (as `.venv`), making it easier to manage and locate your environment for this project.
 
-2. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
+2. Activate the Python virtual environment created by Poetry. Run the following command from the `backend` directory:
+
+    ```bash
+    source .venv/bin/activate
+    ```
+
+    > This ensures that all Python commands use the dependencies installed in your project's virtual environment.
+
+3. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
 
     ```bash title=""
     cd ../frontend
     npm install
     ```
+
+    > `npm install` is a command used in Node.js projects to download and install all the dependencies listed in the package.json file. It sets up the required libraries and modules your project needs to run.
 
 ### Create `.env` File for Apps
 
