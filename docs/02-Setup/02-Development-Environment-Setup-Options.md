@@ -1,4 +1,4 @@
-# 2.1 Development Environment Setup
+# 2.2 Development Environment Setup
 
 To get started, you have two options for setting up your development environment:
 

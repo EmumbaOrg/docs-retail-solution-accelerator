@@ -1,4 +1,4 @@
-# 2.9 Run Application
+# 2.10 Run Application
 
 ## Run Database Migrations
 
