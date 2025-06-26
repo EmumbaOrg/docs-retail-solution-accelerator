@@ -107,3 +107,38 @@ When using VS Code Devcontainers:
 
 > **Note:** Manual Arize container setup is only required for local (non-devcontainer) environments.
 
+
+---
+
+## Troubleshooting
+
+If you encounter issues while running the application, consider the following common solutions:
+
+- **Error Starting Backend App**
+  While starting the backend app from debugger you might face this error `No module named uvicorn`. If you have completed the step of installing backend project dependencies using `poetry install`, then this error means that vscode is not pointing to correct python interpreter.
+
+  To fix this error, open the command panel in vscode using `ctrl + shift + p` type `Python: Select Interpreter` and press enter.
+  ![Command Pallete Select Python Interpreter.](../img/select-python-interpreter-option.png)
+
+  Choose the interpreter that in our backend project virtual environment.
+  ![Select Default Interpreter Option.](../img/default-python-interpreter.png)
+
+- **Database Migration Errors:**  
+  Ensure your database service is running and accessible. Double-check your environment variables for correct database connection details. Rerun the migration command if necessary.
+
+- **Port Conflicts:**  
+  Make sure ports `8000` (backend), `5173` (frontend), and `6006` (Arize Phoenix) are not in use by other applications. Stop any conflicting services or change the port numbers in your configuration.
+
+- **Dependency Problems:**  
+  Verify all dependencies are installed:
+  - For the backend: `pip install -r requirements.txt`
+  - For the frontend: `npm install`
+  - For Docker: Ensure you have the latest version installed.
+
+- **VS Code Debugger Not Working:**  
+  Check that your VS Code is up to date and the required extensions (such as Python and Dev Containers) are installed. Reload VS Code or restart your machine if issues persist.
+
+- **Devcontainer Issues:**  
+  If services do not start automatically, rebuild the devcontainer (`Dev Containers: Rebuild Container` from the command palette).
+
+If problems continue, consult the project README or reach out to your team for further assistance.
