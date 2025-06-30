@@ -1,4 +1,4 @@
-# 2.8 Setting Up Environment (.env) Files
+# 2.9 Setting Up Environment (.env) Files
 
 Environment variable files (`.env`) are essential for securely managing configuration values such as API keys, service URLs, and secrets for each application component. This section guides you through setting up `.env` files for the **frontend**, **backend**, and **arize-phoenix** services.
 
