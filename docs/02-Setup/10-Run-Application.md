@@ -34,7 +34,7 @@ We use Arize Phoenix to monitor and gain observability into the workflows and ag
 > **Important:** Starting the **Arize Phoenix** container is required before running backend apps locally. (In devcontainers, this starts automatically—see below.)
 
 
-### 1. Start Arize Phoenix Docker Container
+### Start Arize Phoenix Docker Container
 
 The `Dockerfile` for Arize Phoenix used in this project is very simple. It is based directly on the official Arize Phoenix base image and exposes the required ports for the service:
 
