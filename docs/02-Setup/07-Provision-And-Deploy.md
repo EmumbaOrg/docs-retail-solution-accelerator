@@ -68,6 +68,42 @@ You should change the default postgres authentication credentials. This serves a
 
         The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
 
+## Provide Permissions to Hooks
+
+Before proceeding with deployment of infra, you must provide permissions to the azd-hooks to make them executable and perform the necessary actions.
+
+    !!! info "Azd hooks for custom workflow"
+
+        azd hooks are configurable scripts defined in `azure.yaml` file that run automatically before or after key lifecycle events like provision, build, deploy etc. allowing you to insert custom logic into your app pipeline. 
+
+        You can apply hooks globally or per-service, supporting execution on multiple OS like posix, Windows.
+
+### Permissions for Windows
+
+1. Execute this command to grant the permissions to the current session to be able to execute `pwsh` scripts located in the `azd-hooks` directory.
+
+    ```bash title=""
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+### Permissions for Unix-like Environment 
+
+1. If you are using unix-like environment such as (WSL, Cygwin, MinGW etc.) on Windows, execute the following command to grant permissions to the current session for execution of scripts. 
+    
+    ```bash title=""
+    pwsh -NoProfile -Command "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass"
+    ```
+
+### Permissions for Linux/macOS
+
+1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable.
+
+    ```bash title=""
+    sudo chmod +x azd-hooks/predeploy.sh
+    sudo chmod +x azd-hooks/preprovision.sh
+    sudo chmod +x azd-hooks/postprovision.sh
+    ```
+
 ## Provision Azure Resource Without Apps Deployment
 
 You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the workshop to deploy apps on Azure infrastructure.
