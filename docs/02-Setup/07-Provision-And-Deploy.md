@@ -72,11 +72,11 @@ You should change the default postgres authentication credentials. This serves a
 
 Before proceeding with deployment of infra, you must provide permissions to the azd-hooks to make them executable and perform the necessary actions.
 
-    !!! info "Azd hooks for custom workflow"
+!!! info "Azd hooks for custom workflow"
 
-        azd hooks are configurable scripts defined in `azure.yaml` file that run automatically before or after key lifecycle events like provision, build, deploy etc. allowing you to insert custom logic into your app pipeline. 
+    azd hooks are configurable scripts defined in `azure.yaml` file that run automatically before or after key lifecycle events like provision, build, deploy etc. allowing you to insert custom logic into your app pipeline. 
 
-        You can apply hooks globally or per-service, supporting execution on multiple OS like posix, Windows.
+    You can apply hooks globally or per-service, supporting execution on multiple OS like posix, Windows.
 
 ### Permissions for Windows
 
