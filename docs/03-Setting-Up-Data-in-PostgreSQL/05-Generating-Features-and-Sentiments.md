@@ -11,11 +11,15 @@ These insights help populate the `product_reviews` table with structured fields 
 
 ---
 
-## 🧪 Try It Yourself: Extract Sentiment from a Review
+## Try It Yourself: Extract Sentiment from a Review
 
 Here’s an example SQL query that demonstrates how we use the `azure_ai.extract` function to classify sentiment. You can run this directly in **pgAdmin** to see it in action.
 
 ### 📌 Use Case: Sentiment Classification
+
+
+!!! note "You can run this command in pgAdmin or any SQL tool to try out generating the sentiment."
+Query:
 
 ```sql
 SELECT azure_ai.extract(
@@ -35,9 +39,12 @@ positive
 
 ---
 
-## 🧪 Try It Yourself: Extract the Product Feature Being Mentioned
+## Try It Yourself: Extract the Product Feature Being Mentioned
 
 This example shows how to extract **which feature** is being talked about in the review. We guide the LLM using a **schema prompt** listing possible feature names.
+
+!!! note "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
+Query:
 
 ```sql
 SELECT azure_ai.extract(
@@ -55,11 +62,11 @@ extracted_feature
 portability
 ```
 
-> 🧠 Note: The AI model picks from the list of feature names you provide in the schema prompt. This is why the feature list is aggregated dynamically in the actual workflow.
+!!! note "🧠 The AI model picks from the list of feature names you provide in the schema prompt. This is why the feature list is aggregated dynamically in the actual workflow."
 
 ---
 
-## 🧩 Behind the Scenes
+## Behind the Scenes
 
 Although you’re testing this manually here, the production system runs these AI queries in **batches** as part of the data ingestion pipeline using Alembic migrations. During deployment:
 

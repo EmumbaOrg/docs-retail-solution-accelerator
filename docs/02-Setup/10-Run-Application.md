@@ -13,9 +13,9 @@ To apply the migrations, run the following command from the `backend` directory:
   ```
 
 This command applies all pending migrations and ensures your database schema is up to date.
-> **More Information:** For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this workshop.
+!!! note "For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this workshop."
 
-> **Note:** This step is required regardless of whether you use the command line or the VS Code debugger to run the applications.
+!!! note "**Note:** This step is required regardless of whether you use the command line or the VS Code debugger to run the applications."
 
 ## Run Apps in Local Environment
 
@@ -36,7 +36,7 @@ Choose the option that best fits your workflow and follow the corresponding inst
 
     We use Arize Phoenix to monitor and gain observability into the workflows and agents, helping you track and debug application behavior effectively.
 
-    > **Important:** Starting the **Arize Phoenix** container is required before running backend apps locally. (In devcontainers, this starts automatically—see below.)
+    !!! danger "**Important:** Starting the **Arize Phoenix** container is required before running backend apps locally. (In devcontainers, this starts automatically—see below.)"
 
     The `Dockerfile` for Arize Phoenix used in this project is very simple. It is based directly on the official Arize Phoenix base image and exposes the required ports for the service:
 
@@ -62,7 +62,7 @@ Choose the option that best fits your workflow and follow the corresponding inst
     uvicorn src.main:app --host 0.0.0.0 --port 8000 --log-config logging_config.yaml --reload
     ```
 
-    > This command starts the FastAPI backend server using Uvicorn with live reload enabled.
+    !!! info "This command starts the FastAPI backend server using Uvicorn with live reload enabled."
 
 - **Frontend:**
 
@@ -73,7 +73,7 @@ Choose the option that best fits your workflow and follow the corresponding inst
     npm run dev
     ```
 
-    > This command starts the frontend development server using Vite and serves the React app.
+    !!! info "This command starts the frontend development server using Vite and serves the React app."
 
 
 You can run these commands in separate terminals to start both apps simultaneously.
@@ -93,7 +93,7 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
 
 ![debugger-dropdown](../img/debugger-drop-down.png)
 
-> **Tip:** The compound configuration **Launch Frontend and Backend** will run both apps together, each in its own debugger instance.
+!!! tip "**Tip:** The compound configuration **Launch Frontend and Backend** will run both apps together, each in its own debugger instance."
 
 ---
 
@@ -108,7 +108,7 @@ When using VS Code Devcontainers:
 2. Choose the desired configuration (backend, frontend, or both).
 3. Start debugging.
 
-> **Note:** Manual Arize container setup is only required for local (non-devcontainer) environments.
+!!! note "**Note:** Manual Arize container setup is only required for local (non-devcontainer) environments."
 
 
 ---

@@ -2,14 +2,11 @@
 
 In this step, we will re-import `get_reviews_agent` in `backend/src/services/agent_workflow.py` and pass it to the `MultiAgentFlow` when initializing. This ensures the Reviews Agent is properly initialized and included in the workflow service.
 
-> **File location:** `backend/src/services/agent_workflow.py`
->
-> **Purpose:** This step wires your Reviews Agent into the workflow service, so it can be used as part of the overall multi-agent orchestration.
+!!! note "**File location:** `backend/src/services/agent_workflow.py`"
 
----
+!!! note " **Purpose:** This step wires your Reviews Agent into the workflow service, so it can be used as part of the overall multi-agent orchestration."
 
 ```python
-# Import the Reviews Agent
 from src.agents import (
     get_inventory_agent,
     get_planning_agent,
@@ -31,7 +28,5 @@ reviews_agent=get_reviews_agent(
 ),
 ```
 
----
-
-**What this does:**
-This ensures the Reviews Agent is properly initialized and included in the workflow service.
+!!! note "**What this does:**"
+    This ensures the Reviews Agent is properly initialized and included in the workflow service.

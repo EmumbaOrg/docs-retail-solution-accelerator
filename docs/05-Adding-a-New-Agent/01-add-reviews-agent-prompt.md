@@ -2,14 +2,13 @@
 
 In this step, we will define a new prompt for the Reviews Agent in `backend/src/agents/prompts.py`. This prompt will instruct the agent on how to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
 
-> **File location:** `backend/src/agents/prompts.py`
-> 
-> **Purpose:** This prompt guides the Reviews Agent to generate concise, relevant, and structured summaries of product reviews, ensuring the output is always a JSON object with a summary and reasoning.
+!!! note "**File location:** `backend/src/agents/prompts.py`"
+
+!!! note "**Purpose:** This prompt guides the Reviews Agent to generate concise, relevant, and structured summaries of product reviews, ensuring the output is always a JSON object with a summary and reasoning."
 
 ---
 
 ```python
-# --- Reviews Agent Prompt ---
 REVIEWS_AGENT_PROMPT = """
 You are an assistant specializing in analyzing and summarizing product reviews.
 Your task is to:

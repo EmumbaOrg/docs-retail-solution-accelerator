@@ -42,11 +42,11 @@ When a query reaches this agent, here’s the high-level flow:
    - For **personalization flows**, it dispatches a background multi-agent workflow.
 3. **Streaming Response**: Each tool emits events back to the frontend via a message queue for real-time updates.
 
-This setup demonstrates how a single LLM-powered agent can identify user intent in real time and route the query to the most appropriate tool, enabling more natural interactions and unlocking dynamic, intent-driven experiences.
+!!! note "This setup demonstrates how a single LLM-powered agent can identify user intent in real time and route the query to the most appropriate tool, enabling more natural interactions and unlocking dynamic, intent-driven experiences."
 
 ---
 
-### 🧪 Example Queries & Tool Actions
+### Example Queries & Tool Actions
 
 You can experiment with this agent directly from the Product Listing or Product Detail Page. Just type in a query that reflects your interest or concern, and the agent will intelligently route your request to the most suitable tool.
 

@@ -9,7 +9,7 @@ We strongly recommend using the **Dev Container** approach. Dev Containers provi
 
 If you prefer to work outside a container, you can follow the local setup instructions to install each prerequisite on your own operating system. The next sections walk you through both workflows in detail.
 
-> 🔎 Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers).
+!!! note "Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers)."
 
 ## Option 1: Setup Dev Containers (Recommended)
 

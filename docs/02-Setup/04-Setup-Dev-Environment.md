@@ -95,7 +95,7 @@ your dev container command line, not your local operating system command line.
 
 ### Install Required Libraries
 
-> **Note:** When you open this project in VS Code, you may see a prompt or notification suggesting to open the project in a Dev Container. This happens because a `.devcontainer` configuration is present in the repository. For the Local Development Environment option, **ignore this prompt** and continue with the steps below to set up and run everything directly on your host system.
+!!! info "When you open this project in VS Code, you may see a prompt or notification suggesting to open the project in a Dev Container. This happens because a `.devcontainer` configuration is present in the repository. For the Local Development Environment option, **ignore this prompt** and continue with the steps below to set up and run everything directly on your host system."
 
 The `pyproject.toml` file in the `backend` folder contains the set of Python libraries needed to run the Python components of the solution accelerator.
 
@@ -113,7 +113,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
     poetry install
     ```
 
-    > The command `poetry config virtualenvs.in-project true --local` ensures that Poetry creates the virtual environment inside your project directory (as `.venv`), making it easier to manage and locate your environment for this project.
+    !!! info "The command `poetry config virtualenvs.in-project true --local` ensures that Poetry creates the virtual environment inside your project directory (as `.venv`), making it easier to manage and locate your environment for this project."
 
 2. Activate the Python virtual environment created by Poetry. Run the following command from the `backend` directory:
 
@@ -130,8 +130,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
         | macOS | bash/zsh | `source .venv/bin/activate` |
 
 
-3. Execute the command in your terminal to activate your vitual environment.
-    > This ensures that all Python commands use the dependencies installed in your project's virtual environment.
+3. Execute the command in your terminal to activate your vitual environment. This ensures that all Python commands use the dependencies installed in your project's virtual environment.
 
 4. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
     
@@ -141,7 +140,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
     npm install
     ```
 
-    > `npm install` is a command used in Node.js projects to download and install all the dependencies listed in the package.json file. It sets up the required libraries and modules your project needs to run.
+    !!! info "`npm install` is a command used in Node.js projects to download and install all the dependencies listed in the package.json file. It sets up the required libraries and modules your project needs to run."
 
 ### Create `.env` File for Apps
 

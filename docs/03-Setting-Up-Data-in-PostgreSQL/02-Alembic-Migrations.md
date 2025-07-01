@@ -33,6 +33,8 @@ This section walks through each **Alembic migration** used in the AgenticShop ba
 
 To run the migration, execute the following command from your development environment — either from the VS Code integrated terminal (inside the Dev Container) or your host terminal with the virtual environment activated:
 
+!!! info "Alembic tracks which migrations have already been applied. If you run the migration command again and there are no new migrations, nothing will change. Only newly created migration scripts will be executed."
+
 ```bash
 cd backend
 alembic upgrade head
@@ -40,5 +42,5 @@ alembic upgrade head
 
 This will run everything—from schema setup to data seeding, embeddings, AI enrichment, and graph creation:
 
-> ⚠️ Make sure your `backend/.env` file is configured with valid credentials and settings.
+!!! danger "Make sure your `backend/.env` file is configured with valid credentials and settings."
 
