@@ -98,9 +98,9 @@ These updates are stored in PostgreSQL under the `mem0_chatstore` table.
 
 ---
 
-## 🧪 Try This Yourself
+## Try This Yourself
 
-If you want to modify agent behaviors:
+!!! tip "Follow the steps, if you want to modify agent behaviors"
 
 - Review their prompts in `prompts.py`
 - Adjust their logic in the workflow

@@ -1,4 +1,4 @@
-# 2.2 Development Environment Setup
+# 2.2 Development Environment Setup Options
 
 To get started, you have two options for setting up your development environment:
 
@@ -9,7 +9,7 @@ We strongly recommend using the **Dev Container** approach. Dev Containers provi
 
 If you prefer to work outside a container, you can follow the local setup instructions to install each prerequisite on your own operating system. The next sections walk you through both workflows in detail.
 
-> 🔎 Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers).
+!!! note "Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers)."
 
 ## Option 1: Setup Dev Containers (Recommended)
 
@@ -42,6 +42,13 @@ The required development environment uses a Visual Studio (VS) Code editor with 
     ```
     
 4. The command prompt should show the version of PowerShell as `7.5.0` or greater.
+    ![Screenshot of the command prompt showing the results of the 'pwsh' command.](../img/pwsh-installation-version.png)
+
+!!! failure "Error running `pwsh` command"
+
+    If there's an error running the `pwsh` command, then PowerShell 7 is not installed.
+
+    ![Screenshot of `pwsh` command error saying it's not a recognized command.](../img/pwsh-installation-error.png)
 
 ### Install WSL 2 and Ubuntu (Only if using Windows)
 
@@ -225,6 +232,24 @@ Python is the programming language used to build the backend app for the solutio
     ```bash title=""
     python --version
     ```
+
+### Install Poetry
+
+Python is the programming language used to build the backend app for the solution. To manage Python dependencies and environments efficiently, this project uses [Poetry](https://python-poetry.org/), a modern Python packaging and dependency management tool. Poetry simplifies the process of installing, updating, and locking dependencies, ensuring consistency across development environments.
+
+#### Install Poetry
+
+1. Install Poetry by following the official Poetry installation guide at [poetry installation guide](https://python-poetry.org/docs/#installation) for the most up-to-date instructions for your operating system.
+!!! info "Poetry is required to manage backend project dependencies."
+
+
+2. After installation, ensure Poetry is available by adding it to your system's PATH if necessary. You can verify the installation with:
+
+    ```bash
+    poetry --version
+    ```
+
+---
 
 ### Install Node.js
 

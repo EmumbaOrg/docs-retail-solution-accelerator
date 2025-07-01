@@ -2,9 +2,9 @@
 
 In this step, we will create a new file `reviews_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 
-> **File location:** `backend/src/agents/reviews_agent.py`
+!!! note "**File location:** `backend/src/agents/reviews_agent.py`"
 > 
-> **Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain.
+!!! note "**Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain."
 
 ---
 
@@ -79,10 +79,9 @@ def get_reviews_agent(
     )
 ```
 
----
 
-**What this does:**
-This file defines the Reviews Agent, which uses a vector store and LLM to retrieve and summarize product reviews. It exposes a function to create and configure the agent.
+!!! note "**What this does:**"
+    This file defines the Reviews Agent, which uses a vector store and LLM to retrieve and summarize product reviews. It exposes a function to create and configure the agent.
 
 ---
 
@@ -90,9 +89,9 @@ This file defines the Reviews Agent, which uses a vector store and LLM to retrie
 
 In this step, we will update `backend/src/agents/__init__.py` to import and expose the `get_reviews_agent` function. This makes the function available for import elsewhere in your codebase, allowing other modules to use the Reviews Agent.
 
-> **File location:** `backend/src/agents/__init__.py`
-> 
-> **Purpose:** Register your agent so it can be easily imported and used throughout your project.
+!!! note "**File location:** `backend/src/agents/__init__.py`"
+
+!!! note "**Purpose:** Register your agent so it can be easily imported and used throughout your project."
 
 ---
 
@@ -104,10 +103,8 @@ from .reviews_agent import get_reviews_agent
 "get_reviews_agent",
 ```
 
----
-
-**What this does:**
-This makes the `get_reviews_agent` function available for import elsewhere in your codebase.
+!!! note "**What this does:**"
+    This makes the `get_reviews_agent` function available for import elsewhere in your codebase.
 
 ---
 
@@ -116,16 +113,20 @@ This makes the `get_reviews_agent` function available for import elsewhere in yo
 #### Vector Stores
 A vector store is a storage system that holds embedding vectors of document chunks (and sometimes the document chunks themselves). When you ingest documents, they are split into smaller pieces (chunks), and each chunk is converted into a vector using an embedding model. These vectors are then stored in the vector store, enabling efficient similarity search and retrieval.
 
-In the code, we use a vector store to store and retrieve product review embeddings. This allows the agent to efficiently find and retrieve relevant review chunks based on the user’s query and preferences. [LlamaIndex documentation on Vector Stores.](https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/)
+In the code, we use a vector store to store and retrieve product review embeddings. This allows the agent to efficiently find and retrieve relevant review chunks based on the user’s query and preferences. 
+
+!!! tip "For more details, see the [LlamaIndex documentation on Vector Stores.](https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/)"
 
 #### Query Engine
 A query engine is a generic interface in LlamaIndex that allows you to ask questions over your data. It takes a natural language query and returns a rich response, often by retrieving relevant chunks from one or more indexes (such as a vector store) and generating an answer using an LLM. Query engines can be composed to provide more advanced capabilities.
 
-In the code, we create a query engine from the vector store index. This query engine is configured to use the LLM, embedding model, and filters, and is responsible for retrieving the most relevant product review chunks and generating a summary or answer based on them. [LlamaIndex documentation on Query Engine.]()
+In the code, we create a query engine from the vector store index. This query engine is configured to use the LLM, embedding model, and filters, and is responsible for retrieving the most relevant product review chunks and generating a summary or answer based on them. 
+
+!!! tip "For more details, see the [LlamaIndex documentation on Query Engine.](https://docs.llamaindex.ai/en/stable/module_guides/deploying/query_engine/)"
 
 #### Query Engine Tool
 A Query Engine Tool is a wrapper that allows a query engine to be used as a tool within an agent workflow. It provides metadata (such as a name and description) and exposes the query engine’s capabilities to the agent, so the agent can invoke it as needed.
 
 In the code, we wrap the query engine in a `QueryEngineTool`, providing it with a name and description. This tool is then passed to the agent, enabling the agent to use the query engine to retrieve and summarize product reviews as part of its workflow.
 
-For more details, see the [LlamaIndex documentation on Query Engine Tools](https://docs.llamaindex.ai/en/stable/examples/agent/openai_agent_with_query_engine/).
+!!! tip "For more details, see the [LlamaIndex documentation on Query Engine Tools](https://docs.llamaindex.ai/en/stable/examples/agent/openai_agent_with_query_engine/)."
