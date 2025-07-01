@@ -1,4 +1,4 @@
-# 2.6 Provision and Deploy
+# 2.7 Provision and Deploy
 
 You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
@@ -67,6 +67,42 @@ You should change the default postgres authentication credentials. This serves a
     !!! danger "Only for workshop purposes"
 
         The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
+
+## Provide Permissions to Hooks
+
+Before proceeding with deployment of infra, you must provide permissions to the `azd-hooks` to make them executable and perform the necessary actions.
+
+!!! info "Azd hooks for custom workflow"
+
+    `azd-hooks` are configurable scripts defined in `azure.yaml` file that run automatically before or after key lifecycle events like provision, build, deploy etc. allowing you to insert custom logic into your `azd` workflow. 
+
+    You can apply hooks globally or per-service, supporting execution on multiple environments like posix, Windows.
+
+### Permissions for Windows
+
+1. Execute this command to grant the permissions to the current session to be able to execute `pwsh` scripts located in the `azd-hooks` directory.
+
+    ```bash title=""
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+### Permissions for Unix-like Environment 
+
+1. If you are using unix-like environment such as (WSL, Cygwin, MinGW etc.) on Windows, execute the following command to grant permissions to the current session for execution of scripts. 
+    
+    ```bash title=""
+    pwsh -NoProfile -Command "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass"
+    ```
+
+### Permissions for Linux/macOS
+
+1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable.
+
+    ```bash title=""
+    sudo chmod +x azd-hooks/predeploy.sh
+    sudo chmod +x azd-hooks/preprovision.sh
+    sudo chmod +x azd-hooks/postprovision.sh
+    ```
 
 ## Provision Azure Resource Without Apps Deployment
 

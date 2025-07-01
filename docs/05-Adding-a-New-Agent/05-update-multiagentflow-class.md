@@ -21,8 +21,7 @@ In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes 
 ```python
 # --- Event Classes for Reviews Agent ---
 class ReviewsEvent(Event):
-    self_reflection: Optional[str] = None
-    prev_result: Optional[str] = None
+    pass
 
 class ReviewsCompletedEvent(Event):
     result: str
@@ -35,7 +34,7 @@ These event classes allow the workflow to track and manage the execution and com
 
 ---
 
-## Intergrade Reviews Agent in MultiAgentFlow Class
+## Integrate Reviews Agent in MultiAgentFlow Class
 
 In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
@@ -53,7 +52,6 @@ reviews_agent: BaseAgent,
 ```
 
 - **Assign it in the constructor body:**
-
 ```python
 # --- Assign in constructor ---
 self.reviews_agent = reviews_agent
@@ -61,6 +59,7 @@ self.reviews_agent = reviews_agent
 
 - **Add `ReviewsEvent` to the planning step return type:**
 
+Any type of event that a step function can emit must be mentioned in its return type. We add the ReviewsEvent here so that it can be triggered by the planning agent.
 ```python
 # --- Update planning step return type ---
 ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
@@ -68,6 +67,7 @@ ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
 
 - **Trigger the Reviews Agent when needed:**
 
+By adding this code logic in the planning step function, it is able to trigger the review agent step function by emitting the ReviewsEvent.
 ```python
 # --- Trigger Reviews Agent ---
 if "reviews" in agents_to_call:
@@ -77,6 +77,7 @@ if "reviews" in agents_to_call:
 
 - **Add a step function for the Reviews Agent:**
 
+This is the review agent step function, which is executed when the ReviewsEvent is emitted. Within this, we call the review agent that we previously defined in the agents/reviews_agent.py file.
 ```python
 # --- Reviews Agent Step Function ---
 @step
@@ -91,23 +92,12 @@ async def review(
     user_info = await ctx.get("user_profile")
     user_message = await ctx.get("user_msg")
 
-    self_reflection_prompt = ""
-    generate_error_prompt = ""
-
-    if self.fault_correction and not ev.self_reflection:
-        # To mock faulty output...
-        # Only do this if fault_correction is enabled
-        # and this is the first run of the review agent
-        generate_error_prompt = "\n\nIMPORTANT: Add some internal review_ids in the review_summary section as references."
-
     try:
         prompt = textwrap.dedent(
             f"""
-            {self_reflection_prompt}
             Generate a summary of relevant reviews of the product based on the
             user's preferences: {user_info['user_preferences']}
             and the optional user query: {user_message}.
-            {generate_error_prompt}
         """,
         )
 
@@ -127,6 +117,8 @@ async def review(
 
 - **Update the presentation step to accept `ReviewsCompletedEvent`:**
 
+
+The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function. 
 ```python
 # --- Update presentation step signature ---
 ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsCompletedEvent,
