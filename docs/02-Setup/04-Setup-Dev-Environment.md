@@ -82,7 +82,7 @@ your dev container command line, not your local operating system command line.
 1. Open VS Code
 2. Open Folder of your locally cloned repo
 3. Press `Ctrl+Shift+P` to open the command palette
-4. Type: `Dev Container` and choose "Rebuild Container"
+4. Type: `Dev Container` and choose "Rebuild and Reopen in Container"
 
 !!! info "Dev Container Build Process"
 
