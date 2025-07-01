@@ -1,4 +1,4 @@
-# 2.4 Setup Application
+# 2.4 Setup Dev Environment
 
 ## Introduction
 
@@ -64,9 +64,10 @@ After starting Docker, re-run `docker info` to confirm that the Docker Engine
 
 ### Create `.env` File for Apps
 
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now.
-   We will populate the required environment variables later in Section <Section #>
 
+1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
+
+    !!! danger "Create `.env` files for each directory by following instructions below"
     ```bash title=""
     `frontend/.env`
     `backend/.env`
@@ -102,8 +103,10 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
     Open the `backend/pyproject.toml` file in the repo to review the required libraries and the versions that are being used.
 
+
 1. From the integrated terminal window in VS Code, run the following commands to install the required libraries in your virtual environment:
 
+    !!! danger "Create virtual environment and install required libraries for backend"
     ```bash title=""
     cd backend
     poetry config virtualenvs.in-project true --local
@@ -114,14 +117,25 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
 2. Activate the Python virtual environment created by Poetry. Run the following command from the `backend` directory:
 
-    ```bash
-    source .venv/bin/activate
-    ```
+    !!! note "Select the appropriate command for your OS and shell from the table."
 
+        | Platform | Shell | Command to activate virtual environment |
+        | -------- | ----- | --------------------------------------- |
+        | POSIX | bash/zsh | `source .venv/bin/activate` |
+        | | fish | `source .venv/bin/activate.fish` |
+        | | csh/tcsh | `source .venv/bin/activate.csh` |
+        | | pwsh | `.venv/bin/Activate.ps1` |
+        | Windows | cmd.exe | `.venv\Scripts\activate.bat` |
+        | | PowerShell | `.venv\Scripts\Activate.ps1` |
+        | macOS | bash/zsh | `source .venv/bin/activate` |
+
+
+3. Execute the command in your terminal to activate your vitual environment.
     > This ensures that all Python commands use the dependencies installed in your project's virtual environment.
 
-3. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
-
+4. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
+    
+    !!! danger "Install required libraries for frontend project."
     ```bash title=""
     cd ../frontend
     npm install
@@ -131,11 +145,54 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
 ### Create `.env` File for Apps
 
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now.
-   We will populate the required environment variables later in Section <Section #>
+1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
 
+    !!! danger "Create `.env` files for each directory by following instructions below"
     ```bash title=""
     `frontend/.env`
     `backend/.env`
     `arize-phoenix/.env`
     ```
+
+## Troubleshooting: Permissions Error When Rebuilding Dev Containers on Windows
+
+If you encounter a permissions error while rebuilding the Dev Containers on a Windows machine, it is likely due to file or folder ownership issues created by previous builds. This can prevent the container from accessing or modifying certain directories, such as the Python virtual environment or Node.js dependencies.
+
+### How to Resolve
+
+Follow these steps to resolve the permissions error:
+
+!!! info "Exiting the Dev Container to Work Locally"
+    To open your project folder outside of the Dev Container environment:
+    
+    1. Press `Ctrl+Shift+P` in VS Code to open the Command Palette.
+    2. Type and select **"Open Folder Locally"**.
+
+    This will open the folder in a new VS Code window running on your local machine, outside of the Dev Container.
+    
+
+1. **Delete the problematic directories:**
+
+    - Remove the Python virtual environment directory from the `backend` folder:
+        ```bash
+        rm -rf backend/.venv
+        ```
+
+    - Remove the Node.js dependencies directory from the `frontend` folder:
+        ```bash
+        rm -rf frontend/node_modules
+        ```
+
+    !!! info "You can delete these folders using File Explorer or the terminal."
+
+2. **Rebuild the Dev Container:**
+
+    - Open VS Code.
+    - Open the folder of your locally cloned repository.
+    - Press `Ctrl+Shift+P` to open the command palette.
+    - Type: `Dev Container` and choose **"Rebuild Container"**.
+
+    !!! info "Dev Container Build Process"
+        This will start a Docker build process to rebuild your development container. Wait for the process to complete. Once finished, VS Code will reload into the new container environment.
+
+After completing these steps, the permissions issue should be resolved and you can continue working in your Dev Container as normal.

@@ -1,4 +1,4 @@
-# 2.2 Development Environment Setup
+# 2.2 Development Environment Setup Options
 
 To get started, you have two options for setting up your development environment:
 
@@ -42,6 +42,13 @@ The required development environment uses a Visual Studio (VS) Code editor with 
     ```
     
 4. The command prompt should show the version of PowerShell as `7.5.0` or greater.
+    ![Screenshot of the command prompt showing the results of the 'pwsh' command.](../img/pwsh-installation-version.png)
+
+!!! failure "Error running `pwsh` command"
+
+    If there's an error running the `pwsh` command, then PowerShell 7 is not installed.
+
+    ![Screenshot of `pwsh` command error saying it's not a recognized command.](../img/pwsh-installation-error.png)
 
 ### Install WSL 2 and Ubuntu (Only if using Windows)
 
@@ -225,6 +232,39 @@ Python is the programming language used to build the backend app for the solutio
     ```bash title=""
     python --version
     ```
+
+### Install Poetry
+
+Python is the programming language used to build the backend app for the solution. To manage Python dependencies and environments efficiently, this project uses [Poetry](https://python-poetry.org/), a modern Python packaging and dependency management tool. Poetry simplifies the process of installing, updating, and locking dependencies, ensuring consistency across development environments.
+
+#### Install Poetry
+
+1. Install Poetry by running the following command in your terminal:
+
+!!! info "Poetry is required to manage backend project dependencies. Install it using the appropriate command for your operating system:"
+    
+    - **On Windows**
+    ```pwsh
+    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+    ```
+
+    - **On Linux**
+    ```bash
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+
+    - **On Mac**
+    ```bash
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+
+2. After installation, ensure Poetry is available by adding it to your system's PATH if necessary. You can verify the installation with:
+
+    ```bash
+    poetry --version
+    ```
+
+---
 
 ### Install Node.js
 
