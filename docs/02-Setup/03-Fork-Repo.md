@@ -38,7 +38,13 @@ Forking in GitHub refers to creating a personal copy of a public repository, whi
     git clone <url_of_your_forked_repo>
     ```
 
-4. Once the repository has been cloned, change directory at the command prompt to the folder of the cloned repo, then run the following command to open the project in Visual Studio Code:
+4. Once the repository has been cloned, navigate into the root of the cloned repository:
+
+    ```bash
+    cd retail-solution-accelerator
+    ```
+
+5.  Then run the following command to open the project in Visual Studio Code:
 
     ```bash title=""
     code .
