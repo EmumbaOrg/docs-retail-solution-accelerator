@@ -239,24 +239,9 @@ Python is the programming language used to build the backend app for the solutio
 
 #### Install Poetry
 
-1. Install Poetry by running the following command in your terminal:
+1. Install Poetry by following the official Poetry installation guide at [poetry installation guide](https://python-poetry.org/docs/#installation) for the most up-to-date instructions for your operating system.
+!!! info "Poetry is required to manage backend project dependencies."
 
-!!! info "Poetry is required to manage backend project dependencies. Install it using the appropriate command for your operating system:"
-    
-    - **On Windows**
-    ```pwsh
-    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
-    ```
-
-    - **On Linux**
-    ```bash
-    curl -sSL https://install.python-poetry.org | python3 -
-    ```
-
-    - **On Mac**
-    ```bash
-    curl -sSL https://install.python-poetry.org | python3 -
-    ```
 
 2. After installation, ensure Poetry is available by adding it to your system's PATH if necessary. You can verify the installation with:
 
