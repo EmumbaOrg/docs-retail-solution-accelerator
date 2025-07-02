@@ -21,13 +21,13 @@ In this section, you will validate your setup before moving on to the next phase
 
 !!! tip "The Azure Portal allows you to view the resources provisioned on Azure and verify that they are setup correctly"
 
-1. Open the [Azure portal Resource Group page](https://portal.azure.com/#browse/resourcegroups) new browser tab. You may be prompted to login.
+1. Open the [Azure portal Resource Group page](https://portal.azure.com/#browse/resourcegroups) in a new browser tab. You may be prompted to login.
 
 2. You may be presented with a "Welcome to Microsoft Azure" screen. Select **Cancel** (to dismiss it) or click **Get Started** (to take an introductory tour of the Azure Portal).
 
 3. You should be taken directly to the Resource Groups page for your subscription. In the list of resource groups, locate the one named `rg-dev` (or, if you assigned a different name, find that one). This resource group was created for you as part of the `azd up` resource deployment. It contains all of the Azure resources required to build and deploy your AI-powered solution.
 
-    !!! tip "You can use the search filter to reduce the number resource groups displayed."
+    !!! tip "You can use the search filter to reduce the number of resource groups displayed."
 
 4. Select your resource group.
 
@@ -52,7 +52,7 @@ In this section, you will validate your setup before moving on to the next phase
 
 ## Ensure the Azure Flexible Server for PostgreSQL is deployed
 
-The `azd up` command included steps to deploy the **Azure Flexible Server for PostgreSQL**. This server will store all the data and information related to the solution as well as use multiple postges extensions used by the backend app to provide the multi-agent workflow functionalities.
+The `azd up` command included steps to deploy the **Azure Flexible Server for PostgreSQL**. This server will store all the data and information related to the solution as well as use multiple postgres extensions used by the backend app to provide the multi-agent workflow functionalities.
 
 !!! info "Azure Flexible Server deployment"
 
@@ -70,7 +70,7 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 3. In **Azure AI Foundry**, select the **Deployments** menu item under **Shared resources** in the left-hand navigation menu.
 
-4. Verify you see a `gpt-4o` deployment for the `gpt-4o` model and an `text-embedding-ada-002` deployment for the `text-embedding-ada-002` model.
+4. Verify you see a `gpt-4o` deployment for the `gpt-4o` model and a `text-embedding-ada-002` deployment for the `text-embedding-ada-002` model.
 
 5. Ensure that the models that you have deployed have the required quota and deployment type.
 
