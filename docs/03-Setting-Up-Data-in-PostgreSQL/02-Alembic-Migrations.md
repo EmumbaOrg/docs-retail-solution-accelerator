@@ -27,20 +27,5 @@ Instead of requiring manual SQL scripts, Alembic automates:
 
 The migration scripts are located in the [`alembic/versions`](https://github.com/Azure-Samples/postgres-agentic-shop/tree/main/backend/alembic) directory of the repository. Each migration file corresponds to a specific step in the data setup.
 
-## Running Alembic Migrations
 
-This section walks through each **Alembic migration** used in the AgenticShop backend. These migrations are designed to progressively build out your database schema, seed it with product and review data, integrate AI capabilities (e.g., embeddings and sentiment analysis), and create a graph-based representation using Apache AGE.
-
-To run the migration, execute the following command from your development environment — either from the VS Code integrated terminal (inside the Dev Container) or your host terminal with the virtual environment activated:
-
-!!! info "Alembic tracks which migrations have already been applied. If you run the migration command again and there are no new migrations, nothing will change. Only newly created migration scripts will be executed."
-
-```bash
-cd backend
-alembic upgrade head
-```
-
-This will run everything—from schema setup to data seeding, embeddings, AI enrichment, and graph creation:
-
-!!! danger "Make sure your `backend/.env` file is configured with valid credentials and settings."
-
+!!! info "Alembic tracks which migrations have already been applied. If you run the migration command again and there are no new migrations, nothing will change. Only newly created migration scripts will be executed. We have already executed the Alembic migrations and set up the database."

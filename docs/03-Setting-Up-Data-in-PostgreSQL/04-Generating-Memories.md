@@ -14,7 +14,7 @@ Memory enables agents to:
 - Evolve recommendations based on historical interactions
 - Persist state across workflows and sessions
 
-!!! note "For example: If a user mentions they prefer "lightweight laptops with long battery life", that preference is stored and reused by downstream agents."
+!!! note "Example: If a user mentions they prefer "lightweight laptops with long battery life", that preference is stored and reused by downstream agents."
 
 ---
 
@@ -77,7 +77,7 @@ results = memory.search(query="User's specific preferences, likes, dislikes, pas
 print(results)
 ```
 
-!!! note "These memory entries will now influence how the personalization agent tailors product recommendations in later steps."
+!!! info "These memory entries will now influence how the personalization agent tailors product recommendations in later steps."
 
 ---
 
@@ -87,21 +87,21 @@ All memories stored by `mem0` are persisted in a dedicated PostgreSQL table call
 
 !!! tip "To inspect the memory data stored for different users, you can run the following SQL query using **pgAdmin** or any SQL tool"
 
-    ```sql
-    SELECT id, payload FROM public.mem0_chatstore
-    ORDER BY id ASC LIMIT 100;
-    ```
+```sql
+SELECT id, payload FROM public.mem0_chatstore
+ORDER BY id ASC LIMIT 100;
+```
 
-    This will return rows containing the memory text, associated user ID, and metadata such as creation timestamp. Here's an example output:
+This will return rows containing the memory text, associated user ID, and metadata such as creation timestamp. Here's an example output:
 
-    | id                                    | payload                                                                                                                                                  |
-    |--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | 254218b4-070a-4573-bd54-6a56962ca216 | {"data": "Prefers critical reviews about durability", "user_id": "1", "created_at": "2025-06-04T00:41:58.613501-07:00"}                                  |
-    | 298df4f9-4fcb-409e-858b-66372ef8e0c8 | {"data": "Has a deep passion for high-quality audio", "user_id": "1", "created_at": "2025-05-29T07:22:05.293070-07:00"}                                  |
-    | a3c4ec50-8b0b-46f3-9e85-2e84e2faf805 | {"data": "Prefers black color", "user_id": "1", "created_at": "2025-05-29T07:22:01.393729-07:00"}                                                         |
-    | d27e92f0-aff3-4e8f-98eb-7efd1f8e3f69 | {"data": "Prefers workout-friendly products", "user_id": "2", "created_at": "2025-05-29T07:22:18.402198-07:00"}                                           |
+| id                                    | payload                                                                                                                                                  |
+|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 254218b4-070a-4573-bd54-6a56962ca216 | {"data": "Prefers critical reviews about durability", "user_id": "1", "created_at": "2025-06-04T00:41:58.613501-07:00"}                                  |
+| 298df4f9-4fcb-409e-858b-66372ef8e0c8 | {"data": "Has a deep passion for high-quality audio", "user_id": "1", "created_at": "2025-05-29T07:22:05.293070-07:00"}                                  |
+| a3c4ec50-8b0b-46f3-9e85-2e84e2faf805 | {"data": "Prefers black color", "user_id": "1", "created_at": "2025-05-29T07:22:01.393729-07:00"}                                                         |
+| d27e92f0-aff3-4e8f-98eb-7efd1f8e3f69 | {"data": "Prefers workout-friendly products", "user_id": "2", "created_at": "2025-05-29T07:22:18.402198-07:00"}                                           |
 
-!!! note "Each `payload` is a JSON object containing a single memory item and the associated user (metadata)."
+!!! info "Each `payload` is a JSON object containing a single memory item and the associated user (metadata)."
 
 ## Behind the Scenes
 
@@ -115,7 +115,7 @@ These facts are:
 
 The memory engine acts as a **semantic layer**, distilling key preferences or intents from conversations and making them accessible to agents without needing to reprocess raw history.
 
-!!! note "🧠 The LLM prompt used for extraction is defined [here in the mem0 GitHub repo](https://github.com/mem0ai/mem0/blob/main/mem0/configs/prompts.py). You can customize this to fit your domain-specific needs."
+!!! info "🧠 The LLM prompt used for extraction is defined [here in the mem0 GitHub repo](https://github.com/mem0ai/mem0/blob/main/mem0/configs/prompts.py). You can customize this to fit your domain-specific needs."
 
 ## Summary
 

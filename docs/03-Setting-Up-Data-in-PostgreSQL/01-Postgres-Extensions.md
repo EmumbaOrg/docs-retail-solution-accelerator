@@ -11,10 +11,8 @@ Azure Database for PostgreSQL Flexible Server allows you to extend the functiona
 To enable extensions in Azure Database for PostgreSQL Flexible Server, they must first be added to the server's _allowlist_. 
 
 
-!!! note "You can also review how this is done manually in [the official documentation](https://learn.microsoft.com/azure/postgresql/extensions/how-to-allow-extensions)."
+!!! note "You can also review how this is done manually in [the official documentation](https://learn.microsoft.com/azure/postgresql/extensions/how-to-allow-extensions). The documentation includes steps for allowlisting the extensions, follow the instructions provided in the link."
 
-
-!!! note "Steps or allowlisting the extensions and follow the instructions provided."
 === "Azure CLI"
 
     ```bash
@@ -68,7 +66,7 @@ Once allowlisted, extensions are installed in your database. This is also fully 
 
     Enables graph database capabilities within PostgreSQL using Apache AGE. Allows you to model relationships and run Cypher queries for graph traversal and reasoning.
 
-!!! tip "DiskANN depends on pgvector"
+!!! info "DiskANN depends on pgvector"
 
 Make sure the `vector` extension is created before or use `CASCADE` to automatically handle dependencies.
 
@@ -90,4 +88,4 @@ This will list all extensions currently installed in your PostgreSQL instance.
 
 ---
 
-!!! info "If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](https://github.com/Azure-Samples/postgres-agentic-shop/blob/main/azd-hooks/). Refer to the post provision azd hook for understanding."
+!!! note "If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](https://github.com/Azure-Samples/postgres-agentic-shop/blob/main/azd-hooks/). Refer to the post provision azd hook for understanding."

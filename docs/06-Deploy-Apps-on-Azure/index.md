@@ -2,13 +2,13 @@
 
 The workshop began with a _development_ version of the _AgenticShop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
 
-!!! tip "Optional deployment on Azure"
+!!! note "Optional deployment on Azure"
 
     This step is optional and is not mandatory for the functioning of this solution acceleratsor. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
 
 Because you used `azd` for provisioning and deployment, this is as simple as calling `azd up` (to push all changes in both infrastructure and application). After successful deployment on Azure Container Apps, running `azd deploy` would simply rebuild and deploy the application changes only you made in this project.
 
-!!! tip "Understand the difference between `azd up` and `azd deploy`"
+!!! info "Understand the difference between `azd up` and `azd deploy`"
 
     The `azd up` and `azd deploy` commands are both part of the Azure Developer CLI, but they serve different purposes:
 

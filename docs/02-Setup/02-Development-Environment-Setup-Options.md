@@ -175,15 +175,15 @@ The required local development environment uses a Visual Studio (VS) Code editor
 
     !!! info "Upgrade to latest version of Azure CLI"
 
-        If you already have the Azure CLI installed, you'll need to be sure to upgrade to the latest version. This guide requires v2.69.0 or greater. You can use this command to upgrade to the latest version:
+        If you already have the Azure CLI installed, you'll need to be sure to upgrade to the latest version. This guide requires v2.69.0 or greater. You can use the following command to upgrade to the latest version:
 
-        ```azurecli title=""
-        az upgrade
-        ```
+    ```bash
+    az upgrade
+    ```
 
 2. Once installed, open a command prompt on your machine and verify the installation by running the following:
 
-    ```azurecli title=""
+    ```bash
     az version
     ```
 
@@ -195,7 +195,7 @@ The required local development environment uses a Visual Studio (VS) Code editor
 
     To install the `rdbms-connect` extension, execute this command:
 
-    ```azurecli title=""
+    ```bash
     az extension add -n rdbms-connect
     ```
 
@@ -207,7 +207,7 @@ The required local development environment uses a Visual Studio (VS) Code editor
 
 5. Execute the following command from a terminal prompt to verify the tools were installed:
 
-    ```bash title=""
+    ```bash
     azd version
     ```
 
@@ -229,7 +229,7 @@ Python is the programming language used to build the backend app for the solutio
 
 3. Use the following command from a terminal prompt to verify Python was installed:
 
-    ```bash title=""
+    ```bash
     python --version
     ```
 
@@ -239,8 +239,9 @@ Python is the programming language used to build the backend app for the solutio
 
 #### Install Poetry
 
+!!! note "Poetry is required to manage backend project dependencies."
 1. Install Poetry by following the official Poetry installation guide at [poetry installation guide](https://python-poetry.org/docs/#installation) for the most up-to-date instructions for your operating system.
-!!! info "Poetry is required to manage backend project dependencies."
+
 
 
 2. After installation, ensure Poetry is available by adding it to your system's PATH if necessary. You can verify the installation with:

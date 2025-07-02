@@ -18,7 +18,7 @@ Here’s an example SQL query that demonstrates how we use the `azure_ai.extract
 ### 📌 Use Case: Sentiment Classification
 
 
-!!! note "You can run this command in pgAdmin or any SQL tool to try out generating the sentiment."
+!!! tip "You can run this command in pgAdmin or any SQL tool to try out generating the sentiment."
 Query:
 
 ```sql
@@ -43,7 +43,7 @@ positive
 
 This example shows how to extract **which feature** is being talked about in the review. We guide the LLM using a **schema prompt** listing possible feature names.
 
-!!! note "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
+!!! tip "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
 Query:
 
 ```sql

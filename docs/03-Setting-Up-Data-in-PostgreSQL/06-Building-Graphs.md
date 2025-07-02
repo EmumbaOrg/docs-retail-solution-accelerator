@@ -129,7 +129,7 @@ To map the user's phrasing of the feature to a canonical feature in our system, 
 
 Here’s the query using **azure_ai** that performs that step:
 
-!!! note "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
+!!! tip "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
 ```SQL
 WITH feature_schema AS (
     SELECT
