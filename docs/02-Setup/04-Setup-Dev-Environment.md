@@ -131,7 +131,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
         | macOS | bash/zsh | `source .venv/bin/activate` |
 
 
-3. Execute the command in your terminal to activate your virtual environment. This ensures that all Python commands use the dependencies installed in your project's virtual environment.
+3. In VS Code, open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS), then search for and select "Python: Select Interpreter". From the list, choose the interpreter located in your project's virtual environment (`backend/.venv/bin/python`). 
 
 4. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
     
