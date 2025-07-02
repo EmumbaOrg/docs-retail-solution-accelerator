@@ -36,7 +36,7 @@ Choose the option that best fits your workflow and follow the corresponding inst
 
     We use Arize Phoenix to monitor and gain observability into the workflows and agents, helping you track and debug application behavior effectively.
 
-    !!! danger "**Important:** Starting the **Arize Phoenix** container is required before running backend apps locally. (In devcontainers, this starts automatically—see below.)"
+    !!! note "**Important:** Starting the **Arize Phoenix** container is required before running backend apps locally. (In devcontainers, this starts automatically—see below.)"
 
     The `Dockerfile` for Arize Phoenix used in this project is very simple. It is based directly on the official Arize Phoenix base image and exposes the required ports for the service:
 
@@ -45,13 +45,14 @@ Choose the option that best fits your workflow and follow the corresponding inst
     Open a terminal in VS Code and run:
 
 !!! danger "Start arize phoenix docker container"
-    ```bash
-    cd ../arize-phoenix
 
-    docker build -t arize-phoenix .
+```bash
+cd ../arize-phoenix
 
-    docker run --name arize-phoenix-container -p 6006:6006 -v phoenix_data:/root/.phoenix/ arize-phoenix
-    ```
+docker build -t arize-phoenix .
+
+docker run --name arize-phoenix-container -p 6006:6006 -v phoenix_data:/root/.phoenix/ arize-phoenix
+```
 
 - **Backend:**
 
@@ -93,7 +94,7 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
 
 ![debugger-dropdown](../img/debugger-drop-down.png)
 
-!!! tip "**Tip:** The compound configuration **Launch Frontend and Backend** will run both apps together, each in its own debugger instance."
+!!! info "The compound configuration **Launch Frontend and Backend** will run both apps together, each in its own debugger instance."
 
 ---
 

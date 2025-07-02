@@ -20,7 +20,7 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
 
 1. Log into the Azure CLI `az` using the command below.
 
-    ```bash  title=""
+    ```bash
     az login
     ```
 
@@ -32,18 +32,18 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
 
 1. Log in to Azure Developer CLI. This is only required once per-install.
 
-    ```bash title=""
+    ```bash
     azd auth login
     ```
 
     !!! info "Alternative if above command fails"
 
-        If the above command fails, use the following flag which will provide a code in the terminal. Copy this code for later use.
-        On pressing enter, a window will open where paste the code you previously copied and you shall be able to login.
+    If the above command fails, use the following flag which will provide a code in the terminal. Copy this code for later use.
+    On pressing enter, a window will open where paste the code you previously copied and you shall be able to login.
 
-        ```bash title=""
-        azd auth login --use-device-code
-        ```
+    ```bash
+    azd auth login --use-device-code
+    ```
 
     !!! info "Difference between az CLI and azd CLI"
 
@@ -59,7 +59,7 @@ You should change the default postgres authentication credentials. This serves a
 
 2. Edit the following parameters with your own username and password. You can refer to this file anytime you want to connect to the database to perform any action.
 
-    ```bash title=""
+    ```bash
     ADMINISTRATOR_LOGIN_USER=rtbackend
     ADMINISTRATOR_LOGIN_PASSWORD=Agent2shop
     ```
@@ -82,7 +82,7 @@ Before proceeding with deployment of infra, you must provide permissions to the 
 
 1. Execute this command to grant the permissions to the current session to be able to execute `pwsh` scripts located in the `azd-hooks` directory.
 
-    ```bash title=""
+    ```pwsh
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     ```
 
@@ -90,7 +90,7 @@ Before proceeding with deployment of infra, you must provide permissions to the 
 
 1. If you are using unix-like environment such as (WSL, Cygwin, MinGW etc.) on Windows, execute the following command to grant permissions to the current session for execution of scripts. 
     
-    ```bash title=""
+    ```bash
     pwsh -NoProfile -Command "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass"
     ```
 
@@ -98,7 +98,7 @@ Before proceeding with deployment of infra, you must provide permissions to the 
 
 1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable.
 
-    ```bash title=""
+    ```bash
     sudo chmod +x azd-hooks/predeploy.sh
     sudo chmod +x azd-hooks/preprovision.sh
     sudo chmod +x azd-hooks/postprovision.sh
@@ -110,7 +110,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
 1. Use `azd up` to provision your Azure infrastructure and skip deployment of apps on Azure infrastructure.
 
-    ```bash title=""
+    ```bash
     azd up
     ```
 
@@ -127,7 +127,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
 2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
-    ```bash title=""
+    ```bash
     Do you want to deploy Azure Container Apps? (y/n): no
     ```
 
@@ -176,7 +176,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
 2. If your deployment has failed due to region or quota availability and you want to continue with current deployment in another region, you must purge the existing deployment using `azd down --purge` command before proceeding with another deployment. To set the new region for Azure OpenAI models in current `azd` deployment, you can use the following command:
 
-    ```bash title=""
+    ```bash
     azd env set AZURE_OPENAI_LOCATION <region>
     ```
 
@@ -184,7 +184,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         If the resource destruction does not complete, interrupted or `--purge` flag is not used, the resources may still exist in the your subscription as soft deleted resources which can be seen from Azure portal such as deleted OpenAI models in `Manage deleted resources`, then these resources will consume OpenAI quota hindering you from creating new deployment. It is very important to permanently delete these resources either from Azure portal or through azure CLI before proceeding with another deployment. 
 
-        ```bash title=""
+        ```bash
         az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
         ```
 
@@ -206,7 +206,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
     
     To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion. Redeploy the env using `azd up` command.
 
-    ```bash title=""
+    ```bash
     az group delete --name <resource-group-name>
     Are you sure you want to perform this operation? (y/n): y
 
@@ -219,7 +219,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
     - You can execute the following command to create a new deployment and run the `azd up` command for new deployment.
 
-    ```bash title=""
+    ```bash
     azd env new
 
     azd up

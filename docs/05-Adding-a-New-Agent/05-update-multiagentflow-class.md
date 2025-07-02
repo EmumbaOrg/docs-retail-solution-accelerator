@@ -12,9 +12,9 @@ In the context of multi-agent systems, each step typically interacts with a diff
 
 In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
 
-!!! note "**File location:** `backend/src/agents/multi_agent_workflow.py` (or wherever your workflow/event classes are defined)"
+!!! info "**File location:** `backend/src/agents/multi_agent_workflow.py` (or wherever your workflow/event classes are defined)"
 
-!!! note "**Purpose:** These classes represent the start and completion of a review agent task, enabling event-driven orchestration in your workflow."
+!!! info "**Purpose:** These classes represent the start and completion of a review agent task, enabling event-driven orchestration in your workflow."
 
 ```python
 class ReviewsEvent(Event):
@@ -24,7 +24,7 @@ class ReviewsCompletedEvent(Event):
     result: str
 ```
 
-!!! note "**What this does:**"
+!!! info "**What this does:**"
     These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
 
 ---
@@ -33,9 +33,9 @@ class ReviewsCompletedEvent(Event):
 
 In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
-!!! note "**File location:** `backend/src/agents/multi_agent_workflow.py`"
+!!! info "**File location:** `backend/src/agents/multi_agent_workflow.py`"
 
-!!! note "**Purpose:** This step wires your Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent."
+!!! info "**Purpose:** This step wires your Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent."
 
 - **Accept `reviews_agent` in the MultiAgentFlow class constructor argument:**
 
@@ -115,7 +115,7 @@ In this step, we will update the `MultiAgentFlow` class to accept the Reviews Ag
     ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsCompletedEvent,
     ```
 
-!!! note "**What this does:**"
+!!! info "**What this does:**"
     These changes integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
 ---

@@ -68,10 +68,11 @@ After starting Docker, re-run `docker info` to confirm that the Docker Engine
 1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
 
     !!! danger "Create `.env` files for each directory by following instructions below"
-    ```bash title=""
-    `frontend/.env`
-    `backend/.env`
-    `arize-phoenix/.env`
+
+    ```bash
+    cp frontend/.env.example frontend/.env
+    cp backend/.env.example backend/.env
+    cp arize-phoenix/.env.example arize-phoenix/.env
     ```
 
 ## Build and Open Dev Container
@@ -107,7 +108,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 1. From the integrated terminal window in VS Code, run the following commands to install the required libraries in your virtual environment:
 
     !!! danger "Create virtual environment and install required libraries for backend"
-    ```bash title=""
+    ```bash
     cd backend
     poetry config virtualenvs.in-project true --local
     poetry install
@@ -135,7 +136,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 4. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
     
     !!! danger "Install required libraries for frontend project."
-    ```bash title=""
+    ```bash
     cd ../frontend
     npm install
     ```
@@ -147,10 +148,10 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
 
     !!! danger "Create `.env` files for each directory by following instructions below"
-    ```bash title=""
-    `frontend/.env`
-    `backend/.env`
-    `arize-phoenix/.env`
+    ```bash
+    cp frontend/.env.example frontend/.env
+    cp backend/.env.example backend/.env
+    cp arize-phoenix/.env.example arize-phoenix/.env
     ```
 
 ## Troubleshooting: Permissions Error When Rebuilding Dev Containers on Windows
