@@ -65,7 +65,7 @@ After starting Docker, re-run `docker info` to confirm that the Docker Engine
 ### Create `.env` File for Apps
 
 
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in [Section 2.9](./09-Setting-Up-Env-files.md).
+1. For each of the following directories, navigate in each directory to create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in [Section 2.9](./09-Setting-Up-Env-files.md).
 
     !!! danger "Create `.env` files for each directory by following instructions below"
 
