@@ -3,7 +3,7 @@
 You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
 - [X] Authenticated with Azure
-- [X] Provisioned Azure resources and deployed the AgenticShop solution
+- [X] Provisioned Azure resources for AgenticShop solution
 
 ## Authenticate With Azure
 
@@ -168,7 +168,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
  
 ### Continue with Current Deployment
 
-1. If your deployment failed with an error such as validation error, you can re-run the `azd up` command to restart the deployment of the same `azd` env that you have created before.
+1. If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
 
     !!! danger "Validation Error"
 
@@ -187,6 +187,12 @@ You are now ready to provision your Azure resources without deployment of Agenti
         ```bash title=""
         az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
         ```
+
+3. At any point during provisioning of resources, the deployment can fail due to transient or network issues. For such occurrences, you can take either of following actions: 
+    
+    - Restart the deployment with `azd up` command.
+
+    - If the above fails, you can delete the existing deployment with `azd down --purge`, create a new `azd` env with `azd env new` and follow the deployment steps from previous section.
 
 ### Destroy Old Deployment and Create New
 
