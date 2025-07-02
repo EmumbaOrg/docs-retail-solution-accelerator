@@ -73,7 +73,7 @@ Docker Desktop on Windows, such as better memory management for large containers
 5. Test the installation:
 
     - Opening Terminal in PowerShell shell, and type `wsl'
-    - This should load an Ubuntu Linux Shell command line and if you type `ps` you will be a list of processes, this means everything works correctly
+    - This should load an Ubuntu Linux Shell command line and if you type `ps` you will see a list of processes, this means everything works correctly
 
 ### Install Git
 
@@ -106,7 +106,7 @@ Docker Desktop is an application that allows you to build, share, and run contai
     - Open Docker Desktop
     - Click Resources
     - Click WSL integration
-    - Select `Enable integration with me default WSL distro`
+    - Select `Enable integration with my default WSL distro`
     - Select `Ubuntu`
     - Click `Apply & restart`
 
@@ -119,7 +119,7 @@ the needed extensions will automatically be installed within the `dev container`
 
     - Use the default options in the installer.    
 
-2. After installation completed, launch Visual Studio Code.
+2. After installation is completed, launch Visual Studio Code.
 
 3. In the **Extensions** menu, search for and install the following extensions from Microsoft:
 
