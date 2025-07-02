@@ -110,6 +110,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
     !!! danger "Create virtual environment and install required libraries for backend"
     ```bash
     cd backend
+    poetry env use 3.12 [in case multiple pythons installed]
     poetry config virtualenvs.in-project true --local
     poetry install
     ```
