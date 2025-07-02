@@ -4,7 +4,7 @@ The application architecture for **AgenticShop** is designed to showcase how mod
 
 At the heart of the system is a **multi-agent workflow engine** built on top of LlamaIndex. It integrates seamlessly with AI models, vector stores, and memory systems to deliver personalized product experiences based on user interactions.
 
-## 🔧 Technologies and Azure Services Used
+## Technologies and Azure Services Used
 
 This solution leverages a decoupled architecture built on the following components:
 
