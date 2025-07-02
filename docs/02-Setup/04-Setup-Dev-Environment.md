@@ -65,7 +65,7 @@ After starting Docker, re-run `docker info` to confirm that the Docker Engine
 ### Create `.env` File for Apps
 
 
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
+1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in [Section 2.9](./09-Setting-Up-Env-files.md).
 
     !!! danger "Create `.env` files for each directory by following instructions below"
     ```bash title=""
@@ -130,7 +130,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
         | macOS | bash/zsh | `source .venv/bin/activate` |
 
 
-3. Execute the command in your terminal to activate your vitual environment. This ensures that all Python commands use the dependencies installed in your project's virtual environment.
+3. Execute the command in your terminal to activate your virtual environment. This ensures that all Python commands use the dependencies installed in your project's virtual environment.
 
 4. From the integrated terminal window in VS Code, change directory into the frontend directory and run the following commands to install the required libraries in your virtual environment:
     
@@ -144,7 +144,7 @@ The `pyproject.toml` file in the `backend` folder contains the set of Python lib
 
 ### Create `.env` File for Apps
 
-1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in Section 2.8 ![Link to instruction for populating .env files](./08-Setting-Up-Env-files.md)
+1. For each of the following directories, navigate in each directory to create and create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in [Section 2.9](./09-Setting-Up-Env-files.md).
 
     !!! danger "Create `.env` files for each directory by following instructions below"
     ```bash title=""

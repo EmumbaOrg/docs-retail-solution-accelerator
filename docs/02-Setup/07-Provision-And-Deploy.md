@@ -1,6 +1,6 @@
 # 2.7 Provision and Deploy
 
-You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./00-Prerequisites.md) section if you need more details. After completing this section, you should have:
+You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./01-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
 - [X] Authenticated with Azure
 - [X] Provisioned Azure resources and deployed the AgenticShop solution

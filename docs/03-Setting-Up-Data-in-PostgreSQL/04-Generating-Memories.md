@@ -2,7 +2,7 @@
 
 In any agentic application, **memory** is a foundational component. It allows agents to retain information about a user—such as preferences, behaviors, or past interactions—and use that knowledge to deliver **personalized experiences**.
 
-In **AgenticShop**, we use [`mem0`](https://github.com/mem0-ai/mem0) as the memory engine for storing and retrieving user-specific insights.
+In **AgenticShop**, we use [`mem0`](https://github.com/mem0ai/mem0) as the memory engine for storing and retrieving user-specific insights.
 
 ---
 
