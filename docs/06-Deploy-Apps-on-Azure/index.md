@@ -4,7 +4,7 @@ The workshop began with a _development_ version of the _AgenticShop_ application
 
 !!! note "Optional deployment on Azure"
 
-    This step is optional and is not mandatory for the functioning of this solution acceleratsor. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
+    This step is optional and is not mandatory for the functioning of this solution accelerator. Using this step can help you experience the app functionality when its deployed in actual production environment on Azure infrastructure.
 
 Because you used `azd` for provisioning and deployment, this is as simple as calling `azd up` (to push all changes in both infrastructure and application). After successful deployment on Azure Container Apps, running `azd deploy` would simply rebuild and deploy the application changes only you made in this project.
 
