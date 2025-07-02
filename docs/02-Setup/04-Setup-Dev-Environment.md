@@ -87,8 +87,10 @@ your dev container command line, not your local operating system command line.
 
 !!! info "Dev Container Build Process"
 
-    This will kick off a docker build process where your dev container will be built by docker desktop.  Let this process run, it may take a few minutes.
-    You will see VS Code flash and load into a new project environment.  Once the process completes, you can open a new terminal in VS Code.  You will notice the shell will look a little different as now you are in an Ubuntu Linux Container.
+    This will kick off a docker build process where your dev container will be built by docker desktop. Let this process run, it may take a few minutes.
+    You will see VS Code flash and load into a new project environment. Once the process completes, you can open a new terminal in VS Code. You will notice the shell will look a little different as now you are in an Ubuntu Linux Container.
+
+5. In case the correct python interpreter is not set by default - open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS), then search for and select "Python: Select Interpreter". From the list, choose the interpreter located in your project's virtual environment (`backend/.venv/bin/python`). 
 
     From here on out in the documentation, run your commands in the dev container shell.  Except for tools like pgAdmin, you will still run these in your main operating system not the dev container.
 
