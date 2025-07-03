@@ -6,7 +6,7 @@ Before starting the backend or frontend applications, you **must run the databas
 
 To apply the migrations, run the following command from the `backend` directory:
 
-!!! note "**Note:** Activate your virtual environment before proceeding to avoid errors. Refer to [Section 2.4](/04-Setup-Dev-Environment.md) which contains commands to activate the virtual environment based on the specific OS and shell you are using."
+!!! note "**Note:** Activate your virtual environment before proceeding to avoid errors. Refer to [Section 2.4](./04-Setup-Dev-Environment.md) which contains commands to activate the virtual environment based on the specific OS and shell you are using."
 
 !!! danger "Run database migration, creates schema and populates database with seed data."
   ```bash
