@@ -187,7 +187,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
         az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
         ```
 
-3. At any point during provisioning of resources, the deployment can fail due to transient or network issues. For such occurrences, you can take either of following actions: 
+3. At any point during provisioning of resources, the deployment can fail due to transient errors or network issues. For such occurrences, you can take either of following actions: 
     
     - Restart the deployment with `azd up` command.
 

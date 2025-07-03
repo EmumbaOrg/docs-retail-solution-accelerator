@@ -39,7 +39,7 @@ When triggered, it receives user profile data, product attributes, and product v
 ```python
 result = await self.product_personalization_agent.run(
     f"""Personalize the product for user: {user_info},
-    product: {product_info}, product variants: {vaiants_info}""",
+    product: {product_info}, product variants: {variants_info}""",
     timeout=settings.PRODUCT_PERSONALIZATION_AGENT_TIMEOUT,
 )
 ```

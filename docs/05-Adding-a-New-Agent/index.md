@@ -3,6 +3,7 @@
 Welcome to the "Adding a New Agent" module! In this hands-on guide, you'll embark on an exciting journey to extend your multi-agent system by building and integrating a brand new Reviews Agent. This module is designed to give you practical experience with real-world tools and workflows, empowering you to customize and scale intelligent systems.
 
 By the end of this guide, you'll have:
+
 - Designed a specialized agent prompt
 - Integrated your agent into the planning and presentation layers
 - Built and registered a new agent in code

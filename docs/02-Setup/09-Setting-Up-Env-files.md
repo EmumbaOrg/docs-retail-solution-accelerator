@@ -26,7 +26,7 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
     - `AZURE_API_VERSION_LLM`
     - `AZURE_API_VERSION_EMBEDDING_MODEL`
     - Any other variables required by the backend (refer to sample `.env.example`).
-3. Paste these variables values into `backend/.env`.
+3. Paste these variable values into `backend/.env`.
 4. In the new `backend/.env` file, Arize Phoenix environment variables are already set for the devcontainer setup. If you are running locally, you need to update these variables as follows:
 
     - **For local development:**

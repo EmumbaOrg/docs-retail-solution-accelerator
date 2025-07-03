@@ -16,7 +16,7 @@ Once you have completed this workshop, delete the Azure resources you created. Y
 
     !!! info "The `--purge` flag purges the resources that provide soft-delete functionality in Azure, including Azure KeyVault and Azure OpenAI. This flag is required to remove all resources completely."
 
-3. In the terminal window, you will be shown a list of the resources that will be deleted and prompted about continuing. Enter "y" at the prompt to being the resource deletion. When the tear down is completed, you shall see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message at the end.
+3. In the terminal window, you will be shown a list of the resources that will be deleted and prompted about continuing. Enter "y" at the prompt to begin the resource deletion. When the tear down is completed, you shall see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message at the end.
 
     ![tear-down](../img/tear-down.png)
 

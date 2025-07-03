@@ -41,7 +41,7 @@ Forking in GitHub refers to creating a personal copy of a public repository, whi
 4. Once the repository has been cloned, navigate into the root of the cloned repository:
 
     ```bash
-    cd retail-solution-accelerator
+    cd postgres-agentic-shop
     ```
 
 5.  Then run the following command to open the project in Visual Studio Code:

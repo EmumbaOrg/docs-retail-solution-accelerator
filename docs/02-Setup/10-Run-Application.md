@@ -81,7 +81,7 @@ You can run these commands in separate terminals to start both apps simultaneous
 
 ---
 
-### Option 2: Run Apps Using VS Code Debugger **Recommended**
+### Option 2: Run Apps Using VS Code Debugger **(Recommended)**
 
 You can use the VS Code debugger to start the backend, frontend, or both at once:
 
@@ -101,6 +101,7 @@ You can use the VS Code debugger to start the backend, frontend, or both at once
 ## Running in Devcontainers
 
 When using VS Code Devcontainers:
+
 - The Arize container starts automatically—no manual steps needed.
 
 - Use the VS Code debugger as described above to run backend, frontend, or both (no need to run commands manually).
@@ -125,7 +126,7 @@ If you encounter issues while running the application, consider the following co
     To fix this error, open the command panel in vscode using `ctrl + shift + p` type `Python: Select Interpreter` and press enter.
     ![Command Pallete Select Python Interpreter.](../img/select-python-interpreter-option.png)
 
-    Choose the interpreter that in our backend project virtual environment.
+    Choose the interpreter that is in our backend project virtual environment.
     ![Select Default Interpreter Option.](../img/default-python-interpreter.png)
 
 - **Database Migration Errors:**  

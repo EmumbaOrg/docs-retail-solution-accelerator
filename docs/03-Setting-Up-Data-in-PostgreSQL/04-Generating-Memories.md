@@ -105,7 +105,7 @@ This will return rows containing the memory text, associated user ID, and metada
 
 ## Behind the Scenes
 
-While you can add memories manually or programmatically, under the hood `mem0` uses an large language model (LLM) to extract structured insights—called **facts**—from user input. 
+While you can add memories manually or programmatically, under the hood `mem0` uses a large language model (LLM) to extract structured insights—called **facts**—from user input. 
 
 These facts are:
 

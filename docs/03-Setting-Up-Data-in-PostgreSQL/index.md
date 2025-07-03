@@ -48,10 +48,10 @@ The **Apache AGE** extension transforms your PostgreSQL database into a graph da
 In this module, we will walk through how our PostgreSQL database is setup via Bicep and Alembic migrations to support these AI-driven capabilities:
 
 - [ ] **Install Extensions**
-  Install `azure_ai`, `pg_diskann`, `vector`, and `apache_age`
+   - Install `azure_ai`, `pg_diskann`, `vector`, and `apache_age`
 
 - [ ] **Configure Azure AI Integration**
-  Set up `azure_ai` with connection credentials for Azure OpenAI
+   - Set up `azure_ai` with connection credentials for Azure OpenAI
 
 - [ ] **Embed Intelligence into Data**
   - Generate and store embeddings for product content and reviews
