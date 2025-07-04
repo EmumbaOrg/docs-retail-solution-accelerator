@@ -7,11 +7,13 @@ In this step, we will add the 'REVIEW_AGENT_TIMEOUT'  in `backend/src/config/con
 !!! info "**Purpose:** This step creates a timeout configuration for the review agent."
 
 
-Add the following in the Settings class
+!!! danger "Add the following config variable as class variable in the settings class"
 
 ```python
-    REVIEW_AGENT_TIMEOUT: int = 60
+REVIEW_AGENT_TIMEOUT: int = 60
 ```
+
+---
 
 !!! info "**What this does:**"
     This ensures the Reviews Agent has a proper timeout configuration, allowing it to timeout gracefully without disrupting the rest of the agentic flow.
