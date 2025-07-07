@@ -6,7 +6,7 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 
 !!! info "**Purpose:** This step makes sure the planner knows about your new agent and can suggest it for relevant user queries."
 
-!!! danger "Paste these lines in triple qoutes at the end of `PLANNING_AGENT_PROMPT`"
+!!! danger "Insert the following line inside the PLANNING_AGENT_PROMPT string, specifically under the section that begins with Following agents are available:"
 
 ```python
 """
