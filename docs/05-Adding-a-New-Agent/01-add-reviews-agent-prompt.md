@@ -8,6 +8,8 @@ In this step, we will define a new prompt for the Reviews Agent in `backend/src/
 
 ---
 
+!!! danger "Paste the code below at the end of `backend/src/agents/prompts.py` file"
+
 ```python
 REVIEWS_AGENT_PROMPT = """
 You are an assistant specializing in analyzing and summarizing product reviews.

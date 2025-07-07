@@ -2,11 +2,14 @@
 
 In this step, we will create a new file `reviews_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 
-!!! info "**File location:** `backend/src/agents/reviews_agent.py`"
+!!! danger "Create a new file `reviews_agent.py ` in `backend/src/agents/` directory"
 
 !!! info "**Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain."
 
 ---
+
+!!! danger "Paste the code below in reviews_agent.py file."
+
 
 ```python
 from llama_index.core import VectorStoreIndex
@@ -95,12 +98,31 @@ In this step, we will update `backend/src/agents/__init__.py` to import and expo
 
 ---
 
+!!! danger "Add the below code in `backend/src/agents/__init__.py` file."
+
 ```python
-# --- Expose the Reviews Agent ---
 from .reviews_agent import get_reviews_agent
 
 # Then add this in the list:
 "get_reviews_agent",
+```
+
+After adding the above code the file should look like this.
+
+```python
+from .inventory_agent import get_inventory_agent
+from .planning_agent import get_planning_agent
+from .presentation_agent import get_presentation_agent
+from .product_personalization_agent import get_product_personalization_agent
+from .reviews_agent import get_reviews_agent  # 👈 Newly added
+
+__all__ = [
+    "get_presentation_agent",
+    "get_product_personalization_agent",
+    "get_inventory_agent",
+    "get_planning_agent",
+    "get_reviews_agent",  # 👈 Newly added
+]
 ```
 
 !!! info "**What this does:**"
