@@ -39,6 +39,7 @@ This personalized content is generated based on the profile selected earlier.
 Open the **Agentic Flow** panel again.
 
 You’ll see:
+
 - **Planning Agent**: Determines which agents to invoke
 - **Inventory Agent**: Checks if the product is in stock
 - **Product Personalization Agent**: Tailors the content
