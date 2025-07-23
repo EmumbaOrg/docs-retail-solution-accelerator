@@ -286,6 +286,21 @@ Visual Studio Code is a versatile, open-source code editor that combines powerfu
     - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
     - [Bicep](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
 
+    **Optional Extensions to Install**
+
+    - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github)
+    - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)
+    - [Azure Developer Tools](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.azure-dev)
+    - [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
+    - [Bicep](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
+    - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+    - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+    - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+    - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+    - [Node Azure Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+    - [Microsoft Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+    - [Python Poetry](https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry)
+
 4. Close VS Code.
 
 ### Install pgAdmin

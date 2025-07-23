@@ -48,7 +48,7 @@ To ensure transparency and debuggability, the solution includes end-to-end obser
 - Use [Apache AGE](https://age.apache.org/) along with the Azure AI extension to:
   - Model graph representations of products, reviews, features, and sentiments
   - Run complex Cypher queries to find products based on how users talk about specific features
-    (e.g., *“Find laptops with positive reviews about battery life”*)
+    (e.g., *“Headphones with positive reviews about noise cancellation”*)
 
 ---
 
