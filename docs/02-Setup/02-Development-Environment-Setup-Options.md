@@ -286,6 +286,19 @@ Visual Studio Code is a versatile, open-source code editor that combines powerfu
     - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
     - [Bicep](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
 
+    **Optional Extensions to Install**
+    The recommended extensions for this project are defined in the `.vscode/extension.json` file. When you open Visual Studio Code in this workspace, you will see a prompt asking if you want to install all recommended extensions. Click **Install** to automatically add them. If you miss the prompt, you can manually install the extensions listed above from the Extensions menu at any time.
+
+    - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github)
+    - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)
+    - [Azure Developer Tools](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.azure-dev)
+    - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+    - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
+    - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
+    - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
+    - [Node Azure Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+    - [Python Poetry](https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry)
+
 4. Close VS Code.
 
 ### Install pgAdmin

@@ -4,6 +4,48 @@ In this section, we explore a powerful enhancement to our multi-agent setup—in
 
 Where previous agents handled focused tasks like personalization or inventory lookup, this agent handles broader input and delegates work to appropriate tools (including triggering the workflow we discussed in previous section).
 
+You can expand the section below to review the prompt and declaration of Command Routing Agent. 
+
+To review the full implementation visit this file `backend/src/agents/user_query_agent.py`
+
+???- info "Query Agent Prompt and Declaration"
+
+    ```python title="backend/src/agents/user_query_agent.py"
+    USER_QUERY_AGENT_PROMPT = """
+        You are a helpful AI assistant designed to assist users with their queries or product searches
+        by intelligently selecting and invoking exactly ONE of the following tools:
+
+        1. `query_about_product`: Use this when the user is asking about a specific product
+        or seeking information based on an already selected product.
+        - Example: "Show me a summary of critical reviews about durability."
+
+        2. `query_reviews_with_sentiment`: Use this when the user's query includes *search keywords* and
+        mentions *review sentiments* or *specific features mentioned in reviews*.
+        - Example: "Water-resistant headphones with positive reviews about noise cancellation."
+
+        3. `search_products`: Use this when the user is expressing a search intent without referencing reviews or sentiment.
+        - Example: "Water-resistant headphones."
+
+        **Instructions:**
+        - Identify the user's intent and call only ONE tool accordingly.
+        - DO NOT generate a response yourself.
+        - DO NOT ask the user for clarification.
+        - If the intent is unclear or ambiguous, default to using `query_about_product`.
+        - Return only the output of the called tool—do not modify or paraphrase it.
+
+        Be precise. Your role is to route the query to the correct tool, not to interpret or summarize the output.
+        """
+    # Initialize Command Routing Agent
+    FunctionAgent(
+        name=AgentNames.USER_QUERY_AGENT.value,
+        description="Acts as a smart router that interprets user queries and directs them to the most appropriate tool.",
+        system_prompt=USER_QUERY_AGENT_PROMPT,
+        tools=self._get_tools(),
+        llm=self.llm,
+        verbose=settings.VERBOSE,
+    )
+    ```
+
 ---
 
 ### Query Routing Tools
@@ -99,3 +141,9 @@ This flow involves the planning, inventory, personalization, and presentation ag
 ---
 
 These examples demonstrate how the **Command Routing Agent** interprets natural language, identifies intent, and delegates the task to the appropriate specialized tool—enhancing flexibility and user experience without requiring separate agents for each task.
+
+
+!!! info  "Why Some Queries May Show General Results"
+    When the `query_reviews_with_sentiment` tool is invoked but no matching feature mapping exists in the database—such as when there are no reviews or the requested feature is not associated with any products—the agent automatically falls back to a general vector search within the relevant category. In this case, a notification is displayed to inform the user that sentiment-based results were unavailable, and general product results are being shown instead.
+
+    !!! danger "You can review all available categories (\"Headphones\", \"Tablets\", \"Smartwatches\") and features in this file `backend/data/product_features.csv`"
