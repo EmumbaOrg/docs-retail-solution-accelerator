@@ -36,7 +36,7 @@ Click on the first product to open its detail page. You’ll now see a section t
 This personalized content is generated based on the profile selected earlier.
 
 ## 6. Review the Agentic Flow
-Open the **Agentic Flow** panel again.
+Open the **Agentic Flow** panel.
 
 You’ll see:
 
@@ -63,13 +63,13 @@ Always show if red color is available in stock
 
 This query performs two key actions in the backend:
 
-1. **Personalization Update**:  
+- **Personalization Update**:  
    It triggers the multi-agent personalization workflow again, but this time the personalization is adapted to explicitly include whether the red color variant is available. The following image shows that Red color is not available for this product as part of the Inventory Agents output.
 
-![Personalization Update](../img/always-show-red-memory.png)
+    ![Personalization Update](../img/always-show-red-memory.png)
 
-2. **Memory Storage via mem0**:  
-   The system uses **mem0** to store this preference as part of your user profile. This means that for any future product interactions, the agent will automatically consider your preference for the red color—without requiring you to re-enter it.
+- **Memory Storage via mem0**:  
+   The system uses **mem0** to store this preference as part of your user profile. This means that for any future product interactions, the agent will automatically consider your preference for the red color—without requiring you to re-enter it. You will see a "Memory updated!" toast message whenever memory is updated. 
 
 You can inspect this memory update by opening the Agentic Flow panel and checking the Planning Agent tab.
 

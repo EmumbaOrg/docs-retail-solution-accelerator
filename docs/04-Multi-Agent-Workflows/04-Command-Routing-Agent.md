@@ -75,7 +75,7 @@ This performs a **vector search** over the product embeddings using `pg_diskann`
 Now either from the listing page, or the product detail page try the following query:
 
 ```
-Wireless headphones with positive reviews about noise cancellation
+wireless headphones with good noise cancellation
 ```
 
 This time, the agent identifies that your query is about **review sentiment** about a particular product feature and triggers the `query_reviews_with_sentiment` tool. The product which has the most positive reviews about the requested feature is gets listed on the top. These reviews can be viewed on each product page. 
