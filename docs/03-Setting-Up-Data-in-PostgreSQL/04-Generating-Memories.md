@@ -14,7 +14,7 @@ Memory enables agents to:
 - Evolve recommendations based on historical interactions
 - Persist state across workflows and sessions
 
-!!! note "Example: If a user mentions they prefer "lightweight laptops with long battery life", that preference is stored and reused by downstream agents."
+!!! note "Example: If a user mentions in the command prompt "always show critical reviews about durability", that preference is stored and reused by downstream agents. This is further covered in [Trigger Personalization and Memory Update](04-Multi-Agent-Workflows/03-AgenticShop-Walkthrough.md#7-trigger-personalization-and-memory-update)."
 
 ---
 
