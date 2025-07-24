@@ -143,20 +143,7 @@ This flow involves the planning, inventory, personalization, and presentation ag
 These examples demonstrate how the **Command Routing Agent** interprets natural language, identifies intent, and delegates the task to the appropriate specialized tool—enhancing flexibility and user experience without requiring separate agents for each task.
 
 
-### Example Queries & Tool Actions
-
-You can experiment with this agent directly from the Product Listing or Product Detail Page. Just type in a query that reflects your interest or concern, and the agent will intelligently route your request to the most suitable tool.
-
-| Query Example                                                  | Tool Triggered               |
-|----------------------------------------------------------------|------------------------------|
-| “Wireless headphones with positive reviews about noise cancellation”                         | `query_reviews_with_sentiment` |
-| “Waterproof headphones”                                    | `search_products`           |
-| “Show me summary of positive reviews about durability” (on product page)     | `query_about_product`       |
-
-
 !!! info  "Why Some Queries May Show General Results"
-    In some cases, certain search queries may not return any results. For example, a query like "Tablets with good battery" might not yield results if there is no direct association between the feature ("good battery") and the product category ("tablets") in the available data. This can occur when there are no reviews or feature mappings that connect the queried feature to products in the specified category.
+    When the `query_reviews_with_sentiment` tool is invoked but no matching feature mapping exists in the database—such as when there are no reviews or the requested feature is not associated with any products—the agent automatically falls back to a general vector search within the relevant category. In this case, a notification is displayed to inform the user that sentiment-based results were unavailable, and general product results are being shown instead.
 
-    To ensure a better user experience, a fallback mechanism is implemented. If the initial search does not return any products, a general vector search within the relevant category (e.g., "tablets") is performed to provide available products from that category.
-
-    !!! danger "You can review all available categories ("Headphones", "Tablets", "Smartwatches") and features in this file `backend/data/product_features.csv`"
+    !!! danger "You can review all available categories (\"Headphones\", \"Tablets\", \"Smartwatches\") and features in this file `backend/data/product_features.csv`"
