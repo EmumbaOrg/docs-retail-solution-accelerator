@@ -28,6 +28,15 @@ We'll connect the extension to the database server of our application.
 
      ![connection-details](../img/connection-details.png)
 
+     Use the following mapping to find the correct values from your `.env` file:
+
+     | Parameter | .env variable |
+     |----------|----------|
+     | SERVER_NAME    | DB_HOST |  
+     | USER_NAME    | DB_USER   |
+     | PASSWORD    | DB_PASSWORD   |
+     | DATABASE_NAME    | DB_NAME   |
+
 
 4. ### Connected      
 
