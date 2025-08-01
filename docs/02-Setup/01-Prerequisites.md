@@ -19,9 +19,9 @@ To be able to complete this solution accelerator, you will need:
     - If you don't have an Azure account, [sign up for a free one](https://azure.microsoft.com/en-gb/pricing/purchase-options/azure-account) now. (It takes just a few minutes.)
 4. **An appropriate Azure region for your workshop resources**
     - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota.
-    - Before selecting an Azure region, review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
-        - Select a region that **supports the Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models**.
-        - Ensure you have **at least 150K TPM of `GlobalStandard` capacity for the `gpt-4o` and 120K TPM of `GlobalStandard` capacity for available in the region** for `text-embedding-ada-002` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
+    - Before selecting an Azure region, review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-3-small](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
+        - Select a region that **supports the Azure OpenAI `gpt-4o` and `text-embedding-3-small` models**.
+        - Ensure you have **at least 150K TPM of `GlobalStandard` capacity for the `gpt-4o` and 70K TPM of `GlobalStandard` capacity for available in the region** for `text-embedding-3-small` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
 
     !!! danger "Choosing a region that doesn't support both Azure OpenAI models will result in deployment failure when running `azd up`."
 

@@ -155,7 +155,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
         
-	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which is bigger than the current available capacity._
+	    _(InsufficientQuota) This operation require 70 new capacity in quota Tokens Per Minute (thousands) - text-embedding-3-small GlobalStandard, which is bigger than the current available capacity._
 
     !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
 
