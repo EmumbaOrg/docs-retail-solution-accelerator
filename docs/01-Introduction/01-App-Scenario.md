@@ -22,14 +22,15 @@ In addition to personalized workflows, **AgenticShop** features a unified search
 
 Behind this single input box, an **Agent equipped with three tools** dynamically selects the appropriate strategy based on the user’s intent. This enables:
 
-**Personalization Updates**
-The agent detects if the user is expressing preferences (e.g., *"I prefer lightweight laptops with good battery life"*) and updates their profile in the memory layer (**Mem0**), triggering downstream personalization workflows.
+- **Product-Specific Query Handling**  
+  For queries about the currently viewed product (e.g., *"Show critical reviews about durability"*), the agent detects context and **regenerates the personalized content** accordingly.
 
-**Standard Vector Search**
-For product lookups or general discovery queries (e.g., *"Show me wireless earbuds"*), a **pg_diskann-based vector search** retrieves the most semantically relevant results.
+- **Standard Vector Search**  
+  For product lookups or general discovery queries (e.g., *"Wireless earbuds"*), a **pg_diskann-based vector search** retrieves the most semantically relevant results.
 
-**Sentiment-Aware Search**
-For queries like *"Find laptops with positive reviews about battery life"*, the agent combines vector search with in-database **sentiment analysis** and **feature extraction** using **azure_ai**, then optionally filters or reranks results based on extracted review insights.
+- **Sentiment-Aware Search**  
+  For queries like *"Find headphones with great noise cancellation"*, the agent combines vector search with in-database **sentiment analysis** and **feature extraction** using **azure_ai**, then optionally filters or reranks results based on extracted review insights.
+
 
 This intelligent routing architecture allows users to interact naturally with the system, while the agents ensure their intent is correctly interpreted and processed.
 

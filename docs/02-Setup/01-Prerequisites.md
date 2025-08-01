@@ -10,20 +10,24 @@ To be able to complete this solution accelerator, you will need:
     - Any computer capable of running Visual Studio Code, Docker Desktop, and a modern web browser will do.
     - You must have the ability to install software on the computer.
     - We recommend installing a recent version of Edge, Chrome, or Safari.
-2. **A GitHub Account.**
-    - This is required to create a copy (known as a fork) of the sample repository.
-    - We recommend using a personal (vs. enterprise) GitHub account for convenience.
-    - If you don't have a GitHub account, [sign up for a free one](https://github.com/signup) now. (It takes just a few minutes.)
-3. **An Azure Subscription.**
+2. **An Azure Subscription.**
     - This is needed to provision the Azure infrastructure for your AI project.
     - If you don't have an Azure account, [sign up for a free one](https://azure.microsoft.com/en-gb/pricing/purchase-options/azure-account) now. (It takes just a few minutes.)
-4. **An appropriate Azure region for your workshop resources**
-    - To run the solution accelerator with Generative AI through multi-agent workflows, you need two Azure OpenAI models with appropriate quota.
-    - Before selecting an Azure region, review the regional availability guidance for the [gpt-4o](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint) and [text-embedding-ada-002](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint) models in Azure OpenAI.
-        - Select a region that **supports the Azure OpenAI `gpt-4o` and `text-embedding-ada-002` models**.
-        - Ensure you have **at least 150K TPM of `GlobalStandard` capacity for the `gpt-4o` and 120K TPM of `GlobalStandard` capacity for available in the region** for `text-embedding-ada-002` model. Follow [these instructions](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota) to check your available quota.
+3. **Identify a suitable Azure region for your workshop resources**
 
-    !!! danger "Choosing a region that doesn't support both Azure OpenAI models will result in deployment failure when running `azd up`."
+    To successfully deploy and run the solution accelerator with Generative AI capabilities, you must ensure that your Azure subscription has access to the necessary Azure OpenAI models with sufficient quota in at least one supported region.
+
+    - This solution uses two models:
+        - `gpt-4o` with a minimum quota requirement of **50K TPM** (`GlobalStandard`)
+        - `text-embedding-3-small` with a minimum quota requirement of **70K TPM** (`GlobalStandard`)
+
+    - **Before proceeding**, identify an Azure region where both models are available and you have the required quota. Refer to the following documentation for regional availability:
+        - [gpt-4o model availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#standard-models-by-endpoint)
+        - [text-embedding-3-small model availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint)
+
+    - You can check your current quota and request increases using the steps outlined [here](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota).
+
+    - When you run `azd up`, the tool automatically filters and displays only those regions that meet the above requirements — i.e., regions where both models are available **and** the corresponding quota is sufficient.
 
 ## What You Should Know
 
@@ -43,8 +47,7 @@ To get the most of this solution accelerator, you should have:
 ### Preferred knowledge and experience
 
 1. **Familiarity with `git` operations**
-    - You will be forking the sample repository into your GitHub account.
-    - You will be committing code changes to your forked repo.
+    - You will be cloning the sample repository from Github.
 2. **Familiarity with the `bash` shell**.
     - If needed, you will use `bash` in the VS Code terminal to run post-provisioning scripts.
     - You will also use it to run Azure CLI and Azure Developer CLI commands during setup. 
@@ -56,8 +59,6 @@ To get the most of this solution accelerator, you should have:
 
 After completing this workshop, you will have:
 
-1. A personal fork (copy) of the [postgres-agentic-shop](https://github.com/Azure-Samples/postgres-agentic-shop) repository in your GitHub profile. This repo contains all the materials you need to reproduce the workshop later.
+1. Hands-on understanding of the Azure portal and relevant developer tools (e.g., Azure Developer CLI, FastAPI) to streamline end-to-end development workflows for your own AI apps.
 
-2. Hands-on understanding of the Azure portal and relevant developer tools (e.g., Azure Developer CLI, FastAPI) to streamline end-to-end development workflows for your own AI apps.
-
-3. An understanding of how Azure AI services can be integrated into applications to create powerful AI-enabled applications.
+2. An understanding of how Azure AI services can be integrated into applications to create powerful AI-enabled applications.
