@@ -1,6 +1,6 @@
 # 2.6 Verify Azure Quota
 
-This solution requires an appropriate region where Azure OpenAI models are supported and those regions should contain required quota for `GPT-4o` and `text-embedding-ada-002` models. In this section, you should have:
+This solution requires an appropriate region where Azure OpenAI models are supported and those regions should contain required quota for `GPT-4o` and `text-embedding-3-small` models. In this section, you should have:
 
 - [X] Verified your Azure OpenAI Models quota
 
@@ -23,5 +23,5 @@ In this task, you will request quota for Azure OpenAI models in the region you h
 
     _(InsufficientQuota) This operation requires 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which exceeds the current available capacity._
 
-    _(InsufficientQuota) This operation requires 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which exceeds the current available capacity._
+    _(InsufficientQuota) This operation requires 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-3-small GlobalStandard, which exceeds the current available capacity._
 

@@ -62,7 +62,7 @@ The `azd up` command included steps to deploy the **Azure Flexible Server for Po
 
 !!! tip "The Azure AI Foundry portal lets you view and manage the Azure AI resources for your app."
 
-You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedding-ada-002` models were deployed into your Azure OpenAI service.
+You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedding-3-small` models were deployed into your Azure OpenAI service.
 
 1. In the Azure portal, return to the resource group containing your resources and select the **Azure OpenAI** resource.
 
@@ -70,7 +70,7 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 3. In **Azure AI Foundry**, select the **Deployments** menu item under **Shared resources** in the left-hand navigation menu.
 
-4. Verify you see a `gpt-4o` deployment for the `gpt-4o` model and a `text-embedding-ada-002` deployment for the `text-embedding-ada-002` model.
+4. Verify you see a `gpt-4o` deployment for the `gpt-4o` model and a `text-embedding-3-small` deployment for the `text-embedding-3-small` model.
 
 5. Ensure that the models that you have deployed have the required quota and deployment type.
 

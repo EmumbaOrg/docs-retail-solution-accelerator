@@ -1,6 +1,6 @@
 # 2.7 Provision and Deploy
 
-You will need a valid Azure subscription, a GitHub account, and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./01-Prerequisites.md) section if you need more details. After completing this section, you should have:
+You will need a valid Azure subscription and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./01-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
 - [X] Authenticated with Azure
 - [X] Provisioned Azure resources for AgenticShop solution
@@ -155,7 +155,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
         
-	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-ada-002 GlobalStandard, which is bigger than the current available capacity._
+	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-3-small GlobalStandard, which is bigger than the current available capacity._
 
     !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
 
