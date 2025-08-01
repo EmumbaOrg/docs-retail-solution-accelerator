@@ -27,23 +27,6 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
     - `AZURE_API_VERSION_EMBEDDING_MODEL`
     - Any other variables required by the backend (refer to sample `.env.example`).
 3. Paste these variable values into `backend/.env`.
-4. In the new `backend/.env` file, Arize Phoenix environment variables are already set for the devcontainer setup. If you are running locally, you need to update these variables as follows:
-
-    - **For local development:**
-      1. **Comment out** the Arize Phoenix DevContainer environment variables:
-         ```env
-         # DevContainer Environment
-         # PHOENIX_COLLECTOR_ENDPOINT=http://arize-phoenix:6006/v1/traces
-         # PHOENIX_CLIENT_ENDPOINT=http://arize-phoenix:6006
-         ```
-      2. **Uncomment or add** the local environment settings:
-         ```env
-         # Local Environment
-         PHOENIX_COLLECTOR_ENDPOINT="http://localhost:6006/v1/traces"
-         PHOENIX_CLIENT_ENDPOINT="http://localhost:6006"
-         ```
-
-    This ensures your backend connects to the correct Arize Phoenix endpoint depending on whether you are running in a devcontainer or on your local machine.
 
 ---
 
@@ -52,7 +35,6 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 1. In the `frontend` directory, create a copy of file named `.env.example` and rename it to `.env` if it does not already exist.
 2. Set the below variable to the following.
     - `VITE_BE_APP_ENDPOINT=http://127.0.0.1:8000/`
-    - Any other variables required by the frontend (refer to sample `.env.example` if available).
 
 ---
 

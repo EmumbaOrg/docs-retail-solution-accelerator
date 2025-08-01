@@ -4,9 +4,7 @@
 
 Once you have completed this workshop, delete the Azure resources you created. You are charged for the configured capacity and resource usage. Follow these instructions to delete your resource group and all resources you created for this solution accelerator.
 
-1. Depending on the deployment option you selected previously, open the integrated terminal in Visual Studio Code for dev container option or `sh/pwsh` terminal for local dev environment option.
-
-2. Navigate to the root directory of your repository, execute the following command to delete the resources created by the `azd` workflow:
+1. In the VS Code integrated terminal, navigate to the root directory of your repository, execute the following command to delete the resources created by the `azd` workflow:
 
     !!! danger "Execute the following Azure Developer CLI command to delete resources!"
 
@@ -16,7 +14,7 @@ Once you have completed this workshop, delete the Azure resources you created. Y
 
     !!! info "The `--purge` flag purges the resources that provide soft-delete functionality in Azure, including Azure KeyVault and Azure OpenAI. This flag is required to remove all resources completely."
 
-3. In the terminal window, you will be shown a list of the resources that will be deleted and prompted about continuing. Enter "y" at the prompt to begin the resource deletion. When the tear down is completed, you shall see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message at the end.
+2. You will be shown a list of the resources that will be deleted and prompted about continuing. Enter "y" at the prompt to begin the resource deletion. When the tear down is completed, you shall see a `SUCCESS: Your application was removed from Azure in xx minutes xx seconds.` message at the end.
 
     ![tear-down](../img/tear-down.png)
 
