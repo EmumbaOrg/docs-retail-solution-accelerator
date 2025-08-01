@@ -5,7 +5,7 @@
     You just completed the **PROVISION** and **SETUP** steps of workshop. 
 
     - [X] You installed the required tools and software
-    - [X] You forked the sample repo and created a local clone
+    - [X] You cloned the sample repo and created a local clone
     - [X] You provisioned infrastructure resources on Azure
     - [X] You configured your local development environment
 

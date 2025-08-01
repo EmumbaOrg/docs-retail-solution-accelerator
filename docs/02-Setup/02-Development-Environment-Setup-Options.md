@@ -1,22 +1,29 @@
-# 2.2 Development Environment Setup Options
+# 2.2 Development Environment Setup
 
-To get started, you have two options for setting up your development environment:
+To simplify setup and ensure consistency, this solution accelerator uses a **Dev Container** as the exclusive development environment.
 
-- Option 1 **(Recommended)**: Use a Dev Container
-- Option 2: Set up a Local Development Environment manually
+Dev Containers provide a clean, pre-configured workspace with all necessary tools and dependencies already installed. Whether you're on Windows, macOS, or Linux, using Dev Containers helps you avoid common setup issues and ensures that everyone in the workshop is working in the same environment.
 
-We strongly recommend using the **Dev Container** approach. Dev Containers provide a consistent, pre-configured environment that eliminates many of the common setup issues—often referred to as the _“it works on my machine”_ problem. This solution accelerator has multiple prerequisites, and the Dev Container automatically installs most of them, reducing manual configuration and the risk of version mismatches.
+## Why Dev Containers?
 
-If you prefer to work outside a container, you can follow the local setup instructions to install each prerequisite on your own operating system. The next sections walk you through both workflows in detail.
+Using Dev Containers offers several benefits:
 
-!!! note "Want to learn more about Dev Containers? Check out the [official documentation](https://code.visualstudio.com/docs/devcontainers/containers)."
+- ✅ **Consistent Development Environment**: Avoid the “it works on my machine” problem by running the same stack across all participants and contributors.
+- ⚡ **Quick Setup**: All required dependencies (Python, PostgreSQL tools, CLI utilities, etc.) are pre-installed and version-controlled.
+- 🔄 **Isolated Workspace**: Changes you make inside the container don’t affect your global system setup.
+- 🔧 **Reproducibility**: Easily reproduce the environment in CI/CD pipelines or across teams.
+- 🧪 **Great for Experimentation**: Break things without consequences — just rebuild the container!
 
-## Option 1: Setup Dev Containers (Recommended)
+Want to understand more about what Dev Containers are and how they work? Check out this short [YouTube video by Visual Studio Code](https://www.youtube.com/watch?v=b1RavPr_878&ab_channel=VisualStudioCode) (7 mins).
 
-Using a `Dev Container` will minimize the amount of software you need to install on your local operating system.  The following is the minimum needed to build and run the `dev container`:
+📘 For deeper documentation, visit the [official Dev Container guide](https://code.visualstudio.com/docs/devcontainers/containers).
 
-![Dev Containers.](https://code.visualstudio.com/assets/docs/devcontainers/containers/architecture-containers.png)
-[Image reference](https://code.visualstudio.com/assets/docs/devcontainers/containers/architecture-containers.png)
+## Install Prerequisites
+
+To run the Dev Container successfully, you’ll need to install a few tools on your local machine. Once installed, you’ll be able to open the project in VS Code and let it configure everything automatically inside the container.
+
+> 🛠️ **Minimum Setup**  
+> You only need to install the following system-level tools — the rest will be handled by the Dev Container itself:
 
 ### Install Software
 
@@ -126,176 +133,10 @@ the needed extensions will automatically be installed within the `dev container`
 
 4. Close VS Code.
 
-## Option 2: Setup Local Development Environment
+## ✅ You're Ready to Launch!
 
-### Install Software
+Once you’ve installed everything above, you can move to the next step where you’ll clone the repo and then open the cloned repo in VS Code, and it will **automatically prompt you to reopen in a Dev Container**.
 
-The required local development environment uses a Visual Studio (VS) Code editor with a Python runtime. To complete this lab on your own computer, you must install the following required software. On completing this step, you should have installed:
+From there, VS Code will take care of building the container and installing all required tools inside it.
 
-- [X] Windows Powershell 7.5+ (Only if using Windows)
-- [X] Azure command-line tools
-- [X] Git
-- [X] Python 3.12
-- [X] Node.js and npm
-- [X] Docker desktop
-- [X] Visual Studio Code and required extensions
-- [X] pgAdmin
-
-### Install Windows Powershell 7.5+ (Only if using Windows)
-
-1. Download MSI package for [Windows Powershell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
-
-2. Run the package to install Windows Powershell.
-
-3. Once installed, open a command prompt on your machine and verify the installation by running the following:
-
-    ```bash title=""
-    pwsh
-    ```
-    
-4. The command prompt should show the version of PowerShell as `7.5.0` or greater.
-
-### Install Azure command-line tools
-
-!!! note "In this task, you will install both the Azure CLI and the Azure Developer CLI (`azd`)."
-
-    - The Azure CLI enables you to execute Azure CLI commands from a command prompt or VS Code terminal on your local machine.
-    - The Azure Developer CLI (`azd`) is an open-source tool that accelerates provisioning and deploying app resources on Azure.
-
-1. Install or upgrade to the latest version of the [Azure CLI](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest) by following the instructions for your OS at <https://learn.microsoft.com/cli/azure/install-azure-cli>
-
-    !!! info "Upgrade to latest version of Azure CLI"
-
-        If you already have the Azure CLI installed, you'll need to be sure to upgrade to the latest version. This guide requires v2.69.0 or greater. You can use the following command to upgrade to the latest version:
-
-    ```bash
-    az upgrade
-    ```
-
-2. Once installed, open a command prompt on your machine and verify the installation by running the following:
-
-    ```bash
-    az version
-    ```
-
-3. Next, install the `rdbms-connect` extension using the Azure CLI.
-
-    !!! info "About the rdbms-connect extension"
-
-        The `rdbms-connect` extension to the Azure CLI is the enhanced interface for Azure Flexible Server for PostgreSQL. This extension enables command to connect to Azure Database for PostgreSQL flexible server instances and perform required actions.
-
-    To install the `rdbms-connect` extension, execute this command:
-
-    ```bash
-    az extension add -n rdbms-connect
-    ```
-
-4. Install or upgrade Azure Developer CLI to the latest version by following the instructions for your OS at <https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd>.
-
-    !!! info "Upgrade to latest version of Azure Developer CLI"
-
-        If you already have the Azure Developer CLI installed, you'll need to be sure to upgrade to the latest version. This guide requires v1.16 or greater.
-
-5. Execute the following command from a terminal prompt to verify the tools were installed:
-
-    ```bash
-    azd version
-    ```
-
-### Install Git
-
-Git enables you to manage your code by tracking changes, maintaining a version history, and facilitating collaboration with others. This helps in organizing and maintaining the integrity of your project's development.
-
-1. Download Git from <https://git-scm.com/downloads>.
-
-2. Run the installer using the default options.
-
-### Install Python
-
-Python is the programming language used to build the backend app for the solution. By utilizing Python's versatile programming capabilities and Azure Database for PostgreSQL's generative AI and vector search capabilities, you can create powerful, efficient and complex multi-agent workflows.
-
-1. Download Python 3.12 from <https://python.org/downloads>.
-
-2. Run the installer using the default options.
-
-3. Use the following command from a terminal prompt to verify Python was installed:
-
-    ```bash
-    python --version
-    ```
-
-### Install Poetry
-
-Python is the programming language used to build the backend app for the solution. To manage Python dependencies and environments efficiently, this project uses [Poetry](https://python-poetry.org/), a modern Python packaging and dependency management tool. Poetry simplifies the process of installing, updating, and locking dependencies, ensuring consistency across development environments.
-
-#### Install Poetry
-
-!!! note "Poetry is required to manage backend project dependencies."
-1. Install Poetry by following the official Poetry installation guide at [poetry installation guide](https://python-poetry.org/docs/#installation) for the most up-to-date instructions for your operating system.
-
-
-
-2. After installation, ensure Poetry is available by adding it to your system's PATH if necessary. You can verify the installation with:
-
-    ```bash
-    poetry --version
-    ```
-
----
-
-### Install Node.js
-
-Node.js is required to run and manage frontend dependencies and build tools for the React-based UI in this project. It enables commands like `npm install`, `npm run dev`, and others used during development.
-
-1. Download **Node.js v22.x** from [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
-
-2. Run the installer and proceed with the default settings.
-
-### Install Docker Desktop
-
-Docker Desktop is an application that allows you to build, share, and run containerized applications on your local machine. It provides a user-friendly interface to manage Docker containers, images, and networks. By streamlining the containerization process, Docker Desktop helps you develop, test, and deploy applications consistently across different environments.
-
-1. Download and install Docker Desktop for your OS:
-
-    - [Linux](https://docs.docker.com/desktop/setup/install/linux/)
-    - [Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
-    - [Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
-
-### Install Visual Studio Code (and extensions)
-
-Visual Studio Code is a versatile, open-source code editor that combines powerful features with an intuitive interface to help you efficiently write, debug, and customize projects.
-
-1. Download and install from <https://code.visualstudio.com/download>.
-
-    - Use the default options in the installer.
-    - Make sure to check "Add to PATH" during install.
-
-2. After installation completed, launch Visual Studio Code.
-
-3. In the **Extensions** menu, search for and install the following extensions from Microsoft:
-
-    - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-    - [Bicep](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep)
-
-    **Optional Extensions to Install**
-    The recommended extensions for this project are defined in the `.vscode/extension.json` file. When you open Visual Studio Code in this workspace, you will see a prompt asking if you want to install all recommended extensions. Click **Install** to automatically add them. If you miss the prompt, you can manually install the extensions listed above from the Extensions menu at any time.
-
-    - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=github.vscode-pull-request-github)
-    - [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)
-    - [Azure Developer Tools](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.azure-dev)
-    - [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
-    - [Black Formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)
-    - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
-    - [Pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)
-    - [Node Azure Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-    - [Python Poetry](https://marketplace.visualstudio.com/items?itemName=zeshuaro.vscode-python-poetry)
-
-4. Close VS Code.
-
-### Install pgAdmin
-
-Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database.
-
-1. Download pgAdmin from <https://www.pgadmin.org/download/>.
-
-2. Run the installer using the default options.
+Let’s get started!

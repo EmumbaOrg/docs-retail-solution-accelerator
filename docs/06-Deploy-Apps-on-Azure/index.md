@@ -72,7 +72,7 @@ To deploy the updated app, follow the steps below:
 
 ---
 
-_You made it! That was a lot to cover - but don't worry! Now that you have a fork of the repo, you can revisit ideas at your own pace! Before you go, there are some important cleanup tasks you need to do!!_
+_You made it! That was a lot to cover — but don't worry! Now that you have a local copy of the repo, you can revisit ideas at your own pace. Before you go, there are some important cleanup tasks you need to do!_
 
 ---
 
