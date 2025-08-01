@@ -4,20 +4,28 @@ Review the details about what you need to do before starting the workshop, what 
 
 ## What You Need
 
-To be able to complete this solution accelerator, you will need:
+To be able to complete this workshop, you will need:
 
 1. **Your own computer.**
     - Any computer capable of running Visual Studio Code, Docker Desktop, and a modern web browser will do.
     - You must have the ability to install software on the computer.
     - We recommend installing a recent version of Edge, Chrome, or Safari.
+
 2. **An Azure Subscription.**
     - This is needed to provision the Azure infrastructure for your AI project.
     - If you don't have an Azure account, [sign up for a free one](https://azure.microsoft.com/en-gb/pricing/purchase-options/azure-account) now. (It takes just a few minutes.)
-3. **Identify a suitable Azure region for your workshop resources**
+
+3. **User Permissions for Deployment.**
+    - In order to deploy AgenticShop successfully in your subscription, following roles must be attached to the user deploying the solution:
+
+        - Contributor
+        - Role Based Access Control Administrator 
+
+4. **Identify a suitable Azure region for your OpenAI models.**
 
     To successfully deploy and run the solution accelerator with Generative AI capabilities, you must ensure that your Azure subscription has access to the necessary Azure OpenAI models with sufficient quota in at least one supported region.
 
-    - This solution uses two models:
+    - This solution uses following Azure OpenAI models:
         - `gpt-4o` with a minimum quota requirement of **50K TPM** (`GlobalStandard`)
         - `text-embedding-3-small` with a minimum quota requirement of **70K TPM** (`GlobalStandard`)
 
@@ -26,8 +34,19 @@ To be able to complete this solution accelerator, you will need:
         - [text-embedding-3-small model availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint)
 
     - You can check your current quota and request increases using the steps outlined [here](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota).
+    
+    !!! info "Automatic region filtering in `azd` workflow"
 
-    - When you run `azd up`, the tool automatically filters and displays only those regions that meet the above requirements — i.e., regions where both models are available **and** the corresponding quota is sufficient.
+        When you run `azd up`, the tool automatically filters and displays only those regions that meet the above requirements — i.e., regions where both models are available **and** the corresponding quota is sufficient.
+
+5.  **Select appropriate Azure region for your infrastructure resources.**
+
+    Before selecting an Azure region for infrastructure, you must ensure that the region you have selected supports following Azure services:
+        - `Standard_D2ds_v4` Azure Flexible server for PostgreSQL (`General Purpose`)
+        - Resource Group
+        - Azure Key vault 
+        - Azure Container Environment and Azure Container Apps
+        - Azure Container Registry
 
 ## What You Should Know
 
