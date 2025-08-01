@@ -76,16 +76,21 @@ Make sure the `vector` extension is created before or use `CASCADE` to automatic
 
 To verify which extensions are currently installed:
 
-1. Open **pgAdmin** and connect to your database.
-2. In the **Object Explorer**, expand your database and go to **Extensions**.
-3. Alternatively, open a SQL query window and run:
+1. Click on **Postgres** extension.
+2. Go to **Agentic Shop DB > Databases > agentic_shop > Schemas > public > Extensions**. You can see the list of installed extensions.
+3. Alternatively, go to **Agentic Shop DB > Databases**, right click on **agentic_shop** and select **New Query**. 
+
+    ![new-query](../img/new-query.png)
+
+Paste the following and run it. You will see the list of extensions installed:
 
 ```sql
 SELECT * FROM pg_available_extensions WHERE installed_version IS NOT NULL;
 ```
 
-This will list all extensions currently installed in your PostgreSQL instance.
+It will show the following output, listing all the extensions currently installed in your PostgreSQL instance.
 
+   ![new-query](../img/query-output.png)
 ---
 
 !!! note "If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](https://github.com/Azure-Samples/postgres-agentic-shop/blob/main/azd-hooks/). Refer to the post provision azd hook for understanding."

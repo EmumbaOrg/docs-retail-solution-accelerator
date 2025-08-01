@@ -13,12 +13,12 @@ These insights help populate the `product_reviews` table with structured fields 
 
 ## Try It Yourself: Extract Sentiment from a Review
 
-Here’s an example SQL query that demonstrates how we use the `azure_ai.extract` function to classify sentiment. You can run this directly in **pgAdmin** to see it in action.
+Here’s an example SQL query that demonstrates how we use the `azure_ai.extract` function to classify sentiment. You can run this using Postgres extension of VS Code to see it in action.
 
 ### 📌 Use Case: Sentiment Classification
 
 
-!!! tip "You can run this command in pgAdmin or any SQL tool to try out generating the sentiment."
+!!! tip "You can run this command using the Postgres Extension to try out generating the sentiment."
 Query:
 
 ```sql
@@ -43,7 +43,7 @@ positive
 
 This example shows how to extract **which feature** is being talked about in the review. We guide the LLM using a **schema prompt** listing possible feature names.
 
-!!! tip "You can run this command in pgAdmin or any SQL tool to try out extracting product feature."
+!!! tip "You can run this command using Postgres extension for VS code to try out extracting product feature."
 Query:
 
 ```sql
