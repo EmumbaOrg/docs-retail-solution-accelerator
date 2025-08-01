@@ -74,18 +74,6 @@ Edges define how these entities relate to one another—particularly which produ
 
 ---
 
-## Why Build a Graph?
-
-Using a graph database allows AI agents and analysts to:
-
-- Traverse relationships naturally: “Find all reviews for features in the 'Camera' category.”
-- Identify patterns: “Which features are most criticized across smartphone reviews?”
-- Power personalization: “What similar products have better sentiment scores for ‘Durability’?”
-
-This model significantly reduces complexity compared to relational joins and enables deeper reasoning over connections.
-
----
-
 ## Visualizing the Graph
 
 Here’s a simplified schematic of how entities connect:
@@ -160,4 +148,3 @@ ORDER BY (graph_query).positive_review_count DESC;
 This enables the system to rank products like wireless headphones based on the number of positive mentions for the desired feature, surfacing the most well-reviewed products for that specific aspect.
 
 !!! note "This powerful combination of LLM-driven feature resolution and graph traversal using Cypher unlocks complex insights from unstructured user queries—without requiring hardcoded logic or manual keyword mapping."
-

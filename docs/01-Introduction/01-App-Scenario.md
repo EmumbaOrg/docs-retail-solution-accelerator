@@ -29,7 +29,7 @@ Behind this single input box, an **Agent equipped with three tools** dynamically
   For product lookups or general discovery queries (e.g., *"Wireless earbuds"*), a **pg_diskann-based vector search** retrieves the most semantically relevant results.
 
 - **Sentiment-Aware Search**  
-  For queries like *"Find headphones with great noise cancellation"*, the agent combines vector search with in-database **sentiment analysis** and **feature extraction** using **azure_ai**, then optionally filters or reranks results based on extracted review insights.
+  For queries like *"Headphones with great noise cancellation"*, the agent combines vector search with in-database **sentiment analysis** and **feature extraction** using **azure_ai**, then optionally filters or reranks results based on extracted review insights.
 
 
 This intelligent routing architecture allows users to interact naturally with the system, while the agents ensure their intent is correctly interpreted and processed.
