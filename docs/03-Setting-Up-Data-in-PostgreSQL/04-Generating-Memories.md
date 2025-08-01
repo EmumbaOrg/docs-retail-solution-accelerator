@@ -85,7 +85,7 @@ print(results)
 
 All memories stored by `mem0` are persisted in a dedicated PostgreSQL table called `mem0_chatstore`. This table is **managed internally by the mem0 framework**—you don't need to create or modify it manually.
 
-!!! tip "To inspect the memory data stored for different users, you can run the following SQL query using **pgAdmin** or any SQL tool"
+!!! tip "To inspect the memory data stored for different users, you can run the following SQL query. You can utilize the Postgres extension to run it."
 
 ```sql
 SELECT id, payload FROM public.mem0_chatstore

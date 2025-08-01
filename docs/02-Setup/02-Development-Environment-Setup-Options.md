@@ -27,7 +27,6 @@ The required development environment uses a Visual Studio (VS) Code editor with 
 - [X] Git
 - [X] Docker desktop
 - [X] Visual Studio Code
-- [X] pgAdmin
 
 ### Install Windows Powershell 7.5+ (Only if using Windows)
 
@@ -126,14 +125,6 @@ the needed extensions will automatically be installed within the `dev container`
     - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 4. Close VS Code.
-
-### Install pgAdmin
-
-Throughout this workshop, you will use pgAdmin to run queries against your PostgreSQL database.
-
-1. Download pgAdmin from <https://www.pgadmin.org/download/>.
-
-2. Run the installer using the default options.
 
 ## Option 2: Setup Local Development Environment
 
