@@ -1,4 +1,4 @@
-# 2.8 Validate Deployment
+# 2.6 Validate Deployment
 
 !!! success "SETUP IS COMPLETE!"
 

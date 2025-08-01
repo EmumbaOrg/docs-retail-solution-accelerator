@@ -1,4 +1,4 @@
-# 2.7 Provision and Deploy
+# 2.5 Provision and Deploy
 
 You will need a valid Azure subscription and access to relevant Azure OpenAI models to complete this lab. Review the [prerequisites](./01-Prerequisites.md) section if you need more details. After completing this section, you should have:
 
@@ -153,9 +153,9 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         If you did not check your Azure OpenAI models quota prior to starting running the `azd up` command, you may receive a quota error message similar to the following:
 
-        _(InsufficientQuota) This operation require 150 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
+        _(InsufficientQuota) This operation require 50 new capacity in quota Tokens Per Minute (thousands) - gpt-4o GlobalStandard, which is bigger than the current available capacity._
         
-	    _(InsufficientQuota) This operation require 120 new capacity in quota Tokens Per Minute (thousands) - text-embedding-3-small GlobalStandard, which is bigger than the current available capacity._
+	    _(InsufficientQuota) This operation require 70 new capacity in quota Tokens Per Minute (thousands) - text-embedding-3-small GlobalStandard, which is bigger than the current available capacity._
 
     !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
 
