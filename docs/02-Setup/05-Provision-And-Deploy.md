@@ -86,23 +86,14 @@ Before proceeding with deployment of infra, you must provide permissions to the 
     Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
     ```
 
-### Permissions for Unix-like Environment 
+###  Permissions for Linux/macOS 
 
-1. If you are using unix-like environment such as (WSL, Cygwin, MinGW etc.) on Windows, execute the following command to grant permissions to the current session for execution of scripts. 
+1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable. 
     
     ```bash
     pwsh -NoProfile -Command "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass"
     ```
-
-### Permissions for Linux/macOS
-
-1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable.
-
-    ```bash
-    sudo chmod +x azd-hooks/predeploy.sh
-    sudo chmod +x azd-hooks/preprovision.sh
-    sudo chmod +x azd-hooks/postprovision.sh
-    ```
+    - Use the same for POSIX-compatible environments like (cygwin,mygwin,Git Bash)
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -123,6 +114,16 @@ You are now ready to provision your Azure resources without deployment of Agenti
             - Select the Azure region into which resources should be deployed using the up and down arrow keys.
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
         - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
+
+
+    !!! info "Pre-deployment Validation Checks"
+
+        Before the `azd` workflow proceeds, checks are performed in the selected region and recommendations are generated on failure for following cases to ensure that the deployment is successful:
+        
+        - Azure Flexible Server for PostgreSQL SKU
+        - Azure Container Apps quota
+        - azd env name    
+
 
 2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
@@ -149,22 +150,27 @@ You are now ready to provision your Azure resources without deployment of Agenti
         | Azure Flexible server for PostgreSQL  |
         | Azure OpenAI Service                  |
 
-    !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
-
-        It's possible that when Azure Bicep deployment attempts to create resources, error may occur when the soft deleted resources are in process to be purged from Azure backend. If you encounter this error, simply re-run the `azd up` command.
 
 3. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
 
 ## Troubleshooting Errors
- 
+
+### Errors During azd Workflow
+
+1. **Error: "Deployment failed: The resource entity provisioning state is not terminal"**
+    ```
+    ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to resource group: Deployment Error Details: RequestConflict: Cannot modify resource with id '/subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.CognitiveServices/accounts/{Resourcename}' because the resource entity provisioning state is not terminal. Please wait for the provisioning state to become terminal and then retry the request.
+    ```
+
+2.  **Error: "Validation Error"**
+    ``` 
+    InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
+    ```
+
 ### Continue with Current Deployment
 
 1. If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
-
-    !!! danger "Validation Error"
-
-        InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
-
+   
 2. If your deployment has failed due to region or quota availability and you want to continue with current deployment in another region, you must purge the existing deployment using `azd down --purge` command before proceeding with another deployment. To set the new region for Azure OpenAI models in current `azd` deployment, you can use the following command:
 
     ```bash
