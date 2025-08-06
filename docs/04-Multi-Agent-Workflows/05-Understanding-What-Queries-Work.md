@@ -39,11 +39,11 @@ We support two types of search-powered queries using the following tools:
     - *"Find headphones with great noise cancellation"*
     - *"Tablets with reliable cellular connectivity"*
 - This tool combines:
-  - **Vector search**
-  - **Azure AI-powered sentiment analysis and feature extraction**
+    - **Vector search**
+    - **Azure AI-powered sentiment analysis and feature extraction**
 - The system tries to map:
-  1. The **product category** (same limitations apply as above).
-  2. The **product feature** mentioned in the query.
+    1. The **product category** (same limitations apply as above).
+    2. The **product feature** mentioned in the query.
 
 If the mentioned feature is **not tracked in our dataset**, the query won’t work.
 
@@ -52,9 +52,9 @@ If the mentioned feature is **not tracked in our dataset**, the query won’t wo
 > *"Smartwatch with great battery life"*
 
 **Why it might fail**:
-  - *Battery life* is **not** one of the predefined features we extract.
-  - Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
-  - Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
+    - *Battery life* is **not** one of the predefined features we extract.
+    - Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
+    - Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
 
 ### Flexible Matching
 
