@@ -53,9 +53,11 @@ If the mentioned feature is **not tracked in our dataset**, the query won’t wo
 
 **Why it might fail**:
 
-  - *Battery life* is **not** one of the predefined features we extract.
-  - Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
-  - Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
+- The feature (e.g., *battery life*) is **not** one of the predefined features available for extraction.  
+- The feature may be mentioned in user reviews, but it’s not mapped to any known feature in our system.  
+- The feature may be extracted and mapped to some products, but the associated sentiment might not be positive in any of the reviews.
+- The product may include the feature, but if it's not mentioned in reviews, it won’t be surfaced through sentiment-based extraction.
+
 
 ### Flexible Matching
 
