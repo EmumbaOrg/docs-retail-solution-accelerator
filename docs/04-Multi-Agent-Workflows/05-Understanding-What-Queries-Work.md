@@ -52,9 +52,9 @@ If the mentioned feature is **not tracked in our dataset**, the query won’t wo
 > *"Smartwatch with great battery life"*
 
 **Why it might fail**:
-- *Battery life* is **not** one of the predefined features we extract.
-- Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
-- Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
+  - *Battery life* is **not** one of the predefined features we extract.
+  - Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
+  - Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
 
 ### Flexible Matching
 
