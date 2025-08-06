@@ -95,15 +95,3 @@ results = self.memory.add(messages=user_msg, user_id=str(user_id))
 ```
 
 These updates are stored in PostgreSQL under the `mem0_chatstore` table.
-
----
-
-## Try This Yourself
-
-!!! tip "If you want to modify agent behaviors, follow the steps below."
-
-- Review their prompts in `prompts.py`
-- Adjust their logic in the workflow
-- Explore agent outputs by triggering workflows via user queries
-
-This modular setup allows you to easily add new agents or tweak existing ones. In the next section, you’ll do just that—implement a new agent to handle review analysis.
