@@ -1,5 +1,4 @@
-
-## 🔍 Understanding What Queries Work (and Why)
+# 4.5 🔍 Understanding What Queries Work (and Why)
 
 Your personalized shopping assistant supports product search and recommendation for a limited dataset. To ensure relevant results, it’s important to understand how the system interprets queries, and why some may fail.
 
