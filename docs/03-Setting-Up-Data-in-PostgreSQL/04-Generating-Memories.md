@@ -55,7 +55,7 @@ You can try storing user memories in an interactive shell within the devcontaine
 
 ```bash
 cd backend
-python
+python -m asyncio
 ```
 
 ### Step 2: Create a memory instance and add preferences
@@ -66,14 +66,14 @@ from src.config.memory import get_mem0_memory
 memory = get_mem0_memory()
 
 # Simulate adding preferences for user_id=1
-memory.add(messages="Prefers long battery life", user_id="1")
-memory.add(messages="Interested in noise-cancelling headphones", user_id="1")
+await memory.add(messages="Prefers long battery life", user_id="1")
+await memory.add(messages="Interested in noise-cancelling headphones", user_id="1")
 ```
 
 ### Step 3: Retrieve what’s stored (optional)
 
 ```python
-results = memory.search(query="User's specific preferences, likes, dislikes, past interactions, and shopping behavior patterns?", user_id="1")
+results = await memory.search(query="User's specific preferences, likes, dislikes, past interactions, and shopping behavior patterns?", user_id="1")
 print(results)
 ```
 
