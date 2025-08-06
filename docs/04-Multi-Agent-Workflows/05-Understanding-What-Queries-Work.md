@@ -72,16 +72,6 @@ Even if the feature is supported, **relevant reviews must exist** for the system
 
 ---
 
-### 📊 Product Categories and Supported Features
-
-Refer to the following table to explore which features are supported for each product category.
-
-👉 See: **[Product Categories and Features](#)**
-
-(*Replace the anchor or link as needed in your final guide.*)
-
----
-
 ## 🧪 Sample Queries That Work
 
 Here are examples of queries that work well with each tool supported in the assistant. These examples can help you test and understand the system behavior.
