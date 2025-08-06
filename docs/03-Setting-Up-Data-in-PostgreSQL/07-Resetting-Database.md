@@ -1,4 +1,4 @@
-# 3.7: Reset Database
+# 3.7 Reset Database
 
 The Reset button present on the frontend products page allows users to restore the database to its original post-setup state—i.e., immediately after the application is initialized and migrations are run.
 It triggers a backend reset endpoint that clears database entries, allowing the application flow to start fresh.

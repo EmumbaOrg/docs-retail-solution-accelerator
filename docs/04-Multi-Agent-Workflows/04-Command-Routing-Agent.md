@@ -146,4 +146,4 @@ These examples demonstrate how the **Command Routing Agent** interprets natural 
 !!! info  "Why Some Queries May Show General Results"
     When the `query_reviews_with_sentiment` tool is invoked but no matching feature mapping exists in the database—such as when there are no reviews or the requested feature is not associated with any products—the agent automatically falls back to a general vector search within the relevant category. In this case, a notification is displayed to inform the user that sentiment-based results were unavailable, and general product results are being shown instead.
 
-    !!! danger "You can review all available categories (\"Headphones\", \"Tablets\", \"Smartwatches\") and features in this file `backend/data/product_features.csv`"
+    !!! danger "You can review all available categories ("Headphones", "Tablets", "Smartwatches") and features in this file `backend/data/product_features.csv`"
