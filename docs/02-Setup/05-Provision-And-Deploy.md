@@ -68,41 +68,6 @@ You should change the default postgres authentication credentials. This serves a
 
         The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
 
-## Provide Permissions to Hooks
-
-Before proceeding with deployment of infra, you must provide permissions to the `azd-hooks` to make them executable and perform the necessary actions.
-
-!!! info "Azd hooks for custom workflow"
-
-    `azd-hooks` are configurable scripts defined in `azure.yaml` file that run automatically before or after key lifecycle events like provision, build, deploy etc. allowing you to insert custom logic into your `azd` workflow. 
-
-    You can apply hooks globally or per-service, supporting execution on multiple environments like posix, Windows.
-
-### Permissions for Windows
-
-1. Execute this command to grant the permissions to the current session to be able to execute `pwsh` scripts located in the `azd-hooks` directory.
-
-    ```pwsh
-    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-    ```
-
-### Permissions for Unix-like Environment 
-
-1. If you are using unix-like environment such as (WSL, Cygwin, MinGW etc.) on Windows, execute the following command to grant permissions to the current session for execution of scripts. 
-    
-    ```bash
-    pwsh -NoProfile -Command "Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Bypass"
-    ```
-
-### Permissions for Linux/macOS
-
-1. If the OS that you are working with is Linux or macOS, then in order to provide permissions to `azd-hooks` scripts, execute the following commands to make the scripts executable.
-
-    ```bash
-    sudo chmod +x azd-hooks/predeploy.sh
-    sudo chmod +x azd-hooks/preprovision.sh
-    sudo chmod +x azd-hooks/postprovision.sh
-    ```
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -123,6 +88,16 @@ You are now ready to provision your Azure resources without deployment of Agenti
             - Select the Azure region into which resources should be deployed using the up and down arrow keys.
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
         - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
+
+
+    !!! info "Pre-deployment Validation Checks"
+
+        Before the `azd` workflow proceeds, checks are performed in the selected region and recommendations are generated on failure for following cases to ensure that the deployment is successful:
+        
+        - Azure Flexible Server for PostgreSQL SKU
+        - Azure Container Apps quota
+        - azd env name    
+
 
 2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
@@ -149,37 +124,36 @@ You are now ready to provision your Azure resources without deployment of Agenti
         | Azure Flexible server for PostgreSQL  |
         | Azure OpenAI Service                  |
 
-    !!! failure "Deployment failed: The resource entity provisioning state is not terminal"
-
-        It's possible that when Azure Bicep deployment attempts to create resources, error may occur when the soft deleted resources are in process to be purged from Azure backend. If you encounter this error, simply re-run the `azd up` command.
 
 3. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
 
 ## Troubleshooting Errors
- 
-### Continue with Current Deployment
 
-1. If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
+### Errors During azd Workflow
 
-    !!! danger "Validation Error"
+1. **Error: "Deployment failed: The resource entity provisioning state is not terminal"**
+    
+    If your deployment faces an error like such as "The resource entity provisioning state is not terminal", try running your deployment again using `azd up`.
+    
+    ```
+    ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to resource group: Deployment Error Details: RequestConflict: Cannot modify resource with id '/subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.CognitiveServices/accounts/{Resourcename}' because the resource entity provisioning state is not terminal. Please wait for the provisioning state to become terminal and then retry the request.
+    ```
+    
+2.  **Error: "Validation Error"**
+    
+    If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
 
-        InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
-
-2. If your deployment has failed due to region or quota availability and you want to continue with current deployment in another region, you must purge the existing deployment using `azd down --purge` command before proceeding with another deployment. To set the new region for Azure OpenAI models in current `azd` deployment, you can use the following command:
-
-    ```bash
-    azd env set AZURE_OPENAI_LOCATION <region>
+    ``` 
+    InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
+    
     ```
 
-    !!! warning "Soft Delete Resources consume quota"
+    
 
-        If the resource destruction does not complete, interrupted or `--purge` flag is not used, the resources may still exist in the your subscription as soft deleted resources which can be seen from Azure portal such as deleted OpenAI models in `Manage deleted resources`, then these resources will consume OpenAI quota hindering you from creating new deployment. It is very important to permanently delete these resources either from Azure portal or through azure CLI before proceeding with another deployment. 
 
-        ```bash
-        az cognitiveservices account purge --location <region> --resource-group <resource-group> --name <openai-resource-name> 
-        ```
+3.  **Error: "Network Issues"**
 
-3. At any point during provisioning of resources, the deployment can fail due to transient errors or network issues. For such occurrences, you can take either of following actions: 
+    At any point during provisioning of resources, the deployment can fail due to transient errors or network issues. For such occurrences, you can take either of following actions: 
     
     - Restart the deployment with `azd up` command.
 
