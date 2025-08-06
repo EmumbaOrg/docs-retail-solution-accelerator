@@ -26,8 +26,8 @@ We support two types of search-powered queries using the following tools:
 #### **Standard Vector Search**
 
 - Used for general **product discovery** queries, such as:
-  - *"Wireless earbuds"*
-  - *"Smartwatch with fitness tracker"*
+    - *"Wireless earbuds"*
+    - *"Smartwatch with fitness tracker"*
 - Powered by **pg_diskann-based vector search**, which retrieves the most semantically relevant products based on product descriptions and specs.
 - **Internally**, the system tries to infer the product category from the query (e.g., *"earbuds"* maps to *Headphones*). If the LLM fails to map the query to one of the 3 valid categories, no results will be returned.
 
@@ -36,8 +36,8 @@ We support two types of search-powered queries using the following tools:
 #### **Sentiment-Aware Search**
 
 - Used for **feature-based discovery with sentiment**, such as:
-  - *"Find headphones with great noise cancellation"*
-  - *"Tablets with reliable cellular connectivity"*
+    - *"Find headphones with great noise cancellation"*
+    - *"Tablets with reliable cellular connectivity"*
 - This tool combines:
   - **Vector search**
   - **Azure AI-powered sentiment analysis and feature extraction**
@@ -47,7 +47,7 @@ We support two types of search-powered queries using the following tools:
 
 If the mentioned feature is **not tracked in our dataset**, the query won’t work.
 
-##### ❌ Example that will fail:
+### ❌ Example that will fail:
 
 > *"Smartwatch with great battery life"*
 
@@ -56,7 +56,7 @@ If the mentioned feature is **not tracked in our dataset**, the query won’t wo
   - Even if user reviews mention battery life, it’s not mapped to a known feature for extraction.
   - Even if the feature existed and is extracted and mapped to a product, it *might* not be mapped with positive sentiment.
 
-##### Flexible Matching
+### Flexible Matching
 
 The feature name in the query doesn’t need to be an exact match. The system can handle close variations and synonyms:
 
@@ -66,7 +66,7 @@ The feature name in the query doesn’t need to be an exact match. The system ca
 
 All will map to the tracked feature **Noise Cancellation**. 
 
-##### 📌 Note on Review Coverage
+### 📌 Note on Review Coverage
 
 Even if the feature is supported, **relevant reviews must exist** for the system to extract sentiment. If no reviews discuss a feature for a product, it won't affect ranking.
 
