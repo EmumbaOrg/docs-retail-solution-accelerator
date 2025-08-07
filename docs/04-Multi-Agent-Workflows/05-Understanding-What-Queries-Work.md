@@ -118,6 +118,6 @@ Used when the user expresses sentiment or preference toward specific product fea
 - "Headphones with great noise cancellation"
 - "Smartwatches with accurate heart rate monitoring"
 - "Top tablets with strong parental controls"
-- "Smartwatches praised for their display quality"
+- "Smartwatches with reliable sleep tracking"
 - "Headphones with average ANC"
 
