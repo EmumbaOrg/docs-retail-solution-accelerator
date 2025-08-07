@@ -1,4 +1,4 @@
-## 2.3 Clone the Repository
+# 2.3 Clone the Repository
 
 To get started, clone the [postgres-agentic-shop](https://github.com/Azure-Samples/postgres-agentic-shop) repository directly onto your local machine.
 
