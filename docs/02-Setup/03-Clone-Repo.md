@@ -21,6 +21,12 @@ To get started, clone the [postgres-agentic-shop](https://github.com/Azure-Sampl
     ```bash
     code .
     ```
+5. Switch to the workshop branch:
+
+    ```bash
+    git checkout agentic-workshop
+    ```
+
 
 > **Tip**  
 > Leave Visual Studio Code open as you will be using it throughout the remainder of the workshop.
