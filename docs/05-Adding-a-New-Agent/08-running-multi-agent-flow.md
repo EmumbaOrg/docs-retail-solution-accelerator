@@ -9,6 +9,7 @@ Here's what you'll do:
 3. **Debug and Visualize:** You'll use the workflow debug flow diagram in the side panel to confirm that the Reviews Agent was indeed triggered and executed as part of the workflow.
 
 By following these steps, you'll gain hands-on experience in:
+
 - Validating agent orchestration in a real workflow
 - Understanding how user queries map to agent actions
 - Using visual tools to debug and confirm agent execution

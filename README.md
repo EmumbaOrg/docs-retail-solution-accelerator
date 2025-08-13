@@ -1,4 +1,5 @@
 # Workshop Guide
+
 The current repository is instrumented with a `docs/workshop/` folder that contains the step-by-step lab guide for developers, covering the entire workflow from resource provisioning to ideation, evaluation, deployment, and usage.
 
 You can view the workshop directly from this source by running the [MKDocs](https://www.mkdocs.org/) pages locally:

@@ -19,7 +19,7 @@ To be able to complete this workshop, you will need:
     - In order to deploy AgenticShop successfully in your subscription, following roles must be attached to the user deploying the solution:
 
         - Contributor
-        - Role Based Access Control Administrator 
+        - Role Based Access Control Administrator
 
 4. **Identify a suitable Azure region for your OpenAI models.**
 
@@ -34,17 +34,17 @@ To be able to complete this workshop, you will need:
         - [text-embedding-3-small model availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models?tabs=global-standard%2Cstandard-embeddings#standard-models-by-endpoint)
 
     - You can check your current quota and request increases using the steps outlined [here](https://learn.microsoft.com/azure/ai-services/openai/how-to/quota?tabs=rest#view-and-request-quota).
-    
+
     !!! info "Automatic region filtering in `azd` workflow"
 
         When you run `azd up`, the tool automatically filters and displays only those regions that meet the above requirements — i.e., regions where both models are available **and** the corresponding quota is sufficient.
 
-5.  **Select appropriate Azure region for your infrastructure resources.**
+5. **Select appropriate Azure region for your infrastructure resources.**
 
     Before selecting an Azure region for infrastructure, you must ensure that the region you have selected supports following Azure services:
         - `Standard_D2ds_v4` Azure Flexible server for PostgreSQL (`General Purpose`)
         - Resource Group
-        - Azure Key vault 
+        - Azure Key vault
         - Azure Container Environment and Azure Container Apps
         - Azure Container Registry
 
@@ -69,7 +69,7 @@ To get the most of this solution accelerator, you should have:
     - You will be cloning the sample repository from Github.
 2. **Familiarity with the `bash` shell**.
     - If needed, you will use `bash` in the VS Code terminal to run post-provisioning scripts.
-    - You will also use it to run Azure CLI and Azure Developer CLI commands during setup. 
+    - You will also use it to run Azure CLI and Azure Developer CLI commands during setup.
 3. **Familiarity with Python frameworks**.
     - You will modify Python code to implement changes to the starter solution.
     - In some steps, you will create and run Python code from the command line and VS Code.

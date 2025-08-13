@@ -26,13 +26,14 @@ Agents are connected through **events** and executed via the LlamaIndex `Workflo
 
 ---
 
-##  Example: Product Personalization Agent
+## Example: Product Personalization Agent
 
 Let’s walk through one of the core agents—**Product Personalization Agent**—and how it operates within the workflow.
 
 When triggered, it receives user profile data, product attributes, and product variants. It then uses this context to generate a personalized product summary.
 
-### Event Flow:
+### Event Flow
+
 - Triggered by: `ProductPersonalizationEvent`
 - Returns: `ProductPersonalizationCompletedEvent`
 

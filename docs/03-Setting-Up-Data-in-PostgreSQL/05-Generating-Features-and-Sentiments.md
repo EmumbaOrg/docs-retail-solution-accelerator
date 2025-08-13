@@ -17,7 +17,6 @@ Here’s an example SQL query that demonstrates how we use the `azure_ai.extract
 
 ### 📌 Use Case: Sentiment Classification
 
-
 !!! tip "You can run this command using the Postgres Extension to try out generating the sentiment."
 Query:
 
@@ -76,7 +75,6 @@ Although you’re testing this manually here, the production system runs these A
 
 This approach keeps everything **in-database**, minimizing round-trips and making the AI processing fully declarative and observable.
 
-
 ## Configurable Execution for Faster Migrations
 
 The sentiment and feature extraction runs as part of Alembic migrations using `azure_ai.extract()` in batch mode. However, to speed up migrations during development or testing, we’ve introduced a feature flag: `USE_AZURE_AI_FOR_REVIEWS`.
@@ -86,4 +84,3 @@ When this flag is set to `True`, reviews are processed using live AI queries.
 If the flag is `False` (the default), no AI queries are executed during migration, and instead, the migration loads pre-computed sentiment and feature data from a CSV file.
 
 This approach balances the power of in-database AI with flexibility and speed—especially useful for CI pipelines or faster local setup. You can modify this logic in the Alembic migration script if needed.
-

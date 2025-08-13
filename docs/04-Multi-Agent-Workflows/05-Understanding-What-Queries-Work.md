@@ -2,7 +2,7 @@
 
 Your personalized shopping assistant supports product search and recommendation for a limited dataset. To ensure relevant results, it’s important to understand how the system interprets queries, and why some may fail.
 
-### Supported Product Categories
+## Supported Product Categories
 
 The dataset used in this solution contains product information and customer reviews from **only three product categories**:
 
@@ -26,8 +26,8 @@ We support two types of search-powered queries using the following tools:
 #### **Standard Vector Search**
 
 - Used for general **product discovery** queries, such as:
-    - *"Wireless earbuds"*
-    - *"Smartwatch with fitness tracker"*
+  - *"Wireless earbuds"*
+  - *"Smartwatch with fitness tracker"*
 - Powered by **pg_diskann-based vector search**, which retrieves the most semantically relevant products based on product descriptions and specs.
 - **Internally**, the system tries to infer the product category from the query (e.g., *"earbuds"* maps to *Headphones*). If the LLM fails to map the query to one of the 3 valid categories, no results will be returned.
 
@@ -36,18 +36,18 @@ We support two types of search-powered queries using the following tools:
 #### **Sentiment-Aware Search**
 
 - Used for **feature-based discovery with sentiment**, such as:
-    - *"Find headphones with great noise cancellation"*
-    - *"Tablets with reliable cellular connectivity"*
+  - *"Find headphones with great noise cancellation"*
+  - *"Tablets with reliable cellular connectivity"*
 - This tool combines:
-    - **Vector search**
-    - **Azure AI-powered sentiment analysis and feature extraction**
+  - **Vector search**
+  - **Azure AI-powered sentiment analysis and feature extraction**
 - The system tries to map:
     1. The **product category** (same limitations apply as above).
     2. The **product feature** mentioned in the query.
 
 If the mentioned feature is **not tracked in our dataset**, the query won’t work.
 
-### ❌ Example that will fail:
+### ❌ Example that will fail
 
 > *"Smartwatch with great battery life"*
 
@@ -58,7 +58,6 @@ If the mentioned feature is **not tracked in our dataset**, the query won’t wo
 - The feature may be extracted and mapped to some products, but the associated sentiment might not be positive in any of the reviews.
 - The product may include the feature, but if it's not mentioned in reviews, it won’t be surfaced through sentiment-based extraction.
 
-
 ### Flexible Matching
 
 The feature name in the query doesn’t need to be an exact match. The system can handle close variations and synonyms:
@@ -67,7 +66,7 @@ The feature name in the query doesn’t need to be an exact match. The system ca
 - *"Headphones with great ANC"*
 - *"Headphones with great noise cancellation"*
 
-All will map to the tracked feature **Noise Cancellation**. 
+All will map to the tracked feature **Noise Cancellation**
 
 ### 📌 Note on Review Coverage
 
@@ -120,4 +119,3 @@ Used when the user expresses sentiment or preference toward specific product fea
 - "Top tablets with strong parental controls"
 - "Smartwatches with reliable sleep tracking"
 - "Headphones with average ANC"
-

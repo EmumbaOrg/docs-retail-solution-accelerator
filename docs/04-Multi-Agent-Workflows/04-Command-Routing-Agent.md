@@ -4,7 +4,7 @@ In this section, we explore a powerful enhancement to our multi-agent setup—in
 
 Where previous agents handled focused tasks like personalization or inventory lookup, this agent handles broader input and delegates work to appropriate tools (including triggering the workflow we discussed in previous section).
 
-You can expand the section below to review the prompt and declaration of Command Routing Agent. 
+You can expand the section below to review the prompt and declaration of Command Routing Agent.
 
 To review the full implementation visit this file `backend/src/agents/user_query_agent.py`
 
@@ -48,7 +48,7 @@ To review the full implementation visit this file `backend/src/agents/user_query
 
 ---
 
-### Query Routing Tools
+## Query Routing Tools
 
 The **Command Routing Agent** is initialized with three tools:
 
@@ -106,7 +106,7 @@ Waterproof headphones
 
 The **Command Routing Agent** will receive this query and determine that the best tool is `search_products`.
 
-This performs a **vector search** over the product embeddings using `pg_diskann`. To see which tool has been triggered, open the Agentic Flow panel. 
+This performs a **vector search** over the product embeddings using `pg_diskann`. To see which tool has been triggered, open the Agentic Flow panel.
 
 ![Command Routing](../img/command-routing.png)
 
@@ -120,7 +120,7 @@ Now either from the listing page, or the product detail page try the following q
 wireless headphones with good noise cancellation
 ```
 
-This time, the agent identifies that your query is about **review sentiment** about a particular product feature and triggers the `query_reviews_with_sentiment` tool. The product which has the most positive reviews about the requested feature is gets listed on the top. These reviews can be viewed on each product page. 
+This time, the agent identifies that your query is about **review sentiment** about a particular product feature and triggers the `query_reviews_with_sentiment` tool. The product which has the most positive reviews about the requested feature is gets listed on the top. These reviews can be viewed on each product page.
 
 This combines the power of different Postgres extensions to perform **semantic search** (via pg_diskann), **feature extractions** (using azure_ai), and **graph queries** (using age) to return results.
 
@@ -141,7 +141,6 @@ This flow involves the planning, inventory, personalization, and presentation ag
 ---
 
 These examples demonstrate how the **Command Routing Agent** interprets natural language, identifies intent, and delegates the task to the appropriate specialized tool—enhancing flexibility and user experience without requiring separate agents for each task.
-
 
 !!! info  "Why Some Queries May Show General Results"
     When the `query_reviews_with_sentiment` tool is invoked but no matching feature mapping exists in the database—such as when there are no reviews or the requested feature is not associated with any products—the agent automatically falls back to a general vector search within the relevant category. In this case, a notification is displayed to inform the user that sentiment-based results were unavailable, and general product results are being shown instead.

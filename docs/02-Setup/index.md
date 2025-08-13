@@ -1,11 +1,10 @@
 # Deployment
 
-A starter solution has been provided, which you will be modifying to add AI rich capabilities throughout this workshop. This initial application includes a user-friendly React JS UI, offering an intuitive frontend interface for users to interact with. Additionally, it features a Python-based backend that handles the multi-agent workflow logic and workflow tracing. Throughout the workshop, you will enhance this existing solution by integrating advanced AI functionalities. 
+A starter solution has been provided, which you will be modifying to add AI rich capabilities throughout this workshop. This initial application includes a user-friendly React JS UI, offering an intuitive frontend interface for users to interact with. Additionally, it features a Python-based backend that handles the multi-agent workflow logic and workflow tracing. Throughout the workshop, you will enhance this existing solution by integrating advanced AI functionalities.
 
 ??? warning "Ensure you completed the prerequisites before starting!"
 
     Before starting, you should review the [prerequisites](./01-Prerequisites.md) for completing the lab.
-
 
 To get started building the custom multi-agent workflow application, you need to:
 

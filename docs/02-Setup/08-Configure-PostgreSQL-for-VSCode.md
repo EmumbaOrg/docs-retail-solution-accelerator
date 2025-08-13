@@ -16,11 +16,9 @@ We'll connect the extension to the database server of our application.
 
      ![PostgreSQL extension icon for VS Code](../img/postgres-extension-icon.png)
 
-
 2. ### Select 'add connection' option
 
      ![add-connection](../img/add-connection.png)
-
 
 3. ### Add details
 
@@ -37,12 +35,10 @@ We'll connect the extension to the database server of our application.
      | PASSWORD    | DB_PASSWORD   |
      | DATABASE_NAME    | DB_NAME   |
 
-
-4. ### Connected      
+4. ### Connected
 
     Connected to our database server.
 
      ![connection-details](../img/connected.png)
-
 
 ### The extension is now setup and connected to our database server. We'll now use this throughout the workshop to interact with the database.

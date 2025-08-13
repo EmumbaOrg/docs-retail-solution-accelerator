@@ -40,11 +40,11 @@ To ensure transparency and debuggability, the solution includes end-to-end obser
 **By completing this solution accelerator, you will learn how to:**
 
 - Leverage Azure OpenAI to extract product features and sentiment for downstream graph and search applications
-- Embed Generative AI capabilities directly into PostgreSQL workflows using the [Azure AI extension](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-integrate-azure-ai)
-- Perform fast, scalable vector similarity searches using [pg_diskann](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgdiskann), integrated with [LlamaIndex](https://llamaindex.ai/)
+- Embed Generative AI capabilities directly into PostgreSQL workflows using the [Azure AI extension](https://learn.microsoft.com/azure/postgresql/flexible-server/how-to-integrate-azure-ai)
+- Perform fast, scalable vector similarity searches using [pg_diskann](https://learn.microsoft.com/azure/postgresql/flexible-server/how-to-use-pgdiskann), integrated with [LlamaIndex](https://llamaindex.ai/)
 - Design and orchestrate multi-agent systems using LlamaIndex, with persistent memory via [Mem0](https://mem0.ai/) and observability via [Phoenix Arize](https://phoenix.arize.com/)
-- Host the solution using [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview) to simulate a real-world production deployment
-- Use the [Azure Developer CLI](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/) and templates to provision and deploy applications consistently across teams
+- Host the solution using [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview) to simulate a real-world production deployment
+- Use the [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/) and templates to provision and deploy applications consistently across teams
 - Use [Apache AGE](https://age.apache.org/) along with the Azure AI extension to:
   - Model graph representations of products, reviews, features, and sentiments
   - Run complex Cypher queries to find products based on how users talk about specific features
@@ -60,6 +60,6 @@ To ensure transparency and debuggability, the solution includes end-to-end obser
 4. **Azure AI Foundry** | [Documentation](https://learn.microsoft.com/azure/ai-studio/) · [Architecture](https://learn.microsoft.com/azure/ai-studio/concepts/architecture) · [SDKs](https://learn.microsoft.com/azure/ai-studio/how-to/develop/sdk-overview) · [Evaluation](https://learn.microsoft.com/azure/ai-studio/how-to/evaluate-generative-ai-app)
 5. **Azure Container Apps** | [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/) · [Deploy from code](https://learn.microsoft.com/azure/container-apps/quickstart-repo-to-cloud?tabs=bash%2Ccsharp&pivots=with-dockerfile)
 6. **Responsible AI** | [Overview](https://www.microsoft.com/ai/responsible-ai) · [With AI Services](https://learn.microsoft.com/azure/ai-services/responsible-use-of-ai-overview?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext) · [Azure AI Content Safety](https://learn.microsoft.com/azure/ai-services/content-safety/)
-7. **pg_diskann** | [Fast vector similarity search](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgdiskann)
+7. **pg_diskann** | [Fast vector similarity search](https://learn.microsoft.com/azure/postgresql/flexible-server/how-to-use-pgdiskann)
 8. **Apache AGE** | [Graph extension for PostgreSQL](https://age.apache.org/)
 

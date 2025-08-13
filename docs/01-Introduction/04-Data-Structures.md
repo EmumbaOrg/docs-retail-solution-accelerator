@@ -24,13 +24,12 @@ AgenticShop processes **user profiles, product catalogs, product variants, custo
 
 ### How These Tables Work Together
 
-1.  **User data** (`users`) provides context for personalization.
-2.  **Product information** (`products`, `product_images`, `features`, `product_features`, `variants`, `variant_attributes`) forms the catalog that AI agents interact with.
-3.  **Customer reviews** (`product_reviews`) are processed by AI to extract sentiment and identify key features discussed.
-4.  **Embeddings** (`embeddings_products`, `embeddings_reviews`) are generated from product and review text, enabling semantic search and retrieval.
-5.  AI agents generate **personalized content** (`personalized_product_sections`) based on user profiles, product data, reviews, and inventory status.
-7.  **Apache AGE graph data** (derived from these tables) models relationships between products, reviews, and features for advanced analytics and explainable AI.
-
+1. **User data** (`users`) provides context for personalization.
+2. **Product information** (`products`, `product_images`, `features`, `product_features`, `variants`, `variant_attributes`) forms the catalog that AI agents interact with.
+3. **Customer reviews** (`product_reviews`) are processed by AI to extract sentiment and identify key features discussed.
+4. **Embeddings** (`embeddings_products`, `embeddings_reviews`) are generated from product and review text, enabling semantic search and retrieval.
+5. AI agents generate **personalized content** (`personalized_product_sections`) based on user profiles, product data, reviews, and inventory status.
+6. **Apache AGE graph data** (derived from these tables) models relationships between products, reviews, and features for advanced analytics and explainable AI.
 
 ![Database ERD Diagram](../img/solution-accelerator-database-erd.png)
 

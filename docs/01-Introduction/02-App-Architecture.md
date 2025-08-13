@@ -9,10 +9,12 @@ At the heart of the system is a **multi-agent workflow engine** built on top of 
 This solution leverages a decoupled architecture built on the following components:
 
 ### Frontend
+
 - **React (SPA)**: A responsive and dynamic single-page application running in the browser.
 - Hosted as an Azure Container App.
 
 ### Backend
+
 - **FastAPI**: High-performance Python web framework handling API logic.
 - **Azure Container Apps**: Hosts both frontend and backend components.
 - **Azure Key Vault**: Securely stores and retrieves database credentials and secrets.
@@ -21,9 +23,11 @@ This solution leverages a decoupled architecture built on the following componen
 - **Azure AI (PostgreSQL Extension)**: Used for in-database embedding generation and summarization.
 
 ### Observability
+
 - **Phoenix by Arize**: Observability tool that captures and visualizes LLM traces and workflows. Integrated directly into the backend app.
 
 ### Data Store
+
 - **Azure Database for PostgreSQL Flexible Server**:
   - Stores products, features, reviews, and user memories.
   - Hosts `mem0_chatstore` table for memory.

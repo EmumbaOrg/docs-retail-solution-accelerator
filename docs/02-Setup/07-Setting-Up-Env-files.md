@@ -9,6 +9,7 @@ Environment variable files (`.env`) are essential for securely managing configur
 After deploying your services on Azure (see section 2.6), a `.env` file is generated in the **root directory** of your project. This file contains all the necessary environment variable values (URLs, keys, etc.) for the deployed services. You do **not** need to manually retrieve these values from the Azure portal.
 
 **To complete your setup:**
+
 - Copy the relevant variables from the root `.env` file into the `.env` files for each service as described below.
 
 ---
@@ -40,7 +41,7 @@ After deploying your services on Azure (see section 2.6), a `.env` file is gener
 
 ## 4. Arize-Phoenix: Setting up `.env` file
 
-By default, we recommend **not** setting the environment variable below for Arize Phoenix. In this case, traces will be stored locally inside the container using a Docker volume, and will persist as long as the Docker volume exists. However, if the volume is removed, traces will be lost. 
+By default, we recommend **not** setting the environment variable below for Arize Phoenix. In this case, traces will be stored locally inside the container using a Docker volume, and will persist as long as the Docker volume exists. However, if the volume is removed, traces will be lost.
 
 !!! info "If you want to persist traces to an external database, follow the steps below to configure the connection."
 
