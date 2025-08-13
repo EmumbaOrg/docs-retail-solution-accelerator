@@ -171,7 +171,7 @@ async def review(
 
 ---
 
-The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function. 
+The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function.
 
 !!! danger "Update the presentation step function to accept `ReviewsCompletedEvent`."
 
@@ -199,7 +199,7 @@ async def presentation(
 
 **Further Explanation:**
 
-In this step, we are integrating the Reviews Agent into the LlamaIndex workflow system. According to the [LlamaIndex Workflows documentation](https://docs.llamaindex.ai/en/stable/module_guides/workflow/#workflows), a workflow is an event-driven abstraction that chains together several steps, each responsible for handling specific event types and emitting new events. 
+In this step, we are integrating the Reviews Agent into the LlamaIndex workflow system. According to the [LlamaIndex Workflows documentation](https://docs.llamaindex.ai/en/stable/module_guides/workflow/#workflows), a workflow is an event-driven abstraction that chains together several steps, each responsible for handling specific event types and emitting new events.
 
 Here's how the code in this step leverages LlamaIndex workflows:
 

@@ -11,4 +11,3 @@ This reset operation clears all personalized data generated during application u
 - **mem0_chatstore** table: Holds user preferences. Initially, it contains predefined preferences added during migrations for all user profiles (Alex, Eugene, Paul). As users interact with the app, additional preferences are stored in this table. The reset service removes preferences added during runtime and restores only the original ones.
 
 This feature ensures a clean testing or demo environment by removing accumulated state while preserving the baseline data defined during setup.
-

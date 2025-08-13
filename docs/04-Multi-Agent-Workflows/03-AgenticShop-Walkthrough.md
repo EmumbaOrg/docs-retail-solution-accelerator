@@ -3,9 +3,11 @@
 In this section, you'll walk through a real user interaction scenario powered by our multi-agent architecture. This flow highlights how a user query triggers intelligent agentic behavior involving vector search, planning, personalization, and inventory checking.
 
 ## 1. Open the App
+
 Open the URL [http://localhost:5173/](http://localhost:5173/) to access the web interface. You’ll be greeted with the homepage of the **AgenticShop** frontend.
 
 ## 2. Select a Profile
+
 You’ll see three predefined user profiles on the landing screen. Each profile is configured with different preferences.
 
 ![Profile Selection](../img/profile-selection.png)
@@ -13,6 +15,7 @@ You’ll see three predefined user profiles on the landing screen. Each profile 
 Select any user profile. You will be taken to the **product listing page**, where a set of products are displayed.
 
 ## 3. Search for "Wireless headphones"
+
 In the search bar, enter a query like:
 
 ```
@@ -24,11 +27,13 @@ Wireless headphones
 Behind the scenes a vector search is performed using pg_diskann to fetch the most relevant products. We will explore more on the query routing in the following section.
 
 ## 4. Background Personalization
+
 Each returned product triggers a **background multi-agent workflow** that personalizes the product description based on the selected user’s profile.
 
 This proactive triggering improves UX by hiding the latency of the multi-agent system.
 
 ## 5. Open a Product Detail Page
+
 Click on the first product to open its detail page. You’ll now see a section titled **"Your Personalized Section"**.
 
 ![Personalized Section](../img/personalized-section.png)
@@ -36,6 +41,7 @@ Click on the first product to open its detail page. You’ll now see a section t
 This personalized content is generated based on the profile selected earlier.
 
 ## 6. Review the Agentic Flow
+
 Open the **Agentic Flow** panel.
 
 You’ll see:

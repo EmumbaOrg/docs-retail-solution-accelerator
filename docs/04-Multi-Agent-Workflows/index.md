@@ -2,7 +2,7 @@
 
 In this section of the workshop, we'll introduce the foundational concepts and architecture behind multi-agent systems using **LlamaIndex**. These systems consist of multiple specialized agents working collaboratively to solve complex tasks by breaking them down into smaller, manageable parts.
 
-### What You'll Learn
+## What You'll Learn
 
 This section will help you understand the **building blocks** of a multi-agent system, how they are coordinated using workflows, and how to implement them using LlamaIndex's flexible, event-driven architecture.
 

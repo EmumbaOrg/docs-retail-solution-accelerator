@@ -63,11 +63,10 @@ You should change the default postgres authentication credentials. This serves a
     ADMINISTRATOR_LOGIN_USER=rtbackend
     ADMINISTRATOR_LOGIN_PASSWORD=Agent2shop
     ```
-    
+
     !!! danger "Only for workshop purposes"
 
         The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
-
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -89,7 +88,6 @@ You are now ready to provision your Azure resources without deployment of Agenti
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
         - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
 
-
     !!! info "Pre-deployment Validation Checks"
 
         Before the `azd` workflow proceeds, checks are performed in the selected region and recommendations are generated on failure for following cases to ensure that the deployment is successful:
@@ -98,18 +96,17 @@ You are now ready to provision your Azure resources without deployment of Agenti
         - Azure Container Apps quota
         - azd env name    
 
-
 2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
 
     ```bash
     Do you want to deploy Azure Container Apps? (y/n): no
     ```
 
-    - Selecting `no` will deploy only the Azure OpenAI models and the database server in the resource group while frontend, backend and arize Azure Container Apps will not be deployed. 
+    - Selecting `no` will deploy only the Azure OpenAI models and the database server in the resource group while frontend, backend and arize Azure Container Apps will not be deployed.
 
     - Selecting `yes` here will deploy the solution with default settings on Azure including the Azure Container Apps. This is not recommended at this stage. We shall deploy our apps on Azure later in this workshop.
 
-2. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
+3. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
 
     - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
 
@@ -124,37 +121,33 @@ You are now ready to provision your Azure resources without deployment of Agenti
         | Azure Flexible server for PostgreSQL  |
         | Azure OpenAI Service                  |
 
-
-3. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
+4. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
 
 ## Troubleshooting Errors
 
 ### Errors During azd Workflow
 
 1. **Error: "Deployment failed: The resource entity provisioning state is not terminal"**
-    
+
     If your deployment faces an error like such as "The resource entity provisioning state is not terminal", try running your deployment again using `azd up`.
-    
+
     ```
     ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to resource group: Deployment Error Details: RequestConflict: Cannot modify resource with id '/subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.CognitiveServices/accounts/{Resourcename}' because the resource entity provisioning state is not terminal. Please wait for the provisioning state to become terminal and then retry the request.
     ```
-    
-2.  **Error: "Validation Error"**
-    
-    If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
 
-    ``` 
+2. **Error: "Validation Error"**
+
+    If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
+
+    ```
     InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
     
     ```
 
-    
+3. **Error: "Network Issues"**
 
+    At any point during provisioning of resources, the deployment can fail due to transient errors or network issues. For such occurrences, you can take either of following actions:
 
-3.  **Error: "Network Issues"**
-
-    At any point during provisioning of resources, the deployment can fail due to transient errors or network issues. For such occurrences, you can take either of following actions: 
-    
     - Restart the deployment with `azd up` command.
 
     - If the above fails, you can delete the existing deployment with `azd down --purge`, create a new `azd` env with `azd env new` and follow the deployment steps from previous section.
@@ -168,7 +161,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
     !!! danger "No Deployment Found!"
 
         ERROR: deleting infrastructure: error deleting Azure resources: finding completed deployments: 'dev': no deployments found.
-    
+
     To resolve this error, you must either execute the following `az` CLI command or delete that specific resource group from Azure portal. Executing the command will ask you for a confirmation to delete resource group. Input `y` to confirm deletion. Redeploy the env using `azd up` command.
 
     ```bash

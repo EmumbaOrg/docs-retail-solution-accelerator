@@ -2,7 +2,7 @@
 
 Modern applications powered by Generative AI often require multiple specialized agents working together to solve complex problems. In AgenticShop, we use **multi-agent workflows** to structure and coordinate tasks such as reviewing product data, updating personalization, performing vector search, and interacting with a user’s memory.
 
-### Why Use a Workflow?
+## Why Use a Workflow?
 
 Multi-agent systems can quickly become unmanageable without structure—agents may step on each other’s toes or miss necessary context. The **LlamaIndex `Workflow` module** helps organize these agents into a clear, event-driven pipeline. Each component has a defined role, and execution is coordinated via **events** that guide the flow of information.
 
@@ -22,10 +22,10 @@ Workflows offer the following advantages:
 At a high level, a LlamaIndex `Workflow` consists of:
 
 - **Steps** – These are the individual units of execution in the workflow. Each step performs a specific task and can wrap:
-    - An **Agent** for complex reasoning and multi-turn capabilities
-    - A **Function** for logic such as formatting or transforming data
-    - A **Tool** for invoking structured tools
-    - A **Router** to direct flow based on logic or message content
+  - An **Agent** for complex reasoning and multi-turn capabilities
+  - A **Function** for logic such as formatting or transforming data
+  - A **Tool** for invoking structured tools
+  - A **Router** to direct flow based on logic or message content
 - **Events** – Events are structured messages that trigger workflow steps. Each step listens for one or more `EventType`s as input and emits one or more `EventType`s as output. Events carry the context that allows the workflow to evolve dynamically.
 - **Workflow Execution** – Execution starts with `workflow.run(input_event)`, which dispatches the initial event. From there, steps respond to incoming events, perform their tasks, and emit new events that trigger downstream steps. This event-driven chaining enables flexible, reactive workflows.
 

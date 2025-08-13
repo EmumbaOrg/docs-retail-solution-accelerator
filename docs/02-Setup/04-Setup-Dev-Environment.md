@@ -26,7 +26,7 @@ Follow the instructions below based on your operating system to start the Docker
 
 ---
 
-**Linux**
+#### Linux
 
 If you installed Docker using a package manager, you can start the Docker service with:
 
@@ -42,7 +42,7 @@ sudo systemctl enable docker
 
 ---
 
-**Windows**
+#### Windows
 
 1. Open the Start menu and search for **Docker Desktop**.
 2. Click on **Docker Desktop** to launch it.
@@ -50,7 +50,7 @@ sudo systemctl enable docker
 
 ---
 
-**macOS**
+#### macOS
 
 1. Open **Launchpad** and search for **Docker**.
 2. Click on **Docker** to launch Docker Desktop.
@@ -61,7 +61,6 @@ sudo systemctl enable docker
 After starting Docker, re-run `docker info` to confirm that the Docker Engine
 
 ### Create `.env` File for Apps
-
 
 1. For each of the following directories, navigate in each directory to create a copy of `.env.example` file and rename it `.env` for now. We will populate the required environment variables later in [Section 2.9](./09-Setting-Up-Env-files.md).
 
@@ -82,7 +81,7 @@ your dev container command line, not your local operating system command line.
 2. Open Folder of your locally cloned repo
 3. Press `Ctrl+Shift+P` to open the command palette
 4. Type: `Dev Container` and choose "Rebuild and Reopen in Container"
-5. In case the correct python interpreter is not set by default - open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS), then search for and select "Python: Select Interpreter". From the list, choose the interpreter located in your project's virtual environment (`backend/.venv/bin/python`). 
+5. In case the correct python interpreter is not set by default - open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P on macOS), then search for and select "Python: Select Interpreter". From the list, choose the interpreter located in your project's virtual environment (`backend/.venv/bin/python`).
 
 !!! info "Dev Container Build Process"
 

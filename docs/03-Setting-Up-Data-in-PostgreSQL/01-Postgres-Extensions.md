@@ -8,8 +8,7 @@ Azure Database for PostgreSQL Flexible Server allows you to extend the functiona
 
 ## Allowlist the Extensions
 
-To enable extensions in Azure Database for PostgreSQL Flexible Server, they must first be added to the server's _allowlist_. 
-
+To enable extensions in Azure Database for PostgreSQL Flexible Server, they must first be added to the server's _allowlist_.
 
 !!! note "You can also review how this is done manually in [the official documentation](https://learn.microsoft.com/azure/postgresql/extensions/how-to-allow-extensions). The documentation includes steps for allowlisting the extensions, follow the instructions provided in the link."
 
@@ -90,7 +89,7 @@ SELECT * FROM pg_available_extensions WHERE installed_version IS NOT NULL;
 
 It will show the following output, listing all the extensions currently installed in your PostgreSQL instance.
 
-   ![new-query](../img/query-output.png)
+![new-query](../img/query-output.png)
 ---
 
 !!! note "If you're interested in understanding how these are configured programmatically, you can explore the [Bicep deployment scripts](https://github.com/Azure-Samples/postgres-agentic-shop/blob/main/azd-hooks/). Refer to the post provision azd hook for understanding."

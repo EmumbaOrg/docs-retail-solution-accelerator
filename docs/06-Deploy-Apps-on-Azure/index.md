@@ -66,9 +66,8 @@ To deploy the updated app, follow the steps below:
 3. In the _AgenticShop_ landing page, select any **User** and you can see the home page where all the products are listed!
 
     ![users](../img/users.png)
-    
-4. You can select any product and the UI will show you the details and personalized recommendations of the products powered by AI models.
 
+4. You can select any product and the UI will show you the details and personalized recommendations of the products powered by AI models.
 
 ---
 

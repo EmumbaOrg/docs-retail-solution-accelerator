@@ -19,7 +19,6 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 
 !!! danger "Update the json agents list present in planning agent prompt."
 
-
 ```python
 "Respond with a JSON list of agents to call: ["product_personalization", "reviews", "inventory"]"
 ```

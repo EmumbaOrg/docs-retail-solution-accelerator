@@ -1,6 +1,6 @@
 # 1.1 The App Scenario
 
-### Personalizing E-Commerce with GenAI and Multi-Agent Systems
+## Personalizing E-Commerce with GenAI and Multi-Agent Systems
 
 In the e-commerce space, delivering a personalized shopping experience has become essential to retaining users and increasing conversion. However, most personalization systems are rule-based or rely on shallow behavioral tracking. These approaches struggle to adapt in real-time to user preferences and product attributes derived from unstructured data such as reviews.
 
@@ -31,6 +31,4 @@ Behind this single input box, an **Agent equipped with three tools** dynamically
 - **Sentiment-Aware Search**  
   For queries like *"Headphones with great noise cancellation"*, the agent combines vector search with in-database **sentiment analysis** and **feature extraction** using **azure_ai**, then optionally filters or reranks results based on extracted review insights.
 
-
 This intelligent routing architecture allows users to interact naturally with the system, while the agents ensure their intent is correctly interpreted and processed.
-

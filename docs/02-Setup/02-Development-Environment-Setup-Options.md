@@ -37,7 +37,7 @@ The required development environment uses a Visual Studio (VS) Code editor with 
 
 ### Install Windows Powershell 7.5+ (Only if using Windows)
 
-1. Download MSI package for [Windows Powershell](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
+1. Download MSI package for [Windows Powershell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5)
 
 2. Run the package to install Windows Powershell.
 
@@ -46,7 +46,7 @@ The required development environment uses a Visual Studio (VS) Code editor with 
     ```bash title=""
     pwsh
     ```
-    
+
 4. The command prompt should show the version of PowerShell as `7.5.0` or greater.
     ![Screenshot of the command prompt showing the results of the 'pwsh' command.](../img/pwsh-installation-version.png)
 
@@ -123,7 +123,7 @@ the needed extensions will automatically be installed within the `dev container`
 
 1. Download and install from <https://code.visualstudio.com/download>.
 
-    - Use the default options in the installer.    
+    - Use the default options in the installer.
 
 2. After installation is completed, launch Visual Studio Code.
 
@@ -133,7 +133,7 @@ the needed extensions will automatically be installed within the `dev container`
 
 4. Close VS Code.
 
-## ✅ You're Ready to Launch!
+## ✅ You're Ready to Launch
 
 Once you’ve installed everything above, you can move to the next step where you’ll clone the repo and then open the cloned repo in VS Code, and it will **automatically prompt you to reopen in a Dev Container**.
 

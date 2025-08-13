@@ -61,7 +61,6 @@ def create_workflow(self) -> MultiAgentFlow:
         return workflow
 ```
 
-
 ---
 
 !!! info "**What this does:**"

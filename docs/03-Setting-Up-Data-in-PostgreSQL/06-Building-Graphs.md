@@ -21,6 +21,7 @@ Each node in the graph represents a distinct type of entity from the underlying 
     - Represents a retail product.
     - Properties: `id`, `name`, `category`
     - Example:
+
         ```cypher
         (p:Product {id: 101, name: "SmartWatch X200", category: "Electronics"})
         ```
@@ -29,6 +30,7 @@ Each node in the graph represents a distinct type of entity from the underlying 
     - Captures a user’s review.
     - Properties: `id`, `product_id`, `feature_id`, `sentiment`, `text`
     - Example:
+
       ```cypher
       (r:Review {id: 5001, text: "Great battery life!", sentiment: "positive"})
       ```
@@ -37,6 +39,7 @@ Each node in the graph represents a distinct type of entity from the underlying 
     - Describes a functional or descriptive product attribute.
     - Properties: `id`, `name`, `categories` (JSON array)
     - Example:
+
       ```cypher
       (f:Feature {id: 10, name: "Battery Life", categories: ["Electronics", "Wearables"]})
       ```
@@ -50,6 +53,7 @@ Edges define how these entities relate to one another—particularly which produ
 1. **Product `-[HAS_FEATURE]->` Feature**
     - Links a product to its associated features.
     - Example:
+
       ```cypher
       (p:Product)-[:HAS_FEATURE]->(f:Feature)
       ```
@@ -57,6 +61,7 @@ Edges define how these entities relate to one another—particularly which produ
 2. **Product `-[HAS_REVIEW]->` Review**
     - Connects products to their customer reviews.
     - Example:
+
       ```cypher
       (p:Product)-[:HAS_REVIEW]->(r:Review)
       ```
@@ -66,6 +71,7 @@ Edges define how these entities relate to one another—particularly which produ
 5. **Review `-[neutral_sentiment]->` Feature**
     - Connects reviews to features, annotated with the expressed sentiment.
     - Example:
+
       ```cypher
       (r:Review)-[:positive_sentiment {feature_id: 10, product_id: 101}]->(f:Feature)
       ```
@@ -98,7 +104,6 @@ Here’s a simplified schematic of how entities connect:
     - **Edges**: Capture relationships and sentiment between them.
     - Each edge can carry its own **properties**, enabling more nuanced filtering and querying.
 
-
 ## From Natural Language to Graph Query
 
 Let’s walk through how the graph is used to answer a user query like:
@@ -118,6 +123,7 @@ To map the user's phrasing of the feature to a canonical feature in our system, 
 Here’s the query using **azure_ai** that performs that step:
 
 !!! tip "You can run this command using the Postgres extension of Vscode to try out extracting product feature."
+
 ```SQL
 WITH feature_schema AS (
     SELECT
