@@ -6,12 +6,12 @@ Where previous agents handled focused tasks like personalization or inventory lo
 
 You can expand the section below to review the prompt and declaration of Command Routing Agent.
 
-To review the full implementation visit this file `backend/src/agents/user_query_agent.py`
+To review the full implementation visit this file `backend/src/agents/command_routing_agent.py`
 
 ???- info "Query Agent Prompt and Declaration"
 
-    ```python title="backend/src/agents/user_query_agent.py"
-    USER_QUERY_AGENT_PROMPT = """
+    ```python title="backend/src/agents/command_routing_agent.py"
+    COMMAND_ROUTING_AGENT_PROMPT = """
         You are a helpful AI assistant designed to assist users with their queries or product searches
         by intelligently selecting and invoking exactly ONE of the following tools:
 
@@ -37,9 +37,9 @@ To review the full implementation visit this file `backend/src/agents/user_query
         """
     # Initialize Command Routing Agent
     FunctionAgent(
-        name=AgentNames.USER_QUERY_AGENT.value,
+        name=AgentNames.COMMAND_ROUTING_AGENT.value,
         description="Acts as a smart router that interprets user queries and directs them to the most appropriate tool.",
-        system_prompt=USER_QUERY_AGENT_PROMPT,
+        system_prompt=COMMAND_ROUTING_AGENT_PROMPT,
         tools=self._get_tools(),
         llm=self.llm,
         verbose=settings.VERBOSE,
@@ -62,9 +62,9 @@ These tools are defined as callable Python functions and wrapped into LlamaIndex
 
 ```python
 FunctionAgent(
-    name="user_query_agent",
+    name="command_routing_agent",
     description="Smart router that interprets user queries and directs them to the most appropriate tool.",
-    system_prompt=USER_QUERY_AGENT_PROMPT,
+    system_prompt=COMMAND_ROUTING_AGENT_PROMPT,
     tools=[...],  # Three tool functions
     llm=llm,
     verbose=settings.VERBOSE,
