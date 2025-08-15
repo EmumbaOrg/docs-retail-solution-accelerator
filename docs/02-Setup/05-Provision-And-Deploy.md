@@ -51,22 +51,23 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
 
         azd CLI is a higher-level, developer-focused workflow tool that scaffolds, provisions, deploys, and monitors entire applications to automates the full app lifecycle, together with IaC, CI/CD, and monitoring so you don't handcraft each resource individually.
 
-## Change PostgreSQL Authentication Credentials
+## PostgreSQL Admin Credentials (auto-generated)
 
-You should change the default postgres authentication credentials. This serves as a best security practice to avoid unauthorised access and credentials leakage of PostgreSQL database.
+> **NOTE:** This solution uses PostgreSQL username/password authentication. During deployment (`azd up`), the admin **username** and **password** are **auto-generated** and written to your project’s `.env` file.
 
-1. In the root directory of your project, change directory into `infra` directory and edit the `main.parameters.json` file.
+!!! warning "Do not commit secrets"
+    Keep your `.env` file **out of version control**.
 
-2. Edit the following parameters with your own username and password. You can refer to this file anytime you want to connect to the database to perform any action.
+1. Deploy the infrastructure with `azd up`. When it completes, open the generated `.env` file in your project to view the admin credentials.
 
-    ```bash
-    ADMINISTRATOR_LOGIN_USER=rtbackend
-    ADMINISTRATOR_LOGIN_PASSWORD=Agent2shop
+2. Use the values from `.env` whenever you need to connect to the database locally (e.g., via a client or CLI). Treat these as **secrets**.
+
+**Example `.env` entries (values will differ):**
+
+    ```dotenv
+    DB_USER=rtadmindm2wsm
+    DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
     ```
-
-    !!! danger "Only for workshop purposes"
-
-        The credentials shown above are only for workshop or learning purposes. You must change these parameters as best security practice if you intend to deploy this solution in production.
 
 ## Provision Azure Resource Without Apps Deployment
 
@@ -141,7 +142,6 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
     ```
     InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
-    
     ```
 
 3. **Error: "Network Issues"**
