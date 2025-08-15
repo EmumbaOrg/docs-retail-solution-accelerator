@@ -11,6 +11,7 @@ Before running the `azd up` command, you must authenticate your VS Code environm
 
 To create Azure resources, you need to be authenticated from VS Code. Open a new integrated terminal in VS Code. Then, complete the following steps:
 
+<!-- markdownlint-disable MD046 -->
 !!! info "Visual Studio Code Integrated terminal"
 
     The integrated terminal in Visual Studio Code is a built-in console panel that runs your system’s shell such as Bash, PowerShell etc. within the editor. It lets you execute commands without switching windows, and enhances workflow with extensions, persistent sessions, and context-aware shell integration
