@@ -64,10 +64,10 @@ To create Azure resources, you need to be authenticated from VS Code. Open a new
 
 **Example `.env` entries (values will differ):**
 
-    ```dotenv
-    DB_USER=rtadmindm2wsm
-    DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
-    ```
+```dotenv
+DB_USER=rtadmindm2wsm
+DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
+```
 
 ## Provision Azure Resource Without Apps Deployment
 
