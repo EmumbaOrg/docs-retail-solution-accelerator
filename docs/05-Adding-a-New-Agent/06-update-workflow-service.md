@@ -1,12 +1,13 @@
 # 5.6: Update Workflow Service
 
-In this step, we will re-import `get_reviews_agent` in `backend/src/services/agent_workflow.py` and pass it to the `MultiAgentFlow` when initializing. This ensures the Reviews Agent is properly initialized and included in the workflow service.
+
+This section describes how `get_reviews_agent` is re-imported in `backend/src/services/agent_workflow.py` and passed to the `MultiAgentFlow` during initialization. Notice how this ensures the Reviews Agent is properly initialized and included in the workflow service.
 
 !!! info "**File location:** `backend/src/services/agent_workflow.py`"
 
 !!! info " **Purpose:** This step wires your Reviews Agent into the workflow service, so it can be used as part of the overall multi-agent orchestration."
 
-!!! danger "Import `get_reviews_agent` in `backend/src/services/agent_workflow.py` file."
+!!! info "Observe the import of `get_reviews_agent` in `backend/src/services/agent_workflow.py`."
 
 ```python
 from src.agents import (
@@ -22,7 +23,7 @@ from src.agents import (
 
 ## Pass Review Agent to MultiAgentFlow
 
-!!! danger "Add reviews_agent in MutliAgentFlow class initialization inside MultiAgentFlowService `create_workflow` function"
+!!! info "Notice how `reviews_agent` is included in the MultiAgentFlow class initialization inside the MultiAgentFlowService `create_workflow` function."
 
 ```python
 reviews_agent=get_reviews_agent(
