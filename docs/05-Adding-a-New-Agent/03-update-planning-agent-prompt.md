@@ -1,12 +1,13 @@
 # 5.3 Update Planning Agent Prompt
 
-In this step, we will update the `PLANNING_AGENT_PROMPT` to include a description of the Reviews Agent and update the example agents list in the JSON response. This ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
+
+This section explores how the `PLANNING_AGENT_PROMPT` is updated to include a description of the Reviews Agent and to update the example agents list in the JSON response. Notice how these changes ensure the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
 
 !!! info "**File location:** `backend/src/agents/prompts.py`"
 
 !!! info "**Purpose:** This step makes sure the planner knows about your new agent and can suggest it for relevant user queries."
 
-!!! danger "Insert the following line inside the PLANNING_AGENT_PROMPT string, specifically under the section that begins with Following agents are available:"
+!!! info "Observe the following line, which is included inside the PLANNING_AGENT_PROMPT string under the section that begins with 'Following agents are available:'."
 
 ```python
 """
@@ -17,7 +18,7 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 
 ---
 
-!!! danger "Update the json agents list present in planning agent prompt."
+!!! info "Notice the update to the JSON agents list present in the planning agent prompt."
 
 ```python
 "Respond with a JSON list of agents to call: ["product_personalization", "reviews", "inventory"]"

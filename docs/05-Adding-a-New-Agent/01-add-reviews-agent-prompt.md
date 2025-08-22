@@ -1,6 +1,7 @@
 # 5.1: Add the Reviews Agent Prompt
 
-In this step, we will define a new prompt for the Reviews Agent in `backend/src/agents/prompts.py`. This prompt will instruct the agent on how to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
+
+This section describes the prompt defined for the Reviews Agent in `backend/src/agents/prompts.py`. Notice how this prompt instructs the agent to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
 
 !!! info "**File location:** `backend/src/agents/prompts.py`"
 
@@ -8,7 +9,7 @@ In this step, we will define a new prompt for the Reviews Agent in `backend/src/
 
 ---
 
-!!! danger "Paste the code below at the end of `backend/src/agents/prompts.py` file"
+!!! info "Observe the following code, which is included at the end of `backend/src/agents/prompts.py`."
 
 ```python
 REVIEWS_AGENT_PROMPT = """

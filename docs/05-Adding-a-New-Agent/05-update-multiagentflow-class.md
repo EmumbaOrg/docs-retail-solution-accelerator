@@ -10,13 +10,14 @@ In the context of multi-agent systems, each step typically interacts with a diff
 
 ## Define Reviews Events
 
-In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+
+This section describes how `ReviewsEvent` and `ReviewsCompletedEvent` classes are defined in `multi_agent_workflow.py` to handle events related to the Reviews Agent. Notice how these event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
 
 !!! info "**File location:** `backend/src/agents/multi_agent_workflow.py` (or wherever your workflow/event classes are defined)"
 
 !!! info "**Purpose:** These classes represent the start and completion of a review agent task, enabling event-driven orchestration in your workflow."
 
-!!! danger "Add the code below to the `backend/src/agents/multi_agent_workflow.py` file, right after the other event classes."
+!!! info "Observe the following code, which is included in `backend/src/agents/multi_agent_workflow.py` after the other event classes."
 
 ```python
 class ReviewsEvent(Event):
@@ -33,19 +34,20 @@ class ReviewsCompletedEvent(Event):
 
 ## Integrate Reviews Agent in MultiAgentFlow Class
 
-In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
+
+This section explores how the `MultiAgentFlow` class is updated to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. Notice how these changes integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
 !!! info "**File location:** `backend/src/agents/multi_agent_workflow.py`"
 
 !!! info "**Purpose:** This step wires your Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent."
 
-!!! danger "Accept `reviews_agent` in the MultiAgentFlow class constructor argument."
+!!! info "Observe how `reviews_agent` is accepted in the MultiAgentFlow class constructor argument."
 
 ```python
 reviews_agent: BaseAgent,
 ```
 
-!!! danger "Assign `reviews_agent` in the MultiAgentFlow class constructor body."
+!!! info "Notice how `reviews_agent` is assigned in the MultiAgentFlow class constructor body."
 
 ```python
 self.reviews_agent = reviews_agent
@@ -84,7 +86,7 @@ def __init__(
 
 Any type of event that a step function can emit must be mentioned in its return type. We add the ReviewsEvent here so that it can be triggered by the planning agent.
 
-!!! danger "Add `ReviewsEvent` to the planning step return type."
+!!! info "Observe the addition of `ReviewsEvent` to the planning step return type."
 
 ```python
 ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
@@ -105,7 +107,7 @@ async def planning(
 
 The planning step includes conditional logic based on the output of the planning agent. This logic determines which step to trigger next. To support the Reviews Agent, update this logic so it can also trigger the Reviews Agent when appropriate. By adding this code to the planning step function, the workflow can emit a `ReviewsEvent`, which in turn activates the review agent step function.
 
-!!! danger "Add the code below in planning step function."
+!!! info "Notice the following code added in the planning step function."
 
 ```python
 if "reviews" in agents_to_call:
@@ -131,7 +133,7 @@ if "reviews" in agents_to_call:
 
 This is the review agent step function, which is executed when the ReviewsEvent is emitted. Within this, we call the review agent that we previously defined in the agents/reviews_agent.py file.
 
-!!! danger "Add a step function for the Reviews Agent."
+!!! info "Observe the step function for the Reviews Agent."
 
 ```python
 @step
@@ -173,7 +175,7 @@ async def review(
 
 The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function.
 
-!!! danger "Update the presentation step function to accept `ReviewsCompletedEvent`."
+!!! info "Notice the update to the presentation step function to accept `ReviewsCompletedEvent`."
 
 ```python
 ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsCompletedEvent,

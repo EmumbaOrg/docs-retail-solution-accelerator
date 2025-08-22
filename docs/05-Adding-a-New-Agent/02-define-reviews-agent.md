@@ -1,14 +1,13 @@
 # 5.2: Define the Review Agent
 
-In this step, we will create a new file `reviews_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 
-!!! danger "Create a new file `reviews_agent.py` in `backend/src/agents/` directory"
+This section describes the implementation of `reviews_agent.py` in `backend/src/agents/`, which defines the Reviews Agent and its logic. Notice how this file sets up the agent to use a vector store and LLM to retrieve and summarize product reviews.
 
 !!! info "**Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain."
 
 ---
 
-!!! danger "Paste the code below in reviews_agent.py file."
+!!! info "Review the following code, which is found in `reviews_agent.py`."
 
 ```python
 from llama_index.core import VectorStoreIndex
@@ -86,9 +85,10 @@ def get_reviews_agent(
 
 ---
 
-## Expose the Agent in the Module Init
 
-In this step, we will update `backend/src/agents/__init__.py` to import and expose the `get_reviews_agent` function. This makes the function available for import elsewhere in your codebase, allowing other modules to use the Reviews Agent.
+## Exposing the Agent in the Module Init
+
+Observe how `backend/src/agents/__init__.py` is updated to import and expose the `get_reviews_agent` function. This makes the function available for import elsewhere in the codebase, allowing other modules to use the Reviews Agent.
 
 !!! info "**File location:** `backend/src/agents/__init__.py`"
 
@@ -96,7 +96,7 @@ In this step, we will update `backend/src/agents/__init__.py` to import and expo
 
 ---
 
-!!! danger "Add the below code in `backend/src/agents/__init__.py` file."
+!!! info "Notice the following code added in `backend/src/agents/__init__.py`."
 
 ```python
 from .reviews_agent import get_reviews_agent
