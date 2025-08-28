@@ -1,10 +1,10 @@
 # 2.1 Prerequisites
 
-Review the details about what you need to do before starting the workshop, what you are expected to know beforehand, and what you can expect to take away after completing it.
+Review the details about what is needed before following this guide, what you are expected to know beforehand and what you can expect to learn after going through it.
 
 ## What You Need
 
-To be able to complete this workshop, you will need:
+To follow this guide, you will need:
 
 1. **Your own computer.**
     - Any computer capable of running Visual Studio Code, Docker Desktop, and a modern web browser will do.
@@ -55,13 +55,13 @@ To get the most of this solution accelerator, you should have:
 ### Recommended knowledge and experience
 
 1. **Familiarity with Visual Studio Code**
-    - The default editor used in this workshop is Visual Studio Code. You will configure your VS Code development environment with the required extensions and code libraries.
-    - The workshop requires Visual Studio Code and other tools to be installed on your computer. You will be running the solution code from your local computer.
+    - The default editor used in this guide is Visual Studio Code. You will configure your VS Code development environment with the required extensions and code libraries.
+    - The guide requires Visual Studio Code and other tools to be installed on your computer. You will be running the solution code from your local computer.
 2. **Familiarity with the Azure portal**
-    - The workshop assumes you are familiar with navigating to resources within the Azure portal.
-    - You will use the Azure portal to retrieve endpoints, keys, and other values associated with the resources you deploy for this workshop.
+    - The guide assumes you are familiar with navigating to resources within the Azure portal.
+    - You will use the Azure portal to retrieve endpoints, keys, and other values associated with the resources described in this guide.
 3. **Familiarity with PostgreSQL**
-    - The workshop assumes you are familiar with basic SQL syntax.
+    - The guide assumes you are familiar with basic SQL syntax.
 
 ### Preferred knowledge and experience
 
@@ -71,13 +71,12 @@ To get the most of this solution accelerator, you should have:
     - If needed, you will use `bash` in the VS Code terminal to run post-provisioning scripts.
     - You will also use it to run Azure CLI and Azure Developer CLI commands during setup.
 3. **Familiarity with Python frameworks**.
-    - You will modify Python code to implement changes to the starter solution.
-    - In some steps, you will create and run Python code from the command line and VS Code.
+    - This guide provides an overview of the solution, including relevant Python code components.
 
 ## What You Will Take Away
 
-After completing this workshop, you will have:
+After going through this guide, you will have:
 
-1. Hands-on understanding of the Azure portal and relevant developer tools (e.g., Azure Developer CLI, FastAPI) to streamline end-to-end development workflows for your own AI apps.
+1. An understanding of the Azure portal and relevant developer tools (e.g., Azure Developer CLI, FastAPI) to streamline end-to-end development workflows for your own AI apps.
 
 2. An understanding of how Azure AI services can be integrated into applications to create powerful AI-enabled applications.
