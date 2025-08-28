@@ -20,7 +20,7 @@ Memory enables agents to:
 
 ## How Is Memory Initialized?
 
-During the data seeding phase of the workshop, we load preconfigured user preferences from a CSV file. These are injected into `mem0` using the following logic:
+During the data seeding phase of the guide, we load preconfigured user preferences from a CSV file. These are injected into `mem0` using the following logic:
 
 ```python
 output = memory.add(
