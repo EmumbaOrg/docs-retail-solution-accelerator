@@ -1,6 +1,6 @@
 # Deploy Apps on Azure
 
-The workshop began with a _development_ version of the _AgenticShop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
+This guide began with a _development_ version of the _AgenticShop_ application on your own computer. Now that you have modified elements of the app and tested them out locally, you might want to _deploy_ the application on Azure. 
 
 !!! note "Optional deployment on Azure"
 
@@ -75,4 +75,4 @@ _You made it! That was a lot to cover — but don't worry! Now that you have a l
 
 ---
 
-!!! note "THANK YOU: Let's wrap up the session by cleaning up resources!"
+!!! note "THANK YOU: Let's wrap up the guide by cleaning up resources!"
