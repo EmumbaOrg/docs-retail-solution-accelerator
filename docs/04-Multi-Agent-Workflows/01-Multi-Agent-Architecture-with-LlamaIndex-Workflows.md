@@ -35,7 +35,7 @@ Each step is defined with clear input and output events, enabling modular, scala
 
 ### What You'll Implement
 
-In this guide, you’ll implement or inspect:
+In this guide, you’ll inspect:
 
 - A multi-agent `Workflow` that connects planning, personalization, inventory and presentation logic is already provided.
 - A **Review Agent** that answers users query based on product reviews.
