@@ -2,7 +2,7 @@
 
 !!! success "SETUP IS COMPLETE!"
 
-    You just completed the **PROVISION** and **SETUP** steps of workshop. 
+    You just completed the **PROVISION** and **SETUP** steps of guide. 
 
     - [X] You installed the required tools and software
     - [X] You cloned the sample repo and created a local clone
