@@ -2,7 +2,7 @@
 
 ## Clean-up
 
-Once you have completed this workshop, delete the Azure resources you created. You are charged for the configured capacity and resource usage. Follow these instructions to delete your resource group and all resources you created for this solution accelerator.
+Once you have completed this guide, delete the Azure resources you created. You are charged for the configured capacity and resource usage. Follow these instructions to delete your resource group and all resources you created for this solution accelerator.
 
 1. In the VS Code integrated terminal, navigate to the root directory of your repository, execute the following command to delete the resources created by the `azd` workflow:
 
@@ -20,7 +20,7 @@ Once you have completed this workshop, delete the Azure resources you created. Y
 
 ## Give us a ⭐️ on GitHub
 
-!!! question "FOUND THIS WORKSHOP AND SAMPLE USEFUL? MAKE SURE YOU GET UPDATES."
+!!! question "FOUND THIS GUIDE AND SAMPLE USEFUL? MAKE SURE YOU GET UPDATES."
 
 The **[Postgres Agentic Shop](https://github.com/Azure-Samples/postgres-agentic-shop)** sample is an actively updated project that will reflect the latest features and best practices for code-first development of multi-agent workflows on the Azure AI platform. **[Visit the repo](https://github.com/Azure-Samples/postgres-agentic-shop)** or click the button below, to give us a ⭐️.
 
