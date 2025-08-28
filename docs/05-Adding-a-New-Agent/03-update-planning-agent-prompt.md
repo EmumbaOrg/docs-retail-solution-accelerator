@@ -1,12 +1,14 @@
-# 5.3 Update Planning Agent Prompt
+# 5.3 Planning Agent Prompt Overview
 
-In this step, we will update the `PLANNING_AGENT_PROMPT` to include a description of the Reviews Agent and update the example agents list in the JSON response. This ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
+This section provides an overview of how the `PLANNING_AGENT_PROMPT` is structured to include the Reviews Agent in the planning and agent selection logic.
 
 !!! info "**File location:** `backend/src/agents/prompts.py`"
 
-!!! info "**Purpose:** This step makes sure the planner knows about your new agent and can suggest it for relevant user queries."
+!!! info "**Purpose:** Ensures the planner is aware of the Reviews Agent and can suggest it for relevant user queries."
 
-!!! danger "Insert the following line inside the PLANNING_AGENT_PROMPT string, specifically under the section that begins with Following agents are available:"
+---
+
+The prompt includes a description of the Reviews Agent under the section that begins with "Following agents are available:"
 
 ```python
 """
@@ -15,9 +17,7 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 """
 ```
 
----
-
-!!! danger "Update the json agents list present in planning agent prompt."
+The JSON agents list in the planning agent prompt is also updated:
 
 ```python
 "Respond with a JSON list of agents to call: ["product_personalization", "reviews", "inventory"]"
@@ -25,7 +25,7 @@ In this step, we will update the `PLANNING_AGENT_PROMPT` to include a descriptio
 
 ---
 
-The updated prompt should look like this.
+The updated prompt looks like this:
 
 ```python
 PLANNING_AGENT_PROMPT = """
@@ -49,4 +49,4 @@ don’t include any code blocks or backticks.
 ---
 
 !!! info "**What this does:**"
-    This change ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
+    This prompt structure ensures the planning agent is aware of the Reviews Agent and can include it in its planning and agent selection logic.
