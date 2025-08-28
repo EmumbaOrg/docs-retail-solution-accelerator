@@ -1,12 +1,12 @@
-# 5.7: Add Agent Timeout
+# 5.7: Agent Timeout Configuration Overview
 
-In this step, we will add the 'REVIEW_AGENT_TIMEOUT'  in `backend/src/config/config.py`. This is the maximum amount of time the review agent will take to process a request, after which it will timeout, allowing the agentic flow to move forward gracefully.
+This section provides an overview of the `REVIEW_AGENT_TIMEOUT` setting in `backend/src/config/config.py`. This configuration sets the maximum amount of time the Reviews Agent will take to process a request, after which it will timeout, allowing the agentic flow to move forward gracefully.
 
 !!! info "**File location:** `backend/src/config/config.py`"
 
-!!! info "**Purpose:** This step creates a timeout configuration for the review agent."
+!!! info "**Purpose:** This configuration ensures the Reviews Agent has a timeout, allowing it to exit gracefully if a request takes too long."
 
-!!! danger "Add the following config variable as class variable in the settings class"
+The timeout is set as a class variable in the settings class:
 
 ```python
 REVIEW_AGENT_TIMEOUT: int = 60
