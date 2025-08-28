@@ -27,7 +27,7 @@ To run the Dev Container successfully, you’ll need to install a few tools on y
 
 ### Install Software
 
-The required development environment uses a Visual Studio (VS) Code editor with a Python runtime. To complete this lab on your own computer, you must install the following required software. On completing this step, you should have installed:
+The required development environment uses a Visual Studio (VS) Code editor with a Python runtime. To follow this guide, the following software is required:
 
 - [X] Git
 - [X] Docker desktop
