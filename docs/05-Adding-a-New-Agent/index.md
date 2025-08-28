@@ -1,32 +1,26 @@
-# Adding a New Agent: Guide Overview
+# Agent Architecture and Integration: Guide Overview
 
-Welcome to the "Adding a New Agent" module! In this hands-on guide, you'll embark on an exciting journey to extend your multi-agent system by building and integrating a brand new Reviews Agent. This module is designed to give you practical experience with real-world tools and workflows, empowering you to customize and scale intelligent systems.
+Welcome to "Agent Architecture and Integration"! In this guide, you'll get an in-depth overview of how the Reviews Agent is integrated within the multi-agent system. This section explains the architecture, implementation, and codebase details, so you can understand how the agent operates and interacts with other components in the system.
 
-By the end of this guide, you'll have:
+By the end of this guide, you'll understand:
 
-- Designed a specialized agent prompt
-- Integrated your agent into the planning and presentation layers
-- Built and registered a new agent in code
-- Connected your agent to vector stores and query engines
-- Leveraged LlamaIndex workflows for event-driven orchestration
-- Enabled your agent to participate in multi-step, multi-agent flows
+- How a specialized agent prompt is designed
+- How agents are integrated into the planning and presentation layers
+- How new agents are registered in code
+- How agents connect to vector stores and query engines
+- How LlamaIndex workflows enable event-driven orchestration
+- How agents participate in multi-step, multi-agent flows
 
-**Here's what you'll accomplish, step by step:**
+**Here's what is involved, step by step:**
 
-1. **Add the Reviews Agent Prompt:** Craft a powerful prompt that guides your agent to generate insightful, user-focused review summaries.
-2. **Update the Planning Agent Prompt:** Make your new agent discoverable and selectable by the system's planner.
-3. **Update the Presentation Agent Prompt:** Ensure your agent is visible and accessible in the presentation layer.
-4. **Define the Reviews Agent:** Build the core logic for your agent, connecting it to vector stores and query engines.
-5. **Add Reviews Events:** Define the events that will trigger and track your agent's actions.
-6. **Update the MultiAgentFlow Class:** Integrate your agent into the event-driven workflow, enabling seamless collaboration with other agents.
-7. **Update Workflow Service:** Wire up your agent in the workflow service for full system integration.
-
+1. **Reviews Agent Prompt:** How the prompt is crafted to generate insightful, user-focused review summaries.
+2. **Planning Agent Integration:** How the Reviews Agent is made discoverable and selectable by the system's planner.
+3. **Presentation Agent Integration:** How the agent is surfaced in the presentation layer.
+4. **Reviews Agent Definition:** The core logic for the agent, including connections to vector stores and query engines.
+5. **Reviews Events:** The events that trigger and track the agent's actions.
+6. **MultiAgentFlow Integration:** How the agent is incorporated into the event-driven workflow for seamless collaboration.
+7. **Workflow Service Integration:** How the agent is wired into the workflow service for full
 ---
 
-Before we begin, let's examine the current workflow without the **Reviews Agent**. Reviewing the debug flow diagram below, you'll notice that the Reviews Agent is not yet part of the multi-agent architecture. This will help you understand the baseline system before we integrate the new agent.
 
-![Workflow Without Reviews Agent](../img/workflow-without-review-agent.png)
-
----
-
-Get ready to dive in, experiment, and see your new agent come to life as part of a robust, intelligent multi-agent system. Let's get started!
+Let's deep dive into the implementation and code-level details to understand how the Reviews Agent operates within the multi-agent system.
