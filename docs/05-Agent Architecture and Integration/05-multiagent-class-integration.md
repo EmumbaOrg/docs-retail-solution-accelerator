@@ -1,4 +1,4 @@
-# 5.5: MultiAgentFlow Class Integration Overview
+# 5.5: MultiAgentFlow Class Integration
 
 ## Understanding MultiAgent Architecture Using LlamaIndex Workflows
 

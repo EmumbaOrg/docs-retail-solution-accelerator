@@ -1,4 +1,4 @@
-# 5.3 Planning Agent Prompt Overview
+# 5.3 Planning Agent Prompt
 
 This section provides an overview of how the `PLANNING_AGENT_PROMPT` is structured to include the Reviews Agent in the planning and agent selection logic.
 

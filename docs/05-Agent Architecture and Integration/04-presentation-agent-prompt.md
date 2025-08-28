@@ -1,4 +1,4 @@
-# 5.4 Presentation Agent Prompt Overview
+# 5.4 Presentation Agent Prompt
 
 This section provides an overview of how the `PRESENTATION_AGENT_PROMPT` lists the Reviews Agent as one of the available agents. This makes the Reviews Agent visible to the presentation layer, allowing it to be referenced.
 

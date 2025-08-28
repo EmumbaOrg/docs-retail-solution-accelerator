@@ -1,4 +1,4 @@
-# 5.7: Agent Timeout Configuration Overview
+# 5.7: Agent Timeout Configuration
 
 This section provides an overview of the `REVIEW_AGENT_TIMEOUT` setting in `backend/src/config/config.py`. This configuration sets the maximum amount of time the Reviews Agent will take to process a request, after which it will timeout, allowing the agentic flow to move forward gracefully.
 

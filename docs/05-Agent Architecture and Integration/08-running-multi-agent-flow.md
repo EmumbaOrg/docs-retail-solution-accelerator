@@ -1,4 +1,4 @@
-# 5.8 Multi-Agent Workflow Execution Overview
+# 5.8 Multi-Agent Workflow Execution
 
 This section provides an overview of how the multi-agent workflow operates with the integrated Reviews Agent. Here, you'll see how the system responds to user queries, how the Reviews Agent is triggered, and how its output is incorporated into the overall response.
 

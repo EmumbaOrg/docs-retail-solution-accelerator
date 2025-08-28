@@ -1,4 +1,4 @@
-# 5.1: Reviews Agent Prompt Overview
+# 5.1: Reviews Agent Prompt
 
 This section provides an overview of the prompt defined for the Reviews Agent in `backend/src/agents/prompts.py`. The prompt instructs the agent on how to analyze and summarize product reviews, ensuring the output is concise, relevant, and structured.
 

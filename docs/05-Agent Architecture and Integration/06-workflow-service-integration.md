@@ -1,4 +1,4 @@
-# 5.6: Workflow Service Integration Overview
+# 5.6: Workflow Service Integration
 
 This section provides an overview of how the Reviews Agent is initialized and included in the workflow service (`backend/src/services/agent_workflow.py`). The agent is imported and passed to the `MultiAgentFlow` during initialization, ensuring it is part of the overall multi-agent orchestration.
 
