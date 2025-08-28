@@ -1,6 +1,6 @@
 # Multi-Agent System Overview
 
-In this section of the workshop, we'll introduce the foundational concepts and architecture behind multi-agent systems using **LlamaIndex**. These systems consist of multiple specialized agents working collaboratively to solve complex tasks by breaking them down into smaller, manageable parts.
+In this section of the guide, we'll introduce the foundational concepts and architecture behind multi-agent systems using **LlamaIndex**. These systems consist of multiple specialized agents working collaboratively to solve complex tasks by breaking them down into smaller, manageable parts.
 
 ## What You'll Learn
 
