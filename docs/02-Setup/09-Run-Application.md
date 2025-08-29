@@ -1,24 +1,16 @@
 # 2.9 Run Application
 
-## Run Database Migrations
+## Database Setup
 
-Before starting the backend or frontend applications, you **must run the database migrations** to set up the required tables and schema. This is essential after configuring your environment variables, especially for a new deployment, as the database will be empty and the app will not function correctly without the necessary tables.
+Before starting the backend or frontend application, the database must have the required tables and schema. This is handled automatically: when you deploy the app using `azd up`, all necessary `alembic` migrations are executed as part of the backend deployment process. You do not need to run any migration commands manually—your database will always be up to date after deployment.
 
-To apply the migrations, run the following command from the `backend` directory:
+!!! info "In future, if there is a need to make updates to the database, a new migration file can be added and the migrations can be re-run to update the database using the command `alembic upgrade head`. This can be done in two ways:"
 
-!!! note "**Note:** Activate your virtual environment before proceeding to avoid errors. Refer to [Section 2.4](./04-Setup-Dev-Environment.md) which contains commands to activate the virtual environment based on the specific OS and shell you are using."
+    - **Local Machine** : From within the devcontainer of your local machine, navigate to the backend directory and run `alembic upgrade head` (Make sure your virtual environment is activated. Refer to [Section 2.4](./04-Setup-Dev-Environment.md)).
+  
+    - **Redeploy Backend Service** : Run `azd deploy backend` to deploy the backend service again. This process automatically re-runs the migrations from the backend container app server, updating the database. Because the backend container app, the database and other required services are in the same resource group, migrations typically execute faster this way than running them from your local machine.
 
-!!! danger "Run database migration, creates schema and populates database with seed data."
-
-  ```bash
-  cd backend
-  alembic upgrade head
-  ```
-
-This command applies all pending migrations and ensures your database schema is up to date.
 !!! note "For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this workshop."
-
-!!! note "**Note:** This step is required regardless of whether you use the command line or the VS Code debugger to run the applications."
 
 ### Run Apps Using VS Code Debugger
 
