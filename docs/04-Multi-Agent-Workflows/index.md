@@ -23,6 +23,7 @@ By the end of this section, you will:
   - **Planner** that breaks down user input into tasks
   - **Review Agent** that analyzes product reviews using **Azure AI**
   - **Personalization Agent** that generates personalized content
+  - **Evaluation Agent** that evaluates the response of other agents (only triggered when `Enable Self Correction` is set to true from frontend)
   - **Presentation Agent** that formats results for display
 - Using memory to persist user preferences across sessions
 

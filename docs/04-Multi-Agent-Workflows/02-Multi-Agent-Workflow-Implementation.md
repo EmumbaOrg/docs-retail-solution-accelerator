@@ -20,7 +20,8 @@ The multi-agent system includes the following agents:
 | **Planner Agent**       | Determines which agents to invoke based on user query and profile.                          |
 | **Product Personalization Agent** | Tailors product descriptions to the user’s preferences.                            |
 | **Inventory Agent**     | Analyzes inventory constraints and availability.
-| **Reviews Agent**     | Generates response to user queries regarding product reviews.                                            |
+| **Reviews Agent**     | Generates response to user queries regarding product reviews.
+| **Evaluation Agent**     | Evaluates response of other agents (only triggered when `Enable Self Correction` is true from frontend.                                            |
 | **Presentation Agent**  | Synthesizes responses from other agents into a final, user-facing product description.      |
 
 Agents are connected through **events** and executed via the LlamaIndex `Workflow` system, which provides modularity, traceability, and event-driven orchestration.
