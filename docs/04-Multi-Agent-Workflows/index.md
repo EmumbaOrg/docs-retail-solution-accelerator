@@ -14,12 +14,12 @@ You will learn about:
 
 We will explore how these components are combined to form a structured, reactive pipeline that drives intelligent behavior across the system.
 
-### What You'll Build
+### What You'll Accomplish
 
 By the end of this section, you will:
 
 - Understand how to define and connect agents using **LlamaIndex Workflows**
-- Implement a multi-step agent flow that includes:
+- Review a multi-step agent flow that includes:
   - **Planner** that breaks down user input into tasks
   - **Review Agent** that analyzes product reviews using **Azure AI**
   - **Personalization Agent** that generates personalized content

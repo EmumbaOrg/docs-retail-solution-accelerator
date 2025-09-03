@@ -33,7 +33,7 @@ Each step is defined with clear input and output events, enabling modular, scala
 
 ---
 
-### What You'll Implement
+### What You'll Explore
 
 In this guide, you’ll inspect:
 

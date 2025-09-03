@@ -24,9 +24,6 @@ Once you have completed this guide, delete the Azure resources you created. You 
 
 The **[Postgres Agentic Shop](https://github.com/Azure-Samples/postgres-agentic-shop)** sample is an actively updated project that will reflect the latest features and best practices for code-first development of multi-agent workflows on the Azure AI platform. **[Visit the repo](https://github.com/Azure-Samples/postgres-agentic-shop)** or click the button below, to give us a ⭐️.
 
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/Azure-Samples/postgres-agentic-shop" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" data-show-count="true" aria-label="Star Azure-Samples/postgres-agentic-shop on GitHub"> Give the AgenticShop Solution Accelerator a Star!</a>
-
 ## Provide Feedback
 
 Have feedback that can help us make this lab better for others? [Open an issue](https://github.com/Azure-Samples/postgres-agentic-shop) and let us know.
