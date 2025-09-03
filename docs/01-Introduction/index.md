@@ -19,10 +19,6 @@ Throughout the guide, you’ll discover how GenAI-based systems work and how the
 You can find the complete source code here:
 [github.com/Azure-Samples/postgres-agentic-shop](https://github.com/Azure-Samples/postgres-agentic-shop)
 
-The application has the following architecture:
-
-![High-level architecture diagram for the solution](../img/solution-accelerator-architecture.png)
-
 ---
 
 ## Learning Objectives

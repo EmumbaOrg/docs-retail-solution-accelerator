@@ -10,7 +10,7 @@ Before starting the backend or frontend application, the database must have the 
   
     - **Redeploy Backend Service** : Run `azd deploy backend` to deploy the backend service again. This process automatically re-runs the migrations from the backend container app server, updating the database. Because the backend container app, the database and other required services are in the same resource group, migrations typically execute faster this way than running them from your local machine.
 
-!!! note "For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this workshop."
+!!! note "For detailed guidance on Alembic migrations, see [Section 3.2: Alembic Migrations](../03-Setting-Up-Data-in-PostgreSQL/02-Alembic-Migrations.md) of this guide."
 
 ### Run Apps Using VS Code Debugger
 
