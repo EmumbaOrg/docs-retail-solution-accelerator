@@ -1,4 +1,4 @@
-# 5.5: Update the MultiAgentFlow Class
+# 5.5: MultiAgentFlow Class Integration
 
 ## Understanding MultiAgent Architecture Using LlamaIndex Workflows
 
@@ -6,17 +6,15 @@ LlamaIndex workflows are designed around an event-driven architecture. The workf
 
 Each step processes its input event and returns a new event. This returned event determines the next step in the workflow. Steps can emit multiple events, and a single step can be set up to listen for several different event types. This flexibility allows multiple steps to run in parallel, enabling efficient and scalable workflows.
 
-In the context of multi-agent systems, each step typically interacts with a different agent. By leveraging this event-driven approach, you can run several agents at the same time, making your workflow both modular and highly parallelized. This structure makes it easy to add, remove, or modify agents as your application evolves.
+In the context of multi-agent systems, each step typically interacts with a different agent. By leveraging this event-driven approach, several agents can run at the same time, making the workflow both modular and highly parallelized. This structure makes it easy to add, remove, or modify agents as your application evolves.
 
-## Define Reviews Events
+## Reviews Events
 
-In this step, we will define `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` to handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
+The `ReviewsEvent` and `ReviewsCompletedEvent` classes in `multi_agent_workflow.py` handle events related to the Reviews Agent. These event classes allow the workflow to track and manage the execution and completion of the Reviews Agent.
 
 !!! info "**File location:** `backend/src/agents/multi_agent_workflow.py` (or wherever your workflow/event classes are defined)"
 
 !!! info "**Purpose:** These classes represent the start and completion of a review agent task, enabling event-driven orchestration in your workflow."
-
-!!! danger "Add the code below to the `backend/src/agents/multi_agent_workflow.py` file, right after the other event classes."
 
 ```python
 class ReviewsEvent(Event):
@@ -31,27 +29,15 @@ class ReviewsCompletedEvent(Event):
 
 ---
 
-## Integrate Reviews Agent in MultiAgentFlow Class
+## Reviews Agent Integration in MultiAgentFlow Class
 
-In this step, we will update the `MultiAgentFlow` class to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This will integrate the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
+The `MultiAgentFlow` class is updated to accept the Reviews Agent, emit and handle review events, and add a step function for the Reviews Agent. This integrates the Reviews Agent into the multi-agent workflow, allowing it to be triggered, run, and its results to be handled like other agents.
 
 !!! info "**File location:** `backend/src/agents/multi_agent_workflow.py`"
 
-!!! info "**Purpose:** This step wires your Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent."
+!!! info "**Purpose:** This integration wires the Reviews Agent into the event-driven workflow, so it can be triggered, run, and its results handled like any other agent."
 
-!!! danger "Accept `reviews_agent` in the MultiAgentFlow class constructor argument."
-
-```python
-reviews_agent: BaseAgent,
-```
-
-!!! danger "Assign `reviews_agent` in the MultiAgentFlow class constructor body."
-
-```python
-self.reviews_agent = reviews_agent
-```
-
-The constructor of the MultiAgentFlow class should now look like this.
+The constructor of the MultiAgentFlow class includes the Reviews Agent:
 
 ```python
 def __init__(
@@ -82,15 +68,9 @@ def __init__(
 
 ---
 
-Any type of event that a step function can emit must be mentioned in its return type. We add the ReviewsEvent here so that it can be triggered by the planning agent.
+Any type of event that a step function can emit must be mentioned in its return type. `ReviewsEvent` is included so it can be triggered by the planning agent.
 
-!!! danger "Add `ReviewsEvent` to the planning step return type."
-
-```python
-ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
-```
-
-The planning step function signature would look like this
+The planning step function signature:
 
 ```python
 @step
@@ -101,19 +81,7 @@ async def planning(
 ) -> ProductPersonalizationEvent | InventoryEvent | ReviewsEvent:
 ```
 
----
-
-The planning step includes conditional logic based on the output of the planning agent. This logic determines which step to trigger next. To support the Reviews Agent, update this logic so it can also trigger the Reviews Agent when appropriate. By adding this code to the planning step function, the workflow can emit a `ReviewsEvent`, which in turn activates the review agent step function.
-
-!!! danger "Add the code below in planning step function."
-
-```python
-if "reviews" in agents_to_call:
-    ctx.send_event(ReviewsEvent())
-    triggered_agents.append(ReviewsCompletedEvent)
-```
-
-The conditional logic inside planning step, to trigger next events should look like this.
+The planning step includes conditional logic based on the output of the planning agent. This logic determines which step to trigger next. To support the Reviews Agent, the logic can trigger the Reviews Agent when appropriate:
 
 ```python
 if "product_personalization" in agents_to_call:
@@ -129,9 +97,7 @@ if "reviews" in agents_to_call:
 
 ---
 
-This is the review agent step function, which is executed when the ReviewsEvent is emitted. Within this, we call the review agent that we previously defined in the agents/reviews_agent.py file.
-
-!!! danger "Add a step function for the Reviews Agent."
+The review agent step function is executed when the ReviewsEvent is emitted. Within this, the review agent defined in `agents/reviews_agent.py` is called:
 
 ```python
 @step
@@ -171,15 +137,7 @@ async def review(
 
 ---
 
-The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. We add the ReviewsCompletedEvent here so that the presentation agent accepts the output of the review agent step function.
-
-!!! danger "Update the presentation step function to accept `ReviewsCompletedEvent`."
-
-```python
-ev: ProductPersonalizationCompletedEvent | InventoryCompletedEvent | ReviewsCompletedEvent,
-```
-
-The presentation step function should look now look like this.
+The presentation agent accepts the outputs of agents and then refines them before eventually passing them to the frontend. The presentation step function accepts the output of the review agent step function:
 
 ```python
 @step
@@ -199,7 +157,7 @@ async def presentation(
 
 **Further Explanation:**
 
-In this step, we are integrating the Reviews Agent into the LlamaIndex workflow system. According to the [LlamaIndex Workflows documentation](https://docs.llamaindex.ai/en/stable/module_guides/workflow/#workflows), a workflow is an event-driven abstraction that chains together several steps, each responsible for handling specific event types and emitting new events.
+In this step, we explain how the Reviews Agent is integrated within the LlamaIndex workflow system. According to the [LlamaIndex Workflows documentation](https://docs.llamaindex.ai/en/stable/module_guides/workflow/#workflows), a workflow is an event-driven abstraction that chains together several steps, each responsible for handling specific event types and emitting new events.
 
 Here's how the code in this step leverages LlamaIndex workflows:
 
@@ -209,3 +167,4 @@ Here's how the code in this step leverages LlamaIndex workflows:
 - This modular, event-driven approach allows you to flexibly chain together multiple agents and logic, making it easy to extend or modify the workflow as your application grows.
 
 In summary, this step connects the Reviews Agent to the overall multi-agent workflow, enabling event-driven, modular, and observable orchestration of agent logic using LlamaIndex's workflow system.
+

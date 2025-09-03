@@ -1,6 +1,6 @@
 # Before You Begin
 
-This guide serves as both a solution accelerator and a learning tool for developers who want to build AI-powered e-commerce personalization solutions using **Azure Database for PostgreSQL**, **Azure AI Services**, and **multi-agent systems powered by LlamaIndex**. The **AgenticShop Workshop** provides a hands-on experience to help you jumpstart your own projects and gain practical skills in Gen AI applications.
+This guide serves as both a solution accelerator and a learning tool for developers who want to build AI-powered e-commerce personalization solutions using **Azure Database for PostgreSQL**, **Azure AI Services**, and **multi-agent systems powered by LlamaIndex**. The **AgenticShop Guide** provides a hands-on experience to help you jumpstart your own projects and gain practical skills in Gen AI applications.
 
 To complete this guide, you will need the following:
 

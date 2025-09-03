@@ -55,7 +55,7 @@ You’ll see:
 
 Click through each tab to review the **input** and **output** of each agent involved in the workflow.
 
-In a later section, we will be adding another agent to the mix that specialized in product reviews.
+In a later section, we will walkthrough the code base and show how the reviews agent is added to the mix.
 
 ## 7. Trigger Personalization and Memory Update
 

@@ -2,7 +2,7 @@
 
 To simplify setup and ensure consistency, this solution accelerator uses a **Dev Container** as the exclusive development environment.
 
-Dev Containers provide a clean, pre-configured workspace with all necessary tools and dependencies already installed. Whether you're on Windows, macOS, or Linux, using Dev Containers helps you avoid common setup issues and ensures that everyone in the workshop is working in the same environment.
+Dev Containers provide a clean, pre-configured workspace with all necessary tools and dependencies already installed. Whether you're on Windows, macOS, or Linux, using Dev Containers helps you avoid common setup issues and ensures that everyone following the guide is working in the same environment.
 
 ## Why Dev Containers?
 
@@ -27,7 +27,7 @@ To run the Dev Container successfully, you’ll need to install a few tools on y
 
 ### Install Software
 
-The required development environment uses a Visual Studio (VS) Code editor with a Python runtime. To complete this lab on your own computer, you must install the following required software. On completing this step, you should have installed:
+The required development environment uses a Visual Studio (VS) Code editor with a Python runtime. To follow this guide, the following software is required:
 
 - [X] Git
 - [X] Docker desktop

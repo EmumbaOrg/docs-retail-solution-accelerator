@@ -128,7 +128,7 @@ This combines the power of different Postgres extensions to perform **semantic s
 
 #### 3. Trigger a Multi-Agent Workflow
 
-Lastly the third tool that the Command Routing Agents supports is `query_about_product`. To trigger this, click on a product to open its detail page. Then, enter a query like:
+Lastly the third tool that the Command Routing Agent supports is `query_about_product`. To trigger this, click on a product to open its detail page. Then, enter a query like:
 
 ```
 Always show if red color is available in stock

@@ -1,8 +1,8 @@
 # Introduction
 
-Welcome to the **AgenticShop Workshop** – a hands-on experience built around a prototype e-commerce store that demonstrates how **Generative AI** can be used to personalize shopping experiences through a **multi-agent architecture**.
+Welcome to the **AgenticShop Guide** – a detailed reference guide built around a prototype e-commerce store that demonstrates how **Generative AI** can be used to personalize shopping experiences through a **multi-agent architecture**.
 
-In this workshop, you will:
+In this guide, you will:
 
 - Learn how to structure and implement **multi-agent workflows** using **LlamaIndex**
 - Explore **in-database AI capabilities** using the **Azure AI extension** on **Azure Database for PostgreSQL – Flexible Server**
@@ -14,14 +14,10 @@ You’ll work with a curated sample dataset that includes:
 - A catalog of products and their features
 - User profiles and product reviews
 
-Throughout the workshop, you’ll implement missing components (e.g., agents) yourself, giving you practical exposure to building GenAI-based systems.
+Throughout the guide, you’ll discover how GenAI-based systems work and how they can be applied in real-world scenarios.
 
 You can find the complete source code here:
 [github.com/Azure-Samples/postgres-agentic-shop](https://github.com/Azure-Samples/postgres-agentic-shop)
-
-The application has the following architecture:
-
-![High-level architecture diagram for the solution](../img/solution-accelerator-architecture.png)
 
 ---
 
@@ -33,11 +29,11 @@ By incorporating Apache AGE, you’ll learn how to model and store product-revie
 
 You’ll explore pg_diskann to perform fast and scalable vector similarity searches within PostgreSQL, enabling real-time product and review retrieval.
 
-The workshop also demonstrates how to design and orchestrate multi-agent workflows using LlamaIndex, leveraging strategies such as tool-using agents, Text-to-SQL, and Retrieval-Augmented Generation (RAG). You’ll also learn how to incorporate persistent agent memory using Mem0, allowing agents to retain user-specific context across interactions.
+The guide also demonstrates how to design and orchestrate multi-agent workflows using LlamaIndex, leveraging strategies such as tool-using agents, Text-to-SQL, and Retrieval-Augmented Generation (RAG). You’ll also learn how to incorporate persistent agent memory using Mem0, allowing agents to retain user-specific context across interactions.
 
 To ensure transparency and debuggability, the solution includes end-to-end observability using Phoenix (by Arize), enabling tracing, span-level inspection, and performance monitoring of each agent’s execution within the workflow.
 
-**By completing this solution accelerator, you will learn how to:**
+**By completing this guide, you will learn how to:**
 
 - Leverage Azure OpenAI to extract product features and sentiment for downstream graph and search applications
 - Embed Generative AI capabilities directly into PostgreSQL workflows using the [Azure AI extension](https://learn.microsoft.com/azure/postgresql/flexible-server/how-to-integrate-azure-ai)

@@ -20,7 +20,7 @@ Memory enables agents to:
 
 ## How Is Memory Initialized?
 
-During the data seeding phase of the workshop, we load preconfigured user preferences from a CSV file. These are injected into `mem0` using the following logic:
+During the data seeding phase of the guide, we load preconfigured user preferences from a CSV file. These are injected into `mem0` using the following logic:
 
 ```python
 output = memory.add(
@@ -48,6 +48,9 @@ We’ll explore runtime memory updates in later sections during interactive agen
 ## Try It Yourself: Create Memories Manually
 
 You can try storing user memories in an interactive shell within the devcontainer. Here's how:
+
+!!! info
+    For this to work, make sure you have completed the **optional steps in Section 2**.
 
 !!! tip "Try creating new memories by following this section"
 

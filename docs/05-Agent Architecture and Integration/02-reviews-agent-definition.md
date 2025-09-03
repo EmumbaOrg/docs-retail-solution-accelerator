@@ -1,14 +1,14 @@
-# 5.2: Define the Review Agent
+# 5.2: Reviews Agent Definition
 
-In this step, we will create a new file `reviews_agent.py` in `backend/src/agents/` that defines the Reviews Agent and its logic. This file will set up the agent to use a vector store and LLM to retrieve and summarize product reviews.
+This section provides an overview of how the Reviews Agent is defined in the codebase (`backend/src/agents/reviews_agent.py`). The agent is set up to use a vector store and LLM to retrieve and summarize product reviews.
 
-!!! danger "Create a new file `reviews_agent.py` in `backend/src/agents/` directory"
+!!! info "**File location:** `backend/src/agents/reviews_agent.py`"
 
 !!! info "**Purpose:** Encapsulates all logic for the Reviews Agent, making it reusable and easy to maintain."
 
 ---
 
-!!! danger "Paste the code below in reviews_agent.py file."
+Below is the code that defines the Reviews Agent:
 
 ```python
 from llama_index.core import VectorStoreIndex
@@ -82,44 +82,31 @@ def get_reviews_agent(
 ```
 
 !!! info "**What this does:**"
-    This file defines the Reviews Agent, which uses a vector store and LLM to retrieve and summarize product reviews. It exposes a function to create and configure the agent.
+    This code defines the Reviews Agent, which uses a vector store and LLM to retrieve and summarize product reviews. It exposes a function to create and configure the agent.
 
 ---
 
-## Expose the Agent in the Module Init
+## Exposing the Agent in the Module
 
-In this step, we will update `backend/src/agents/__init__.py` to import and expose the `get_reviews_agent` function. This makes the function available for import elsewhere in your codebase, allowing other modules to use the Reviews Agent.
+The `get_reviews_agent` function is imported and exposed in `backend/src/agents/__init__.py`, making it available for use throughout the codebase.
 
 !!! info "**File location:** `backend/src/agents/__init__.py`"
 
-!!! info "**Purpose:** Register your agent so it can be easily imported and used throughout your project."
+!!! info "**Purpose:** Registers the agent so it can be easily imported and used in other modules."
 
 ---
 
-!!! danger "Add the below code in `backend/src/agents/__init__.py` file."
+Example of how the agent is exposed:
 
 ```python
 from .reviews_agent import get_reviews_agent
-
-# Then add this in the list:
-"get_reviews_agent",
-```
-
-After adding the above code the file should look like this.
-
-```python
-from .inventory_agent import get_inventory_agent
-from .planning_agent import get_planning_agent
-from .presentation_agent import get_presentation_agent
-from .product_personalization_agent import get_product_personalization_agent
-from .reviews_agent import get_reviews_agent  # 👈 Newly added
 
 __all__ = [
     "get_presentation_agent",
     "get_product_personalization_agent",
     "get_inventory_agent",
     "get_planning_agent",
-    "get_reviews_agent",  # 👈 Newly added
+    "get_reviews_agent",
 ]
 ```
 
@@ -134,7 +121,7 @@ __all__ = [
 
 A vector store is a storage system that holds embedding vectors of document chunks (and sometimes the document chunks themselves). When you ingest documents, they are split into smaller pieces (chunks), and each chunk is converted into a vector using an embedding model. These vectors are then stored in the vector store, enabling efficient similarity search and retrieval.
 
-In the code, we use a vector store to store and retrieve product review embeddings. This allows the agent to efficiently find and retrieve relevant review chunks based on the user’s query and preferences.
+In the code, a vector store is used to store and retrieve product review embeddings. This allows the agent to efficiently find and retrieve relevant review chunks based on the user’s query and preferences.
 
 !!! note "For more details, see the [LlamaIndex documentation on Vector Stores.](https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/)"
 
@@ -142,7 +129,7 @@ In the code, we use a vector store to store and retrieve product review embeddin
 
 A query engine is a generic interface in LlamaIndex that allows you to ask questions over your data. It takes a natural language query and returns a rich response, often by retrieving relevant chunks from one or more indexes (such as a vector store) and generating an answer using an LLM. Query engines can be composed to provide more advanced capabilities.
 
-In the code, we create a query engine from the vector store index. This query engine is configured to use the LLM, embedding model, and filters, and is responsible for retrieving the most relevant product review chunks and generating a summary or answer based on them.
+In the code, a query engine is created from the vector store index. This query engine is configured to use the LLM, embedding model, and filters, and is responsible for retrieving the most relevant product review chunks and generating a summary or answer based on them.
 
 !!! note "For more details, see the [LlamaIndex documentation on Query Engine.](https://docs.llamaindex.ai/en/stable/module_guides/deploying/query_engine/)"
 
@@ -150,6 +137,6 @@ In the code, we create a query engine from the vector store index. This query en
 
 A Query Engine Tool is a wrapper that allows a query engine to be used as a tool within an agent workflow. It provides metadata (such as a name and description) and exposes the query engine’s capabilities to the agent, so the agent can invoke it as needed.
 
-In the code, we wrap the query engine in a `QueryEngineTool`, providing it with a name and description. This tool is then passed to the agent, enabling the agent to use the query engine to retrieve and summarize product reviews as part of its workflow.
+In the code, the query engine is wrapped in a `QueryEngineTool`, providing it with a name and description. This tool is then passed to the agent, enabling the agent to use the query engine to retrieve and summarize product reviews as part of its workflow.
 
 !!! note "For more details, see the [LlamaIndex documentation on Query Engine Tools](https://docs.llamaindex.ai/en/stable/examples/agent/openai_agent_with_query_engine/)."
