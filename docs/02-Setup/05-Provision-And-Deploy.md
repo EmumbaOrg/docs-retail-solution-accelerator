@@ -72,7 +72,7 @@ DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
 
 ## Provision Azure Resource Without Apps Deployment
 
-You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the workshop to deploy apps on Azure infrastructure.
+You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the guide to deploy apps on Azure infrastructure.
 
 1. Use `azd up` to provision your Azure infrastructure and skip deployment of apps on Azure infrastructure.
 
@@ -84,7 +84,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
         - **Enter a new environment name**: Enter a value, such as `dev`.
         - The environment for the `azd up` command ensures configuration files, environment variables, and resources are provisioned and deployed correctly.
-        - **Select an Azure Subscription to use**: Select the Azure subscription you are using for this workshop using the up and down arrow keys.
+        - **Select an Azure Subscription to use**: Select the Azure subscription you are using for this guide using the up and down arrow keys.
         - **Select two Azure locations to use**: Ensure both selected regions are same. 
             - Select the Azure region into which resources should be deployed using the up and down arrow keys.
             - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
@@ -106,7 +106,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
     - Selecting `no` will deploy only the Azure OpenAI models and the database server in the resource group while frontend, backend and arize Azure Container Apps will not be deployed.
 
-    - Selecting `yes` here will deploy the solution with default settings on Azure including the Azure Container Apps. This is not recommended at this stage. We shall deploy our apps on Azure later in this workshop.
+    - Selecting `yes` here will deploy the solution with default settings on Azure including the Azure Container Apps. This is not recommended at this stage. We shall deploy our apps on Azure later in this guide.
 
 3. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
 

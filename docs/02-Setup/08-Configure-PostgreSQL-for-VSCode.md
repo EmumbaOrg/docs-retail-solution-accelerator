@@ -41,4 +41,4 @@ We'll connect the extension to the database server of our application.
 
      ![connection-details](../img/connected.png)
 
-### The extension is now setup and connected to our database server. We'll now use this throughout the workshop to interact with the database.
+### The extension is now setup and connected to our database server. We'll now use this throughout the guide to interact with the database.
