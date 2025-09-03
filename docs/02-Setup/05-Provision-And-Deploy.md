@@ -70,7 +70,7 @@ DB_USER=rtadmindm2wsm
 DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
 ```
 
-## Provision Azure Resource
+## Provision Azure Resources
 
 You are now ready to provision your Azure resources.
 

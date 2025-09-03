@@ -82,7 +82,7 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application Url** to open the deployed AgenticShop app in a new browser tab.
 
-    ![appurl](../img/app-url.png)
+    ![app-url](../img/app-url.png)
 
 3. In the _AgenticShop_ landing page, select any **User** and you can see the home page where all the products are listed!
 
