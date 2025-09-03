@@ -1,6 +1,6 @@
 # 1.1 The App Scenario
 
-## Personalizing E-Commerce with GenAI and Multi-Agent Systems
+## Personalizing e-commerce with GenAI and Multi-Agent
 
 In the e-commerce space, delivering a personalized shopping experience has become essential to retaining users and increasing conversion. However, most personalization systems are rule-based or rely on shallow behavioral tracking. These approaches struggle to adapt in real-time to user preferences and product attributes derived from unstructured data such as reviews.
 

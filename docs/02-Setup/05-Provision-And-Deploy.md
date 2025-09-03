@@ -70,11 +70,11 @@ DB_USER=rtadmindm2wsm
 DB_PASSWORD=Aa1_161a08227c7145dd9e5441741cc776a0
 ```
 
-## Provision Azure Resource Without Apps Deployment
+## Provision Azure Resource
 
-You are now ready to provision your Azure resources without deployment of AgenticShop apps. You shall be directed later in the workshop to deploy apps on Azure infrastructure.
+You are now ready to provision your Azure resources.
 
-1. Use `azd up` to provision your Azure infrastructure and skip deployment of apps on Azure infrastructure.
+1. Use `azd up` to provision your Azure infrastructure.
 
     ```bash
     azd up
@@ -85,9 +85,8 @@ You are now ready to provision your Azure resources without deployment of Agenti
         - **Enter a new environment name**: Enter a value, such as `dev`.
         - The environment for the `azd up` command ensures configuration files, environment variables, and resources are provisioned and deployed correctly.
         - **Select an Azure Subscription to use**: Select the Azure subscription you are using for this workshop using the up and down arrow keys.
-        - **Select two Azure locations to use**: Ensure both selected regions are same. 
-            - Select the Azure region into which resources should be deployed using the up and down arrow keys.
-            - Select the Azure region into which Azure OpenAI models should be deployed using the up and down arrow keys.        
+        - **Select an Azure locations to use**: 
+            - The list of locations shown is where both Azure OpenAI models used in the application are available.
         - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
 
     !!! info "Pre-deployment Validation Checks"
@@ -98,21 +97,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
         - Azure Container Apps quota
         - azd env name    
 
-2. **Input your choice for the Azure Container Apps deployment**: Enter `no` to skip Azure Container Apps deployment and press enter.
-
-    ```bash
-    Do you want to deploy Azure Container Apps? (y/n): no
-    ```
-
-    - Selecting `no` will deploy only the Azure OpenAI models and the database server in the resource group while frontend, backend and arize Azure Container Apps will not be deployed.
-
-    - Selecting `yes` here will deploy the solution with default settings on Azure including the Azure Container Apps. This is not recommended at this stage. We shall deploy our apps on Azure later in this workshop.
-
-3. Wait for the process to complete. Depending on the option you selected for the Azure Container Apps, the deployment will take different amounts of time:
-
-    - If you chose Azure Container Apps deployment, it will roughly take 20 minutes.
-
-    - If you chose not to deploy Azure Container Apps, it will roughly take 10 minutes.
+2. Wait for the process to complete. The above commands will provision the resources, build the application containers and deploy it on Azure Container Apps. It can take close to 30 minutes.
 
     !!! info "Provisioned Resources"
 
@@ -123,7 +108,8 @@ You are now ready to provision your Azure resources without deployment of Agenti
         | Azure Flexible server for PostgreSQL  |
         | Azure OpenAI Service                  |
 
-4. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console.
+3. On successful completion you will see a `SUCCESS: Your up workflow to provision and deploy to Azure completed in xx minutes xx seconds.` message on the console. When deployment completes, azd will display the application URLs for the deployed services.
+Be sure to note these URLs—especially the one for the frontend. If needed, you can always retrieve them later from the Azure Container Apps portal.
 
 ## Troubleshooting Errors
 
@@ -133,7 +119,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
     If your deployment faces an error like such as "The resource entity provisioning state is not terminal", try running your deployment again using `azd up`.
 
-    ```
+    ```bash
     ERROR: error executing step command 'provision': deployment failed: error deploying infrastructure: deploying to resource group: Deployment Error Details: RequestConflict: Cannot modify resource with id '/subscriptions/{sub-id}/resourceGroups/{rg-name}/providers/Microsoft.CognitiveServices/accounts/{Resourcename}' because the resource entity provisioning state is not terminal. Please wait for the provisioning state to become terminal and then retry the request.
     ```
 
@@ -141,7 +127,7 @@ You are now ready to provision your Azure resources without deployment of Agenti
 
     If your deployment failed with an error such as validation error, you must name the `azd` env with [rules and restrictions](https://learn.microsoft.com/azure/azure-resource-manager/management/resource-name-rules) for naming conventions. To fix this error, you can create a new `azd` env with `azd env new` with supported naming convention and proceed with the deployment steps mentioned in previous section.
 
-    ```
+    ```bash
     InvalidTemplateDeployment: The template deployment 'dev' is not valid according to the validation procedure.
     ```
 

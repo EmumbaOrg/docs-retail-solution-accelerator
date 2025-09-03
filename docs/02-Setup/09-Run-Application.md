@@ -1,4 +1,4 @@
-# 2.9 Run Application
+# 2.9 [OPTIONAL] Run Application
 
 ## Database Setup
 

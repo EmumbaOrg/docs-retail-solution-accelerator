@@ -37,7 +37,7 @@ The guide also demonstrates how to design and orchestrate multi-agent workflows 
 
 To ensure transparency and debuggability, the solution includes end-to-end observability using Phoenix (by Arize), enabling tracing, span-level inspection, and performance monitoring of each agent’s execution within the workflow.
 
-**By completing this solution accelerator, you will learn how to:**
+**By completing this guide, you will learn how to:**
 
 - Leverage Azure OpenAI to extract product features and sentiment for downstream graph and search applications
 - Embed Generative AI capabilities directly into PostgreSQL workflows using the [Azure AI extension](https://learn.microsoft.com/azure/postgresql/flexible-server/how-to-integrate-azure-ai)

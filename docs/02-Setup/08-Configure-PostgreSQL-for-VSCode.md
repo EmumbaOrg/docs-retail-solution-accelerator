@@ -1,4 +1,4 @@
-# 2.8 Configure PostgreSQL extension for VS Code
+# 2.8 [OPTIONAL] Configure PostgreSQL for VS Code
 
 This guide walks you through setting up the PostgreSQL extension for Visual Studio Code, which provides a powerful, integrated database management experience directly within your development environment. Instead of using external applications, you'll be able to connect to, query, and manage your Azure Database for PostgreSQL Flexible Server instance seamlessly from VS Code. We'll be utilizing this to run queries and for any other database interactions.
 
@@ -41,4 +41,4 @@ We'll connect the extension to the database server of our application.
 
      ![connection-details](../img/connected.png)
 
-### The extension is now setup and connected to our database server. We'll now use this throughout the workshop to interact with the database.
+The extension is now setup and connected to our database server. We'll now use this throughout the workshop to interact with the database.

@@ -49,6 +49,9 @@ We’ll explore runtime memory updates in later sections during interactive agen
 
 You can try storing user memories in an interactive shell within the devcontainer. Here's how:
 
+!!! info
+    For this to work, make sure you have completed the **optional steps in Section 2**.
+
 !!! tip "Try creating new memories by following this section"
 
 ### Step 1: Open the Python REPL inside your devcontainer
