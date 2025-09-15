@@ -78,9 +78,9 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 ## Test the Deployed App
 
-1. In the Azure portal, return to the resource group containing your resources and select the **Container app** resource.
+1. In the Azure portal, return to the resource group containing your resources and select the **Frontend Container App** resource.
 
-2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application Url** to open the deployed AgenticShop app in a new browser tab.
+2. In the **Essentials** section of the Portal Container App's **Overview** page, select the **Application URL** to open the deployed AgenticShop app in a new browser tab.
 
     ![app-url](../img/app-url.png)
 
