@@ -25,6 +25,6 @@ Instead of requiring manual SQL scripts, Alembic automates:
 
 ## Where to Find the Migration Code
 
-The migration scripts are located in the [`alembic/versions`](https://github.com/Azure-Samples/postgres-agentic-shop/tree/main/backend/alembic) directory of the repository. Each migration file corresponds to a specific step in the data setup.
+The migration scripts are located in the [`backend/alembic/versions`](https://github.com/Azure-Samples/postgres-agentic-shop/tree/main/backend/alembic/versions) directory of the repository. Each migration file corresponds to a specific step in the data setup.
 
 !!! info "Alembic tracks which migrations have already been applied. If you run the migration command again and there are no new migrations, nothing will change. Only newly created migration scripts will be executed. We have already executed the Alembic migrations and set up the database."
