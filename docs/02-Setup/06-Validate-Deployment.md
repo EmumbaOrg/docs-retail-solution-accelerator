@@ -64,7 +64,7 @@ You will use the Azure AI Foundry portal to verify the `gpt-4o` and `text-embedd
 
 1. In the Azure portal, return to the resource group containing your resources and select the **Azure OpenAI** resource.
 
-2. On the Azure OpenAI resource's **Overview** page, select **Explore Azure AI Foundry portal**.
+2. On the Azure OpenAI resource's **Overview** page, select **Go to Azure AI Foundry portal**.
 
 3. In **Azure AI Foundry**, select the **Deployments** menu item under **Shared resources** in the left-hand navigation menu.
 

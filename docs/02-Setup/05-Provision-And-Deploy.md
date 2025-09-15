@@ -87,7 +87,9 @@ You are now ready to provision your Azure resources.
         - **Select an Azure Subscription to use**: Select the Azure subscription you are using for this workshop using the up and down arrow keys.
         - **Select an Azure locations to use**: 
             - The list of locations shown is where both Azure OpenAI models used in the application are available.
-        - **Enter a value for the `resourceGroupName`**: Enter `rg-dev`, or a similar name.
+        - Select an existing **Resource Group** or create a new one
+            - *(Only if creating a new Resource Group)* **Enter a value for `resourceGroupName`**: for example, `rg-dev` or a similar name.
+
 
     !!! info "Pre-deployment Validation Checks"
 
