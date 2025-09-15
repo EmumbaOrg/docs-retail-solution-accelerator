@@ -20,7 +20,7 @@ We'll connect the extension to the database server of our application.
 
      ![add-connection](../img/add-connection.png)
 
-3. ### Add details
+3. ### Add details. We use "Agentic Shop DB" as are Server Name for the purpose of this guide.
 
     Look for the connection details from `src/.env` and add them here.
 
